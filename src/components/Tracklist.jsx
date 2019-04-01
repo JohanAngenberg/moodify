@@ -1,39 +1,34 @@
-import React, { Component } from 'react';
-import { TrackCard } from './TrackCard';
+import React, { Component } from "react";
+import { TrackCard } from "./TrackCard";
 
-let dummyPlaylist = require('../dummydata.json');
+let dummyPlaylist = require("../dummydata.json");
 
 class TrackList extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            originalPlaylist: []
-        };
-    }
+    this.state = {
+      originalPlaylist: []
+    };
+  }
 
-    componentDidMount() {
-        // getPlaylistData()
-        // .then(playlist => {
-        this.setState({
-            // originalPlaylist: playlist
-            originalPlaylist: dummyPlaylist
-        })
-        // });
-    }
+  componentDidMount() {
+    // getPlaylistData()
+    // .then(playlist => {
+    this.setState({
+      // originalPlaylist: playlist
+      originalPlaylist: dummyPlaylist
+    });
+    // });
+  }
 
-    render() {
-        const playlist = this.state.originalPlaylist
-            .map((track, i) => (
-                <TrackCard track={track}></TrackCard>
-            ));
+  render() {
+    const playlist = this.state.originalPlaylist.map((track, i) => (
+      <TrackCard track={track} />
+    ));
 
-        return (
-            <div className="App">
-                {playlist}
-            </div>
-        );
-    }
+    return <div className="App">{playlist}</div>;
+  }
 }
 
 export default TrackList;
