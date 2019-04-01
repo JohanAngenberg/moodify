@@ -35,11 +35,13 @@ export class TrackCard extends React.Component {
         const track = this.state.Trackdata;
         const rowWrapperStyles = {
             fontSize: '10px',
+            contentHeight: '60px',
             display: 'flex',
             flexDirection: 'row',
             flexWrap: 'wrap',
             borderBottom: '1px solid gray'
         };
+
         return (
             <div style={rowWrapperStyles}>
                 <img src={track.image} alt="" />
