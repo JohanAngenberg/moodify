@@ -26,7 +26,7 @@ class Tracklist extends Component {
                 <div key={i}>
                     <p>Artist: {song.artist}: Song name: {song.songName}</p>
                 </div>
-            ))
+            ));
 
         return (
             <div className="App">
