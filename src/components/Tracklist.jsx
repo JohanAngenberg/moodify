@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 let dummyPlaylist = require('../dummydata.json');
 
-class Songlist extends Component {
+class Tracklist extends Component {
     constructor(props) {
         super(props);
 
@@ -31,10 +31,10 @@ class Songlist extends Component {
         return (
             <div className="App">
                 {playlist}
-                {/* <SongCard playlist={playlist}></SongCard> */}
+                {/* <TrackCard playlist={playlist}></TrackCard> */}
             </div>
         );
     }
 }
 
-export default Songlist;
+export default Tracklist;

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Songlist from './components/Songlist';
+import Tracklist from './components/Tracklist';
 
   render() {
     return (
       <div>
-        <Songlist></Songlist>
+        <Tracklist></Tracklist>
       </div>
     );
   }
