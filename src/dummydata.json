@@ -19,7 +19,8 @@
         "duration_ms": 301939,
         "time_signature": 4,
         "artist": "The Winery Dogs",
-        "songName": "Elevate"
+        "songName": "Elevate",
+        "image": "https://i.scdn.co/image/349c62416ca9f5d092c4daeed16f46c6723a5679"
     },
     {
         "danceability": 0.322,
@@ -41,7 +42,8 @@
         "duration_ms": 248467,
         "time_signature": 4,
         "artist": "Disturbed",
-        "songName": "The Sound Of Silence"
+        "songName": "The Sound Of Silence",
+        "image": "https://i.scdn.co/image/f0c2f5c341af3f8d121ece5b0a4a6e282dc20ed6"
     },
     {
         "danceability": 0.571,
@@ -63,7 +65,8 @@
         "duration_ms": 351227,
         "time_signature": 3,
         "artist": "Symphony X",
-        "songName": "Without You"
+        "songName": "Without You",
+        "image": "https://i.scdn.co/image/146043d4475abf4998d0a715ddb248028da0d832"
     },
     {
         "danceability": 0.47,
@@ -85,7 +88,8 @@
         "duration_ms": 247388,
         "time_signature": 4,
         "artist": "Five Finger Death Punch",
-        "songName": "House of The Rising Sun"
+        "songName": "House of The Rising Sun",
+        "image": "https://i.scdn.co/image/cd08f78ee0f6bf8c09dcae012710479dc63dd359"
     },
     {
         "danceability": 0.458,
@@ -107,7 +111,8 @@
         "duration_ms": 1162290,
         "time_signature": 4,
         "artist": "Haken",
-        "songName": "Crystallised"
+        "songName": "Crystallised",
+        "image": "https://i.scdn.co/image/38be757de8e44042dd32960bc04c85a03bb13448"
     },
     {
         "danceability": 0.647,
@@ -129,7 +134,8 @@
         "duration_ms": 221653,
         "time_signature": 4,
         "artist": "David Hasselhoff",
-        "songName": "True Survivor"
+        "songName": "True Survivor",
+        "image": "https://i.scdn.co/image/1990adf96acf1961c8d79e0d1de9c0167ffba944"
     },
     {
         "danceability": 0.46,
@@ -151,7 +157,8 @@
         "duration_ms": 230613,
         "time_signature": 4,
         "artist": "Cheap Trick",
-        "songName": "Mighty Wings - From 'Top Gun' Original Soundtrack"
+        "songName": "Mighty Wings - From 'Top Gun' Original Soundtrack",
+        "image": "https://i.scdn.co/image/6794da4be517596392f91e1330d9272f38376812"
     },
     {
         "danceability": 0.279,
@@ -173,7 +180,8 @@
         "duration_ms": 621320,
         "time_signature": 4,
         "artist": "Opeth",
-        "songName": "The Grand Conjuration"
+        "songName": "The Grand Conjuration",
+        "image": "https://i.scdn.co/image/768553dc3e9c6ecbeb2675d85ea5a0302a35bfec"
     },
     {
         "danceability": 0.439,
@@ -195,7 +203,8 @@
         "duration_ms": 392467,
         "time_signature": 3,
         "artist": "Symphony X",
-        "songName": "Paradise Lost"
+        "songName": "Paradise Lost",
+        "image": "https://i.scdn.co/image/3a48f451a76b758a471150bd3881041dca6fb5ba"
     },
     {
         "danceability": 0.23,
@@ -217,7 +226,8 @@
         "duration_ms": 998925,
         "time_signature": 4,
         "artist": "An Abstract Illusion",
-        "songName": "The Sun Will Bleach All Bones"
+        "songName": "The Sun Will Bleach All Bones",
+        "image": "https://i.scdn.co/image/988eb51cfe7f77ff26be6d8ce5b19270b619d773"
     },
     {
         "danceability": 0.408,
@@ -239,7 +249,8 @@
         "duration_ms": 441148,
         "time_signature": 4,
         "artist": "An Abstract Illusion",
-        "songName": "Rain"
+        "songName": "Rain",
+        "image": "https://i.scdn.co/image/988eb51cfe7f77ff26be6d8ce5b19270b619d773"
     },
     {
         "danceability": 0.202,
@@ -261,7 +272,8 @@
         "duration_ms": 470411,
         "time_signature": 3,
         "artist": "An Abstract Illusion",
-        "songName": "Chameleon of the Clouds"
+        "songName": "Chameleon of the Clouds",
+        "image": "https://i.scdn.co/image/988eb51cfe7f77ff26be6d8ce5b19270b619d773"
     },
     {
         "danceability": 0.466,
@@ -283,7 +295,8 @@
         "duration_ms": 368800,
         "time_signature": 4,
         "artist": "Devin Townsend Project",
-        "songName": "Grace"
+        "songName": "Grace",
+        "image": "https://i.scdn.co/image/44b7a05faaf7f44822c821c8eb71b8431eb476e9"
     },
     {
         "danceability": 0.199,
@@ -305,7 +318,8 @@
         "duration_ms": 292667,
         "time_signature": 4,
         "artist": "Devin Townsend",
-        "songName": "Bad Devil"
+        "songName": "Bad Devil",
+        "image": "https://i.scdn.co/image/cc3b12504a622e463ded69c2c2acff9b80e838ba"
     },
     {
         "danceability": 0.392,
@@ -327,7 +341,8 @@
         "duration_ms": 216973,
         "time_signature": 4,
         "artist": "Steel Panther",
-        "songName": "Eyes Of A Panther"
+        "songName": "Eyes Of A Panther",
+        "image": "https://i.scdn.co/image/2096f4d82a65af82e60d8d40422c75cf7cb73aa6"
     },
     {
         "danceability": 0.438,
@@ -349,7 +364,8 @@
         "duration_ms": 218533,
         "time_signature": 4,
         "artist": "Steel Panther",
-        "songName": "Community Property"
+        "songName": "Community Property",
+        "image": "https://i.scdn.co/image/2096f4d82a65af82e60d8d40422c75cf7cb73aa6"
     },
     {
         "danceability": 0.525,
@@ -371,7 +387,8 @@
         "duration_ms": 241337,
         "time_signature": 4,
         "artist": "Steel Panther",
-        "songName": "Party Like Tomorrow Is the End of the World"
+        "songName": "Party Like Tomorrow Is the End of the World",
+        "image": "https://i.scdn.co/image/53e345f4613416a61757331c4130e3caa33bd79e"
     },
     {
         "danceability": 0.439,
@@ -393,7 +410,8 @@
         "duration_ms": 270347,
         "time_signature": 1,
         "artist": "Orphaned Land",
-        "songName": "All Is One"
+        "songName": "All Is One",
+        "image": "https://i.scdn.co/image/a0856ddcb4534aebd17d00c023a1744f9d6256c5"
     },
     {
         "danceability": 0.528,
@@ -415,7 +433,8 @@
         "duration_ms": 346760,
         "time_signature": 4,
         "artist": "Karnivool",
-        "songName": "Themata"
+        "songName": "Themata",
+        "image": "https://i.scdn.co/image/e9cffced68c31006f40340e92ae9275b3c4cc938"
     },
     {
         "danceability": 0.431,
@@ -437,7 +456,8 @@
         "duration_ms": 294307,
         "time_signature": 4,
         "artist": "Sabaton",
-        "songName": "Carolus Rex"
+        "songName": "Carolus Rex",
+        "image": "https://i.scdn.co/image/3401dc9e3710691651f44d2826b06621023c8f3e"
     },
     {
         "danceability": 0.544,
@@ -459,7 +479,8 @@
         "duration_ms": 315400,
         "time_signature": 1,
         "artist": "Leprous",
-        "songName": "Foe"
+        "songName": "Foe",
+        "image": "https://i.scdn.co/image/15e90fcac78348c775b3ce4a961d909e6b0f2264"
     },
     {
         "danceability": 0.24,
@@ -481,7 +502,8 @@
         "duration_ms": 207920,
         "time_signature": 4,
         "artist": "Fair To Midland",
-        "songName": "The Wife, The Kids, and The White Picket Fence"
+        "songName": "The Wife, The Kids, and The White Picket Fence",
+        "image": "https://i.scdn.co/image/d48ebf6467a198f35be07a46585afb684cff9d1e"
     },
     {
         "danceability": 0.417,
@@ -503,7 +525,8 @@
         "duration_ms": 253173,
         "time_signature": 4,
         "artist": "Fair To Midland",
-        "songName": "A Wolf Descends Upon The Spanish Sahara"
+        "songName": "A Wolf Descends Upon The Spanish Sahara",
+        "image": "https://i.scdn.co/image/d48ebf6467a198f35be07a46585afb684cff9d1e"
     },
     {
         "danceability": 0.477,
@@ -525,7 +548,8 @@
         "duration_ms": 251000,
         "time_signature": 4,
         "artist": "Fair To Midland",
-        "songName": "Dance Of The Manatee"
+        "songName": "Dance Of The Manatee",
+        "image": "https://i.scdn.co/image/d48ebf6467a198f35be07a46585afb684cff9d1e"
     },
     {
         "danceability": 0.492,
@@ -547,7 +571,8 @@
         "duration_ms": 289400,
         "time_signature": 4,
         "artist": "Rhapsody Of Fire",
-        "songName": "Dawn of Victory"
+        "songName": "Dawn of Victory",
+        "image": "https://i.scdn.co/image/2db02bd62116a8b485e45958f9117934593b3923"
     },
     {
         "danceability": 0.472,
@@ -569,7 +594,8 @@
         "duration_ms": 350187,
         "time_signature": 4,
         "artist": "Ghost",
-        "songName": "Year Zero"
+        "songName": "Year Zero",
+        "image": "https://i.scdn.co/image/f3e1bfebb0472559d4be1b939bbe98859877aef4"
     },
     {
         "danceability": 0.33,
@@ -591,7 +617,8 @@
         "duration_ms": 329107,
         "time_signature": 4,
         "artist": "Devin Townsend Project",
-        "songName": "Kingdom"
+        "songName": "Kingdom",
+        "image": "https://i.scdn.co/image/44b7a05faaf7f44822c821c8eb71b8431eb476e9"
     },
     {
         "danceability": 0.306,
@@ -613,7 +640,8 @@
         "duration_ms": 1171867,
         "time_signature": 1,
         "artist": "Karmakanic",
-        "songName": "Send A Message From The Heart"
+        "songName": "Send A Message From The Heart",
+        "image": "https://i.scdn.co/image/a0130344743bc8f077adc62ecd3da233ff69d2c0"
     },
     {
         "danceability": 0.482,
@@ -635,7 +663,8 @@
         "duration_ms": 620653,
         "time_signature": 4,
         "artist": "Leprous",
-        "songName": "Forced Entry"
+        "songName": "Forced Entry",
+        "image": "https://i.scdn.co/image/4072f7ac775e05ebed2879232a28facfe068a2b7"
     },
     {
         "danceability": 0.261,
@@ -657,7 +686,8 @@
         "duration_ms": 346573,
         "time_signature": 3,
         "artist": "Mastodon",
-        "songName": "Oblivion"
+        "songName": "Oblivion",
+        "image": "https://i.scdn.co/image/1c08953693f326cbc3c8b3045306bb46a0b7b256"
     },
     {
         "danceability": 0.439,
@@ -679,7 +709,8 @@
         "duration_ms": 265435,
         "time_signature": 4,
         "artist": "Blue Stahli",
-        "songName": "ULTRAnumb"
+        "songName": "ULTRAnumb",
+        "image": "https://i.scdn.co/image/6765d68c3d824b270ce8fad39d48cd7963e532fb"
     },
     {
         "danceability": 0.574,
@@ -701,7 +732,8 @@
         "duration_ms": 289560,
         "time_signature": 4,
         "artist": "Limp Bizkit",
-        "songName": "Nookie"
+        "songName": "Nookie",
+        "image": "https://i.scdn.co/image/1e283a8a4db8d8e8792d6f56249c071c0c2c496f"
     },
     {
         "danceability": 0.469,
@@ -723,7 +755,8 @@
         "duration_ms": 183507,
         "time_signature": 4,
         "artist": "Halestorm",
-        "songName": "I Miss The Misery"
+        "songName": "I Miss The Misery",
+        "image": "https://i.scdn.co/image/8dc16f20ac1afb8144ec8418ccbe939b1e72727c"
     },
     {
         "danceability": 0.422,
@@ -745,7 +778,8 @@
         "duration_ms": 366400,
         "time_signature": 4,
         "artist": "Metallica",
-        "songName": "Turn The Page"
+        "songName": "Turn The Page",
+        "image": "https://i.scdn.co/image/be3210e0838ec7c2f40155d47ca80420e8b080a0"
     },
     {
         "danceability": 0.45,
@@ -767,7 +801,8 @@
         "duration_ms": 166707,
         "time_signature": 4,
         "artist": "Limp Bizkit",
-        "songName": "Break Stuff"
+        "songName": "Break Stuff",
+        "image": "https://i.scdn.co/image/1e283a8a4db8d8e8792d6f56249c071c0c2c496f"
     },
     {
         "danceability": 0.533,
@@ -789,7 +824,8 @@
         "duration_ms": 522520,
         "time_signature": 4,
         "artist": "Dream Theater",
-        "songName": "On The Backs Of Angels"
+        "songName": "On The Backs Of Angels",
+        "image": "https://i.scdn.co/image/d95ff52118412d14f9b7eacb84fbb526cad41bdf"
     },
     {
         "danceability": 0.444,
@@ -811,7 +847,8 @@
         "duration_ms": 412627,
         "time_signature": 4,
         "artist": "Dream Theater",
-        "songName": "Behind The Veil"
+        "songName": "Behind The Veil",
+        "image": "https://i.scdn.co/image/700727135e863e1e7bacf805eda81de36b3712c1"
     },
     {
         "danceability": 0.17,
@@ -833,7 +870,8 @@
         "duration_ms": 323933,
         "time_signature": 4,
         "artist": "Animals As Leaders",
-        "songName": "Tempting Time"
+        "songName": "Tempting Time",
+        "image": "https://i.scdn.co/image/9aa410369ef40fdc68cb6f210289d6a585fbbb7f"
     },
     {
         "danceability": 0.399,
@@ -855,7 +893,8 @@
         "duration_ms": 401120,
         "time_signature": 3,
         "artist": "Animals As Leaders",
-        "songName": "Cafo"
+        "songName": "Cafo",
+        "image": "https://i.scdn.co/image/9aa410369ef40fdc68cb6f210289d6a585fbbb7f"
     },
     {
         "danceability": 0.364,
@@ -877,7 +916,8 @@
         "duration_ms": 548200,
         "time_signature": 4,
         "artist": "TesseracT",
-        "songName": "Eden"
+        "songName": "Eden",
+        "image": "https://i.scdn.co/image/fe7d14eca1e8159b858b86388d447cd4a737f8cc"
     },
     {
         "danceability": 0.345,
@@ -899,7 +939,8 @@
         "duration_ms": 233267,
         "time_signature": 4,
         "artist": "Sabaton",
-        "songName": "Ghost Division"
+        "songName": "Ghost Division",
+        "image": "https://i.scdn.co/image/0f27cbfed66fa1da673fb1f700ee361fb525952f"
     },
     {
         "danceability": 0.587,
@@ -921,7 +962,8 @@
         "duration_ms": 198187,
         "time_signature": 4,
         "artist": "Breaking Benjamin",
-        "songName": "Follow"
+        "songName": "Follow",
+        "image": "https://i.scdn.co/image/e0750f13277666f4cd0189a8db398ca4c4d80287"
     },
     {
         "danceability": 0.232,
@@ -943,7 +985,8 @@
         "duration_ms": 574407,
         "time_signature": 4,
         "artist": "Windir",
-        "songName": "Journey To The End"
+        "songName": "Journey To The End",
+        "image": "https://i.scdn.co/image/1753c97d48a2c51d3efbd83410894f1f4b8fda21"
     },
     {
         "danceability": 0.262,
@@ -965,7 +1008,8 @@
         "duration_ms": 255067,
         "time_signature": 4,
         "artist": "Falconer",
-        "songName": "Northwind"
+        "songName": "Northwind",
+        "image": "https://i.scdn.co/image/c5700859848c78782a74a67b1454ccc7c67402a7"
     },
     {
         "danceability": 0.28,
@@ -987,7 +1031,8 @@
         "duration_ms": 214533,
         "time_signature": 4,
         "artist": "All That Remains",
-        "songName": "The Air That I Breathe"
+        "songName": "The Air That I Breathe",
+        "image": "https://i.scdn.co/image/c6b7275ffb8e7b93e6fdf7789d448ed648c1c36a"
     },
     {
         "danceability": 0.569,
@@ -1009,7 +1054,8 @@
         "duration_ms": 172667,
         "time_signature": 4,
         "artist": "Korn",
-        "songName": "Word Up!"
+        "songName": "Word Up!",
+        "image": "https://i.scdn.co/image/34e57505330da7dcbd79fefa2d1541d2a61cce83"
     },
     {
         "danceability": 0.508,
@@ -1031,7 +1077,8 @@
         "duration_ms": 222640,
         "time_signature": 4,
         "artist": "Korn",
-        "songName": "Get Up! - feat. Skrillex"
+        "songName": "Get Up! - feat. Skrillex",
+        "image": "https://i.scdn.co/image/2d82bbb1d3da098c98fe8702b739cea49bbaa498"
     },
     {
         "danceability": 0.449,
@@ -1053,7 +1100,8 @@
         "duration_ms": 149333,
         "time_signature": 3,
         "artist": "Metallica",
-        "songName": "Die Die My Darling"
+        "songName": "Die Die My Darling",
+        "image": "https://i.scdn.co/image/be3210e0838ec7c2f40155d47ca80420e8b080a0"
     },
     {
         "danceability": 0.429,
@@ -1075,7 +1123,8 @@
         "duration_ms": 257120,
         "time_signature": 4,
         "artist": "Soilwork",
-        "songName": "Tongue"
+        "songName": "Tongue",
+        "image": "https://i.scdn.co/image/61b27cabfae95c304c5fe5cab6e1fe951f2642c8"
     },
     {
         "danceability": 0.272,
@@ -1097,7 +1146,8 @@
         "duration_ms": 311333,
         "time_signature": 3,
         "artist": "Ghost",
-        "songName": "Secular Haze"
+        "songName": "Secular Haze",
+        "image": "https://i.scdn.co/image/f3e1bfebb0472559d4be1b939bbe98859877aef4"
     },
     {
         "danceability": 0.67,
@@ -1119,7 +1169,8 @@
         "duration_ms": 268747,
         "time_signature": 4,
         "artist": "Ghost",
-        "songName": "Ritual"
+        "songName": "Ritual",
+        "image": "https://i.scdn.co/image/4b1a06912d236b8379018b2bc0835a87d8c96723"
     },
     {
         "danceability": 0.329,
@@ -1141,7 +1192,8 @@
         "duration_ms": 213573,
         "time_signature": 4,
         "artist": "Ghost",
-        "songName": "Con Clavi Con Dio"
+        "songName": "Con Clavi Con Dio",
+        "image": "https://i.scdn.co/image/4b1a06912d236b8379018b2bc0835a87d8c96723"
     },
     {
         "danceability": 0.414,
@@ -1163,7 +1215,8 @@
         "duration_ms": 221067,
         "time_signature": 4,
         "artist": "Katatonia",
-        "songName": "My Twin"
+        "songName": "My Twin",
+        "image": "https://i.scdn.co/image/785e524815b34101bc5839424adfe99b24085104"
     },
     {
         "danceability": 0.441,
@@ -1185,7 +1238,8 @@
         "duration_ms": 344413,
         "time_signature": 4,
         "artist": "Sabaton",
-        "songName": "En livstid i krig"
+        "songName": "En livstid i krig",
+        "image": "https://i.scdn.co/image/e5f088d36b5304591b43698a76c3ac69171ef8f9"
     },
     {
         "danceability": 0.51,
@@ -1207,7 +1261,8 @@
         "duration_ms": 287425,
         "time_signature": 4,
         "artist": "Epica",
-        "songName": "Never Enough"
+        "songName": "Never Enough",
+        "image": "https://i.scdn.co/image/e1272bcfab53cfae40362ccc23edcf794a869e6f"
     },
     {
         "danceability": 0.374,
@@ -1229,7 +1284,8 @@
         "duration_ms": 296360,
         "time_signature": 4,
         "artist": "Dream Evil",
-        "songName": "The Book Of Heavy Metal"
+        "songName": "The Book Of Heavy Metal",
+        "image": "https://i.scdn.co/image/1eb11343a10ba741f06f3adb5e45c5b9adb8bb0a"
     },
     {
         "danceability": 0.475,
@@ -1251,7 +1307,8 @@
         "duration_ms": 249773,
         "time_signature": 4,
         "artist": "Soilwork",
-        "songName": "Late For The Kill, Early For The Slaughter"
+        "songName": "Late For The Kill, Early For The Slaughter",
+        "image": "https://i.scdn.co/image/facf6ca2da6688c12111200131a45b3bd76d1902"
     },
     {
         "danceability": 0.195,
@@ -1273,7 +1330,8 @@
         "duration_ms": 244859,
         "time_signature": 4,
         "artist": "Nomentory",
-        "songName": "Where death is most alive"
+        "songName": "Where death is most alive",
+        "image": "https://i.scdn.co/image/bf3710d5153c5c628d3c3ae9d0918f9db4a5a7f7"
     },
     {
         "danceability": 0.489,
@@ -1295,7 +1353,8 @@
         "duration_ms": 311027,
         "time_signature": 4,
         "artist": "Devin Townsend Project",
-        "songName": "Supercrush!"
+        "songName": "Supercrush!",
+        "image": "https://i.scdn.co/image/59162b75f5c87f220169376ad2de4fa9ebf20ca6"
     },
     {
         "danceability": 0.477,
@@ -1317,7 +1376,8 @@
         "duration_ms": 225987,
         "time_signature": 4,
         "artist": "Devin Townsend Project",
-        "songName": "Juular"
+        "songName": "Juular",
+        "image": "https://i.scdn.co/image/fcba41e6b2299ac02de55312e1f87f8f9efb0128"
     },
     {
         "danceability": 0.344,
@@ -1339,7 +1399,8 @@
         "duration_ms": 223813,
         "time_signature": 4,
         "artist": "Strapping Young Lad",
-        "songName": "Almost Again"
+        "songName": "Almost Again",
+        "image": "https://i.scdn.co/image/20e0bf28aa75339a8e6989712eb7394d63194b17"
     },
     {
         "danceability": 0.344,
@@ -1361,7 +1422,8 @@
         "duration_ms": 228587,
         "time_signature": 4,
         "artist": "Mastodon",
-        "songName": "Blood and Thunder"
+        "songName": "Blood and Thunder",
+        "image": "https://i.scdn.co/image/2a4c46fc00d112e66c852457a3faabf2bbe52238"
     },
     {
         "danceability": 0.415,
@@ -1383,7 +1445,8 @@
         "duration_ms": 260653,
         "time_signature": 4,
         "artist": "Coheed and Cambria",
-        "songName": "Gravemakers & Gunslingers"
+        "songName": "Gravemakers & Gunslingers",
+        "image": "https://i.scdn.co/image/5c66cfd01d18dae26ba599c666cc9733a45d09e3"
     },
     {
         "danceability": 0.516,
@@ -1405,7 +1468,8 @@
         "duration_ms": 266067,
         "time_signature": 4,
         "artist": "Rush",
-        "songName": "YYZ"
+        "songName": "YYZ",
+        "image": "https://i.scdn.co/image/25c0ee7e285e52715d74b693bcd1e751d1d644a0"
     },
     {
         "danceability": 0.475,
@@ -1427,7 +1491,8 @@
         "duration_ms": 235733,
         "time_signature": 4,
         "artist": "Charlie Shred",
-        "songName": "The Rose"
+        "songName": "The Rose",
+        "image": "https://i.scdn.co/image/1b1ee80cda518f87657c7e2cb67bfd29d4c336f1"
     },
     {
         "danceability": 0.317,
@@ -1449,7 +1514,8 @@
         "duration_ms": 972080,
         "time_signature": 4,
         "artist": "Dream Theater",
-        "songName": "A Nightmare To Remember"
+        "songName": "A Nightmare To Remember",
+        "image": "https://i.scdn.co/image/92ea15928d94970173d2eabacee9d91be1950e57"
     },
     {
         "danceability": 0.338,
@@ -1471,7 +1537,8 @@
         "duration_ms": 373693,
         "time_signature": 4,
         "artist": "Dream Theater",
-        "songName": "The Dance Of Eternity [Scene Seven]"
+        "songName": "The Dance Of Eternity [Scene Seven]",
+        "image": "https://i.scdn.co/image/47779fbbb2f9dca9bb90b226e5c03de4e6137c4a"
     },
     {
         "danceability": 0.295,
@@ -1493,7 +1560,8 @@
         "duration_ms": 301853,
         "time_signature": 3,
         "artist": "Rammstein",
-        "songName": "ICH TU DIR WEH"
+        "songName": "ICH TU DIR WEH",
+        "image": "https://i.scdn.co/image/58ff8d0518db299ba2f8711c74c55e3942818023"
     },
     {
         "danceability": 0.395,
@@ -1515,7 +1583,8 @@
         "duration_ms": 213316,
         "time_signature": 4,
         "artist": "Korn",
-        "songName": "Narcissistic Cannibal - feat. Skrillex & Kill The Noise [The Juggernaut Remix]"
+        "songName": "Narcissistic Cannibal - feat. Skrillex & Kill The Noise [The Juggernaut Remix]",
+        "image": "https://i.scdn.co/image/1bb79f421917645ac1b263d9a16d27fadb7ebfcb"
     },
     {
         "danceability": 0.432,
@@ -1537,7 +1606,8 @@
         "duration_ms": 252960,
         "time_signature": 4,
         "artist": "Pendulum",
-        "songName": "Witchcraft"
+        "songName": "Witchcraft",
+        "image": "https://i.scdn.co/image/5998786367c2225d54967918cd8da2097a874afa"
     },
     {
         "danceability": 0.557,
@@ -1559,7 +1629,8 @@
         "duration_ms": 223867,
         "time_signature": 4,
         "artist": "Bon Jovi",
-        "songName": "You Give Love A Bad Name"
+        "songName": "You Give Love A Bad Name",
+        "image": "https://i.scdn.co/image/40a5ac00ad0a10ea3754d9c0105bf65962b4d0bd"
     },
     {
         "danceability": 0.54,
@@ -1581,7 +1652,8 @@
         "duration_ms": 212040,
         "time_signature": 4,
         "artist": "Disturbed",
-        "songName": "Ten Thousand Fists"
+        "songName": "Ten Thousand Fists",
+        "image": "https://i.scdn.co/image/d128bd9849147f7c2dadd42a0da473353631d8e9"
     },
     {
         "danceability": 0.491,
@@ -1603,7 +1675,8 @@
         "duration_ms": 261503,
         "time_signature": 4,
         "artist": "Porcupine Tree",
-        "songName": "Blackest Eyes"
+        "songName": "Blackest Eyes",
+        "image": "https://i.scdn.co/image/84de0e0b395e13c791bdfe72972668b2f31923b1"
     },
     {
         "danceability": 0.533,
@@ -1625,7 +1698,8 @@
         "duration_ms": 192067,
         "time_signature": 4,
         "artist": "Amaranthe",
-        "songName": "Hunger"
+        "songName": "Hunger",
+        "image": "https://i.scdn.co/image/82676b390e2d19fff550abb5cb616ed7d442f13d"
     },
     {
         "danceability": 0.5,
@@ -1647,7 +1721,8 @@
         "duration_ms": 209800,
         "time_signature": 4,
         "artist": "In Flames",
-        "songName": "Deliver Us"
+        "songName": "Deliver Us",
+        "image": "https://i.scdn.co/image/eea1dd481e539ead747a0970e50bf7ed7e6fe3d6"
     },
     {
         "danceability": 0.407,
@@ -1669,7 +1744,8 @@
         "duration_ms": 218933,
         "time_signature": 3,
         "artist": "System Of A Down",
-        "songName": "Toxicity"
+        "songName": "Toxicity",
+        "image": "https://i.scdn.co/image/30de1d4e1dc763879a93b89573893d8494fd6a66"
     },
     {
         "danceability": 0.36,
@@ -1691,7 +1767,8 @@
         "duration_ms": 312573,
         "time_signature": 4,
         "artist": "W.A.S.P.",
-        "songName": "Wild Child"
+        "songName": "Wild Child",
+        "image": "https://i.scdn.co/image/736eea7c2727565c5caa4a0946722e5e40039655"
     },
     {
         "danceability": 0.438,
@@ -1713,7 +1790,8 @@
         "duration_ms": 285707,
         "time_signature": 4,
         "artist": "Pendulum,In Flames",
-        "songName": "Self vs Self (feat. In Flames)"
+        "songName": "Self vs Self (feat. In Flames)",
+        "image": "https://i.scdn.co/image/3cfc5881efb8cafa3f6e17aa121583d636c71260"
     },
     {
         "danceability": 0.362,
@@ -1735,7 +1813,8 @@
         "duration_ms": 310267,
         "time_signature": 4,
         "artist": "8-Point Rose",
-        "songName": "Endless Rage"
+        "songName": "Endless Rage",
+        "image": "https://i.scdn.co/image/4e653b5ae9632724a12bd2af9b05023dd8df38bf"
     },
     {
         "danceability": 0.274,
@@ -1757,7 +1836,8 @@
         "duration_ms": 240493,
         "time_signature": 4,
         "artist": "Machinae Supremacy",
-        "songName": "Edge and Pearl"
+        "songName": "Edge and Pearl",
+        "image": "https://i.scdn.co/image/a46b7ef508d47b3c9f7c7b0a5ce2a53cd1889989"
     },
     {
         "danceability": 0.363,
@@ -1779,7 +1859,8 @@
         "duration_ms": 214773,
         "time_signature": 4,
         "artist": "Soulfly",
-        "songName": "Eye For An Eye"
+        "songName": "Eye For An Eye",
+        "image": "https://i.scdn.co/image/6b39e84a8eb735afd2ad434a82b883274af5a3f7"
     },
     {
         "danceability": 0.356,
@@ -1801,7 +1882,8 @@
         "duration_ms": 313347,
         "time_signature": 4,
         "artist": "Pendulum",
-        "songName": "Propane Nightmares"
+        "songName": "Propane Nightmares",
+        "image": "https://i.scdn.co/image/4c747da16160418c2ef27ac55ab8a6083df8a07d"
     },
     {
         "danceability": 0.341,
@@ -1823,7 +1905,8 @@
         "duration_ms": 316480,
         "time_signature": 4,
         "artist": "Pendulum",
-        "songName": "Blood Sugar [Live At Brixton Academy]"
+        "songName": "Blood Sugar [Live At Brixton Academy]",
+        "image": "https://i.scdn.co/image/58b837b563f886921796ea947b10308edcc0c98a"
     },
     {
         "danceability": 0.628,
@@ -1845,7 +1928,8 @@
         "duration_ms": 235915,
         "time_signature": 4,
         "artist": "Skindred",
-        "songName": "Nobody"
+        "songName": "Nobody",
+        "image": "https://i.scdn.co/image/ce1e28b1ff6a39506b5c0b2946fa3de44b22f5b4"
     },
     {
         "danceability": 0.576,
@@ -1867,7 +1951,8 @@
         "duration_ms": 283400,
         "time_signature": 4,
         "artist": "Slipknot",
-        "songName": "Psychosocial"
+        "songName": "Psychosocial",
+        "image": "https://i.scdn.co/image/6ef6c65881c1909e2de8db0e952521d606947f58"
     },
     {
         "danceability": 0.359,
@@ -1889,7 +1974,8 @@
         "duration_ms": 230227,
         "time_signature": 3,
         "artist": "Lamb of God",
-        "songName": "Laid to Rest"
+        "songName": "Laid to Rest",
+        "image": "https://i.scdn.co/image/4f22d2608277a07d5604734ac92b7192c99715de"
     },
     {
         "danceability": 0.478,
@@ -1911,7 +1997,8 @@
         "duration_ms": 226027,
         "time_signature": 4,
         "artist": "Ill Niño",
-        "songName": "This Is War"
+        "songName": "This Is War",
+        "image": "https://i.scdn.co/image/9aea5bb4af7e1f5fb56776146a7ce67676e7ab46"
     },
     {
         "danceability": 0.255,
@@ -1933,7 +2020,8 @@
         "duration_ms": 202658,
         "time_signature": 4,
         "artist": "In Flames",
-        "songName": "Dead End"
+        "songName": "Dead End",
+        "image": "https://i.scdn.co/image/278bba3b0eeb02844a3448a1da9d0b073ea61ad4"
     },
     {
         "danceability": 0.409,
@@ -1955,7 +2043,8 @@
         "duration_ms": 243200,
         "time_signature": 4,
         "artist": "In Flames",
-        "songName": "Crawling Though Knives"
+        "songName": "Crawling Though Knives",
+        "image": "https://i.scdn.co/image/278bba3b0eeb02844a3448a1da9d0b073ea61ad4"
     },
     {
         "danceability": 0.463,
@@ -1977,7 +2066,8 @@
         "duration_ms": 317320,
         "time_signature": 4,
         "artist": "KISS",
-        "songName": "Detroit Rock City"
+        "songName": "Detroit Rock City",
+        "image": "https://i.scdn.co/image/617b23cf2cd118e3d362a39e6b5c48428776884e"
     },
     {
         "danceability": 0.546,
@@ -1999,7 +2089,8 @@
         "duration_ms": 493627,
         "time_signature": 4,
         "artist": "Dream Theater",
-        "songName": "Pull Me Under - 2007 Remix"
+        "songName": "Pull Me Under - 2007 Remix",
+        "image": "https://i.scdn.co/image/373414524cb50a81e2470d768cfeae09135315ca"
     },
     {
         "danceability": 0.588,
@@ -2021,7 +2112,8 @@
         "duration_ms": 250547,
         "time_signature": 4,
         "artist": "Dream Theater",
-        "songName": "Solitary Shell"
+        "songName": "Solitary Shell",
+        "image": "https://i.scdn.co/image/373414524cb50a81e2470d768cfeae09135315ca"
     },
     {
         "danceability": 0.421,
@@ -2043,7 +2135,8 @@
         "duration_ms": 238701,
         "time_signature": 4,
         "artist": "Nightwish",
-        "songName": "The Kinslayer"
+        "songName": "The Kinslayer",
+        "image": "https://i.scdn.co/image/ce276520807cefce353f4a5770195f2671fd0b74"
     },
     {
         "danceability": 0.304,
@@ -2065,7 +2158,8 @@
         "duration_ms": 151867,
         "time_signature": 4,
         "artist": "Dream Theater",
-        "songName": "Wait For Sleep"
+        "songName": "Wait For Sleep",
+        "image": "https://i.scdn.co/image/de5218047f071b6c4ee3facea6c062e86212b278"
     },
     {
         "danceability": 0.36,
@@ -2087,7 +2181,8 @@
         "duration_ms": 690227,
         "time_signature": 4,
         "artist": "Dream Theater",
-        "songName": "Learning To Live"
+        "songName": "Learning To Live",
+        "image": "https://i.scdn.co/image/de5218047f071b6c4ee3facea6c062e86212b278"
     },
     {
         "danceability": 0.414,
@@ -2109,7 +2204,8 @@
         "duration_ms": 146100,
         "time_signature": 4,
         "artist": "Raubtier",
-        "songName": "Kamphund"
+        "songName": "Kamphund",
+        "image": "https://i.scdn.co/image/0326dde59db8276d9a27e758e5c4e089e064e0fe"
     },
     {
         "danceability": 0.27,
@@ -2131,7 +2227,8 @@
         "duration_ms": 288173,
         "time_signature": 4,
         "artist": "Dissection",
-        "songName": "Black Dragon"
+        "songName": "Black Dragon",
+        "image": "https://i.scdn.co/image/bd88dde7b25e9281351ae94c20340ab8e7376b6d"
     },
     {
         "danceability": 0.517,
@@ -2153,7 +2250,8 @@
         "duration_ms": 211520,
         "time_signature": 4,
         "artist": "Paramore",
-        "songName": "Misery Business"
+        "songName": "Misery Business",
+        "image": "https://i.scdn.co/image/0e3e4e3665edb0f15d3cb57f9f84e5eb82b7f423"
     },
     {
         "danceability": 0.457,
@@ -2175,7 +2273,8 @@
         "duration_ms": 244667,
         "time_signature": 4,
         "artist": "Europe",
-        "songName": "Rock the Night"
+        "songName": "Rock the Night",
+        "image": "https://i.scdn.co/image/9d39863ac6606610eef25e67cadb5bab95881bdc"
     },
     {
         "danceability": 0.586,
@@ -2197,7 +2296,8 @@
         "duration_ms": 169831,
         "time_signature": 4,
         "artist": "Rise Against",
-        "songName": "Give It All"
+        "songName": "Give It All",
+        "image": "https://i.scdn.co/image/70fcca219d3fb19b3ae8d69a9490076eddb626d2"
     }
 ]
 
