@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Tracklist from './components/Tracklist';
 
+class App extends Component {
   render() {
     return (
       <div>
@@ -9,6 +10,7 @@ import Tracklist from './components/Tracklist';
       </div>
     );
   }
+}
 
 
 export default App;
