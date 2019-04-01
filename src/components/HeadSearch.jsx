@@ -19,7 +19,7 @@ export class HeadSearch extends Component {
   render() {
     return (
       <div>
-        <h1>Spotify</h1>
+        <h1>Moodify</h1>
         <form>
           <input
             style={searchBar}
