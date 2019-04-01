@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import TrackList from './components/Tracklist';
+import TrackList from './components/TrackList';
 import HeadSearch from "./components/HeadSearch";
 
 class App extends Component {
@@ -12,6 +12,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;
