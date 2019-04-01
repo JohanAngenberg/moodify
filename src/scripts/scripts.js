@@ -103,7 +103,8 @@ export default class SpotifyAPI {
                         return {
                             id: item.track.id,
                             artist: item.track.artists.map(artist => artist.name).join(),
-                            songName: item.track.name
+                            songName: item.track.name,
+                            image: item.track.album.images[1].url
                         };
                     });
                     const listOfIds = tracksArray.map(track => track.id).join();
