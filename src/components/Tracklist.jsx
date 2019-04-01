@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { TrackCard } from './TrackCard';
+
 let dummyPlaylist = require('../dummydata.json');
 
-class Tracklist extends Component {
+class TrackList extends Component {
     constructor(props) {
         super(props);
 
@@ -22,19 +24,16 @@ class Tracklist extends Component {
 
     render() {
         const playlist = this.state.originalPlaylist
-            .map((song, i) => (
-                <div key={i}>
-                    <p>Artist: {song.artist}: Song name: {song.songName}</p>
-                </div>
+            .map((track, i) => (
+                <TrackCard track={track}></TrackCard>
             ));
 
         return (
             <div className="App">
                 {playlist}
-                {/* <TrackCard playlist={playlist}></TrackCard> */}
             </div>
         );
     }
 }
 
-export default Tracklist;
+export default TrackList;

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import Tracklist from './components/Tracklist';
+import TrackList from './components/TrackList';
+import HeadSearch from "./components/HeadSearch";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Tracklist></Tracklist>
+        <TrackList></TrackList>
       </div>
     );
   }
 }
-
 
 export default App;
