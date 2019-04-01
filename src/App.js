@@ -3,6 +3,7 @@ import './App.css';
 import Tracklist from './components/Tracklist';
 import HeadSearch from "./components/HeadSearch";
 
+class App extends Component {
   render() {
     return (
       <div>
@@ -10,6 +11,7 @@ import HeadSearch from "./components/HeadSearch";
       </div>
     );
   }
+}
 
 
 export default App;
