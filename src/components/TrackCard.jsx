@@ -10,8 +10,9 @@ export class TrackCard extends React.Component {
     }
     componentDidMount() {
         this.setState({
-            Trackdata: this.props.track,
+            TrackData: this.props.track,
             isLoading: false
+
         })
     }
 
