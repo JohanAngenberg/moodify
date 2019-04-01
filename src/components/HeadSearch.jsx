@@ -18,7 +18,7 @@ export class HeadSearch extends Component {
 
   render() {
     return (
-      <div>
+      <div className="header-container">
         <h1>Spotify</h1>
         <form>
           <input
