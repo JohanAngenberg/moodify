@@ -18,13 +18,8 @@ export class HeadSearch extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div className="header-container">
-        <h1>Spotify</h1>
-=======
       <div>
         <h1>Moodify</h1>
->>>>>>> 27807d190d8a3c31f6d96f78859fc9e16323d8d4
         <form>
           <input
             style={searchBar}
