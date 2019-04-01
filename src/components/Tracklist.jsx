@@ -3,7 +3,7 @@ import { TrackCard } from './TrackCard';
 
 let dummyPlaylist = require('../dummydata.json');
 
-class Tracklist extends Component {
+class TrackList extends Component {
     constructor(props) {
         super(props);
 
@@ -36,4 +36,4 @@ class Tracklist extends Component {
     }
 }
 
-export default Tracklist;
+export default TrackList;
