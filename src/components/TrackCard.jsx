@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 export class TrackCard extends React.Component {
     constructor(props) {
@@ -29,7 +30,6 @@ export class TrackCard extends React.Component {
             display: 'flex',
             flexDirection: 'row',
             flexWrap: 'wrap',
-            borderBottom: '1px solid gray',
             padding: '5px'
         };
         const tableStyles = {
@@ -50,28 +50,37 @@ export class TrackCard extends React.Component {
         }
 
         const detailStyles = {
-            textAlign: 'left'
 
         }
+        const barStyle = {
+            borderTop: '1px solid gray'
+        }
         return (
-            <div onClick={this.handleToggleDetails.bind(this)} style={wrapperStyles} >
-                <img style={{ maxHeight: '100px' }} src={track.image} alt="" />
-                <div style={tableStyles}>
-                    <div style={trackNameStyles}>{track.songName}</div>
-                    <div style={artistStyles}>{track.artist}</div>
-                    {this.state.showDetails ?
-                        <div style={detailStyles}>
-                            <div>Danceability: {Math.round(track.danceability * 100)}%</div>
-                            <div>Energy: {Math.round(track.energy * 100)}%</div>
-                            <div>Acousticness: {Math.round(track.acousticness * 100)}%</div>
-                            <div>Instrumentalness: {Math.round(track.instrumentalness * 100)}%</div>
-                            <div>Valence: {Math.round(track.valence * 100)}%</div>
-                            <div>Tempo: {Math.round(track.tempo)} bpm</div>
-                        </div>
-                        : null}
-                </div>
+            <div style={{ borderBottom: '1px solid gray' }}>
 
-            </div >
+                <div onClick={this.handleToggleDetails.bind(this)} style={wrapperStyles} >
+                    <link
+                        rel="stylesheet"
+                        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                        crossorigin="anonymous"
+                    />
+                    <img style={{ maxHeight: '100px' }} src={track.image} alt="" />
+                    <div style={tableStyles}>
+                        <div style={trackNameStyles}>{track.songName}</div>
+                        <div style={artistStyles}>{track.artist}</div>
+                    </div>
+
+                </div >
+                {this.state.showDetails ?
+                    <div style={detailStyles}>
+                        <div style={barStyle}>Danceability<ProgressBar now={Math.round(track.danceability * 100)} label={`Danceability ${Math.round(track.danceability * 100)}%`} /></div>
+                        <div style={barStyle}>Annat <ProgressBar now={Math.round(track.danceability * 100)} label={`${Math.round(track.danceability * 100)}%`} /></div>
+                        <div>Tempo: {Math.round(track.tempo)} bpm</div>
+                    </div>
+                    : null}
+            </div>
+
 
         )
     }
