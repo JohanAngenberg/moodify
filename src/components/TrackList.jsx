@@ -25,6 +25,7 @@ class TrackList extends Component {
   }
 
   render() {
+    console.log(this.props.filterValues);
     let { danceability, energy, acousticness, instrumentalness, valence, tempo } = this.props.filterValues;
     const playlist = this.state.originalPlaylist
       .filter(track => danceability === '' ? track : (track.danceability >= getLowerLimit(danceability) && track.danceability <= getUpperLimit(danceability)))
