@@ -10,13 +10,12 @@ class MainWrapper extends React.Component {
         super(props);
         this.state = {
             playListUri: '',
-            danceability: 0,
-            energy: 0,
-            acousticness: 0,
-            instrumentalness: 0,
-            valence: 0,
-            tempo: 0,
-            toggleDance: false,
+            danceability: '',
+            energy: '',
+            acousticness: '',
+            instrumentalness: '',
+            valence: '',
+            tempo: '',
         }
     }
 
@@ -24,8 +23,8 @@ class MainWrapper extends React.Component {
         this.setState({
             danceability: value
         });
-        console.log(this.state.danceability);
     }
+
     render() {
         return (
             <div>
@@ -34,7 +33,7 @@ class MainWrapper extends React.Component {
                 </div>
                 <div className="main-container">
                     <div className="track-container">
-                        <TrackList />
+                        <TrackList filterValues={this.state} />
                     </div>
                     <div className="right-column">
                         <div className="toolkit-container">
