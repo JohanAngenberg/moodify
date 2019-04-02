@@ -16,6 +16,12 @@ class HeadSearch extends Component {
     };
   }
 
+  handleKeyPress(e) {
+    if (e.key === "Enter") {
+      this.setState({ filterinput: e.target.value }); this.props.playlistUri(this.state.filterInput);
+    }
+  }
+
   render() {
     return (
       <div>
@@ -23,11 +29,12 @@ class HeadSearch extends Component {
         <h1>Moodify</h1>
         <form>
           <input
+            ref="inputUri"
             style={styleSearchBar}
             type="text"
             placeholder="Enter playlist URI..."
             value={this.state.input}
-            onChange={value => this.props.playlistUri({ input: value })}
+            onKeyPress={this.handleKeyPress.bind(this)}
           />
           <div>{this.state.filterInput}</div>
         </form>
