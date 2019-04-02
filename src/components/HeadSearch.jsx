@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const searchBar = {
+const styleSearchBar = {
   height: "30px",
   width: "400px",
   border: "1px solid black"
@@ -19,14 +19,15 @@ class HeadSearch extends Component {
   render() {
     return (
       <div>
+        <br />
         <h1>Moodify</h1>
         <form>
           <input
-            style={searchBar}
+            style={styleSearchBar}
             type="text"
             placeholder="Enter playlist URI..."
             value={this.state.input}
-            onChange={this.handleTextInput}
+            onChange={value => this.setState({ input: value })}
           />
           <div>{this.state.filterInput}</div>
         </form>
