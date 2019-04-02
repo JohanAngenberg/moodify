@@ -9,19 +9,24 @@ class TrackList extends Component {
     super(props);
 
     this.state = {
-      originalPlaylist: dummyPlaylist
+      originalPlaylist: dummyPlaylist,
+      playlist: this.props.playlist
       //TA BORT dummyPlaylist OCH ERSÄTT MED [] FÖR ATT HÄMTA BACKEND-DATA
     };
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/audio-features/5cc2hF6vD6wDqq3sksQFCK')
+    fetch(`http://localhost:3001/audio-features/7ot8V1sOKx0RCpOKGbVEoC`)
       .then(res => res.json())
       .then(res => {
         console.log(res);
         //this.setState({ originalPlaylist: res })
         //TA BORT // FRÅN OVANSTÅENDE FÖR ATT KOMMA ÅT BACKEND-DATA
       })
+  }
+
+  updatePlaylist(e) {
+    this.setState({ playlist: e })
   }
 
   render() {
@@ -37,8 +42,8 @@ class TrackList extends Component {
       .map((track, i) => (
         <TrackCard key={i} track={track}></TrackCard>
       ));
-      console.log(playlist);
-      
+    console.log(playlist);
+
 
     return (
       <div className="App">

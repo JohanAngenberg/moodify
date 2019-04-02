@@ -12,14 +12,28 @@ class HeadSearch extends Component {
 
     this.state = {
       search: [],
-      filterInput: ""
+      filterInput: "",
+      playlistUri: [],
+      playlist: [],
     };
   }
 
   handleKeyPress(e) {
     if (e.key === "Enter") {
-      this.setState({ filterinput: e.target.value }); this.props.playlistUri(this.state.filterInput);
+      this.props.playlistUri(this.state.filterInput);
+
+      fetch(`http://localhost:3001/audio-features/${this.state.filterInput}`)
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
+          this.setState({ playlist: res })
+        }).then(this.props.playlist(this.state.playlist))
+
     }
+  }
+
+  handleInputTextChange(e) {
+    this.setState({ filterInput: e.target.value });
   }
 
   render() {
@@ -27,17 +41,15 @@ class HeadSearch extends Component {
       <div>
         <br />
         <h1>Moodify</h1>
-        <form>
-          <input
-            ref="inputUri"
-            style={styleSearchBar}
-            type="text"
-            placeholder="Enter playlist URI..."
-            value={this.state.input}
-            onKeyPress={this.handleKeyPress.bind(this)}
-          />
-          <div>{this.state.filterInput}</div>
-        </form>
+        <input
+          ref="inputUri"
+          style={styleSearchBar}
+          type="text"
+          placeholder="Enter playlist URI..."
+          value={this.state.input}
+          onChange={this.handleInputTextChange.bind(this)}
+          onKeyDown={this.handleKeyPress.bind(this)}
+        />
       </div>
     );
   }

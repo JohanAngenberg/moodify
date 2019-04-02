@@ -16,6 +16,7 @@ class MainWrapper extends React.Component {
             instrumentalness: '',
             valence: '',
             tempo: '',
+            playlist: '',
         }
     }
 
@@ -31,6 +32,14 @@ class MainWrapper extends React.Component {
         });
         console.log(this.state.playlistUri);
     }
+
+    updatePlaylist(value) {
+        this.setState({
+            playlist: value
+        });
+        console.log(this.state.playlist);
+    }
+
     updateEnergy(value) {
         this.setState({
             energy: value
@@ -65,11 +74,11 @@ class MainWrapper extends React.Component {
         return (
             <div>
                 <div className="header-container">
-                    <HeadSearch playlistUri={this.updatePlaylistUri.bind(this)} />
+                    <HeadSearch playlistUri={this.updatePlaylistUri.bind(this)} playlist={this.updatePlaylist.bind(this)} />
                 </div>
                 <div className="main-container">
                     <div className="track-container">
-                        <TrackList filterValues={this.state} />
+                        <TrackList filterValues={this.state} playlist={this.state.playlist} />
                     </div>
                     <div className="right-column">
                         <div className="toolkit-container">
