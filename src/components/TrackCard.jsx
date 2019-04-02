@@ -54,7 +54,8 @@ export class TrackCard extends React.Component {
 
         }
         const barStyle = {
-            borderTop: '1px solid gray'
+            fontSize: '12px',
+            marginTop: '5px'
         }
         return (
             <div style={{ borderBottom: '1px solid gray' }}>
