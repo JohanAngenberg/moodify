@@ -39,17 +39,10 @@ class TrackList extends Component {
       .filter(track => instrumentalness === '' ? track : (track.instrumentalness >= getLowerLimit(instrumentalness) && track.instrumentalness <= getUpperLimit(instrumentalness)))
       .filter(track => valence === '' ? track : (track.valence >= getLowerLimit(valence) && track.valence <= getUpperLimit(valence)))
       .filter(track => tempo === '' ? track : (track.tempo >= getLowerLimit(tempo) && track.tempo <= getUpperLimit(tempo)))
-      .map((track, i) => (
-        <TrackCard key={i} track={track}></TrackCard>
+      .map((track, id) => (
+        <TrackCard key={track.id} track={track}></TrackCard>
       ));
-<<<<<<< HEAD
-    console.log(playlist);
-
-=======
       console.log(playlist)
-      console.log(playlist[0].props.track.id)
-      
->>>>>>> c17f4f67a7e899777978ea62b6604a2dbe0b1044
 
     return (
       <div className="App">
