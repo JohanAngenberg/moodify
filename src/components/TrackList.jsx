@@ -38,6 +38,7 @@ class TrackList extends Component {
         <TrackCard key={i} track={track}></TrackCard>
       ));
       console.log(playlist)
+      console.log(playlist[0].props.track.id)
       
 
     return (
