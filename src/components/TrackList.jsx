@@ -37,6 +37,8 @@ class TrackList extends Component {
       .map((track, i) => (
         <TrackCard key={i} track={track}></TrackCard>
       ));
+      console.log(playlist);
+      
 
     return (
       <div className="App">

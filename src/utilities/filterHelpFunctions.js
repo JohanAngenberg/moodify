@@ -1,10 +1,17 @@
 
+
 export function getUpperLimit(value) {
-    let halfInterval = 0.2 //Corresponds to +/- 10%
-    return value * (1 + halfInterval);
+    if (value <= 1) {
+        return value + 0.1;
+    } else {
+        return value + 10;
+    }
 }
 
 export function getLowerLimit(value) {
-    let halfInterval = 0.2 //Corresponds to +/- 10%
-    return value * (1 - halfInterval);
+    if (value <= 1) {
+        return value - 0.1;
+    } else {
+        return value - 10;
+    }
 }
