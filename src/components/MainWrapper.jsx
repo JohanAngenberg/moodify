@@ -9,7 +9,7 @@ class MainWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            playListUri: '',
+            playlistUri: '',
             danceability: '',
             energy: '',
             acousticness: '',

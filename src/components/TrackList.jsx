@@ -4,10 +4,6 @@ import { getUpperLimit, getLowerLimit } from '../utilities/filterHelpFunctions.j
 
 let dummyPlaylist = require('../dummydata.json');     //DETTA ÄR DUMMYPLAYLIST
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 899096006347fd37644edc84148e549e067b0be7
 class TrackList extends Component {
   constructor(props) {
     super(props);
@@ -26,15 +22,6 @@ class TrackList extends Component {
         //this.setState({ originalPlaylist: res })
         //TA BORT // FRÅN OVANSTÅENDE FÖR ATT KOMMA ÅT BACKEND-DATA
       })
-<<<<<<< HEAD
-
-  }
-
-
-
-  render() {
-    const playlist = this.state.originalPlaylist
-=======
   }
 
   render() {
@@ -46,7 +33,6 @@ class TrackList extends Component {
       .filter(track => instrumentalness === '' ? track : (track.instrumentalness >= getLowerLimit(instrumentalness) && track.instrumentalness <= getUpperLimit(instrumentalness)))
       .filter(track => valence === '' ? track : (track.valence >= getLowerLimit(valence) && track.valence <= getUpperLimit(valence)))
       .filter(track => tempo === '' ? track : (track.tempo >= getLowerLimit(tempo) && track.tempo <= getUpperLimit(tempo)))
->>>>>>> 899096006347fd37644edc84148e549e067b0be7
       .map((track, i) => (
         <TrackCard key={i} track={track}></TrackCard>
       ));
