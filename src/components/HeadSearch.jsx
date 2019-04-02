@@ -6,7 +6,7 @@ const searchBar = {
   border: "1px solid black"
 };
 
-export class HeadSearch extends Component {
+class HeadSearch extends Component {
   constructor(props) {
     super(props);
 

@@ -7,13 +7,19 @@ class ToolKit extends React.Component {
         super(props);
 
         this.state = {
-            danceAbility: 0,
+            danceability: 0,
             energy: 0,
             acousticness: 0,
             instrumentalness: 0,
             valence: 0,
             tempo: 0,
+            toggleDance: false,
+
         }
+    }
+
+    onToggleDance() {
+        this.setState({ toggleDance: !this.state.toggleDance });
     }
 
     render() {
@@ -21,19 +27,15 @@ class ToolKit extends React.Component {
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'space-evenly'
+            justifyContent: 'space-evenly',
+
         }
 
-        const labelStyle = {
-            flex: '20%',
-            fontSize: '12px'
-        }
         return (
             <div style={slideWrapperStyles}>
                 <div style={{ display: 'flex' }}>
-                    <p style={labelStyle}>DanceAbility</p>
                     <div style={{ flex: '65%' }}>
-                        <InputRange step={1} minValue={0} maxValue={10} value={this.state.danceAbility * 10} onChange={value => this.setState({ danceAbility: value / 10 })} />
+                        <InputRange step={1} minValue={0} maxValue={10} value={this.state.danceability * 10} onChange={value => { this.setState({ danceability: value / 10 }); this.props.danceability(this.state.danceability) }} />
                     </div>
                 </div>
                 <div><InputRange step={1} minValue={0} maxValue={10} value={this.state.energy * 10} onChange={value => this.setState({ energy: value / 10 })} /></div>
