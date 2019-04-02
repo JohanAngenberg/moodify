@@ -6,13 +6,7 @@ const styleSearchBar = {
   border: "1px solid black"
 };
 
-<<<<<<< HEAD
-
-
-export class HeadSearch extends Component {
-=======
 class HeadSearch extends Component {
->>>>>>> e4628833f607cb1410bc670420f6ddb6408aeee3
   constructor(props) {
     super(props);
 
@@ -21,7 +15,6 @@ class HeadSearch extends Component {
       filterInput: ""
     };
   }
-
 
   render() {
     return (
