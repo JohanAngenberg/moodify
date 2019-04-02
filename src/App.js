@@ -3,6 +3,7 @@ import "./App.css";
 import TrackList from "./components/TrackList";
 import HeadSearch from "./components/HeadSearch";
 import WebPlayer from "./components/WebPlayer";
+import ToolKit from "./components/ToolKit"
 
 class App extends Component {
   render() {
@@ -16,7 +17,9 @@ class App extends Component {
             <TrackList />
           </div>
           <div className="right-column">
-            <div className="toolkit-container">Toolkit placeholder</div>
+            <div className="toolkit-container">
+              <ToolKit />
+            </div>
             <div className="player-container">
               <WebPlayer />
             </div>
