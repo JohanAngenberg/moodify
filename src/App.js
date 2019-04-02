@@ -1,30 +1,31 @@
-import React, { Component } from 'react';
-import './App.css';
-import TrackList from './components/TrackList';
+import React, { Component } from "react";
+import "./App.css";
+import TrackList from "./components/TrackList";
 import HeadSearch from "./components/HeadSearch";
+import WebPlayer from "./components/WebPlayer";
+import ToolKit from "./components/ToolKit"
 
 class App extends Component {
   render() {
     return (
       <div>
         <div className="header-container">
-          <HeadSearch></HeadSearch>
+          <HeadSearch />
         </div>
         <div className="main-container">
           <div className="track-container">
-            <TrackList></TrackList>
+            <TrackList />
           </div>
           <div className="right-column">
             <div className="toolkit-container">
-              Toolkit placeholder
+              <ToolKit />
             </div>
             <div className="player-container">
-              Player placeholder
+              <WebPlayer />
             </div>
           </div>
         </div>
       </div>
-
     );
   }
 }

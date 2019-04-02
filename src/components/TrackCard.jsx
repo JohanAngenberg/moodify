@@ -1,6 +1,7 @@
 import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
+
 export class TrackCard extends React.Component {
     constructor(props) {
         super(props);
@@ -53,7 +54,8 @@ export class TrackCard extends React.Component {
 
         }
         const barStyle = {
-            borderTop: '1px solid gray'
+            fontSize: '12px',
+            marginTop: '5px'
         }
         return (
             <div style={{ borderBottom: '1px solid gray' }}>
@@ -63,7 +65,7 @@ export class TrackCard extends React.Component {
                         rel="stylesheet"
                         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                        crossorigin="anonymous"
+                        crossOrigin="anonymous"
                     />
                     <img style={{ maxHeight: '100px' }} src={track.image} alt="" />
                     <div style={tableStyles}>
