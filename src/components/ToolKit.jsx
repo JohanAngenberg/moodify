@@ -37,42 +37,42 @@ class ToolKit extends React.Component {
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.danceability * 10}
                         onChange={value => {
                             this.setState({ danceability: value / 10 });
-                            this.props.danceability(this.state.danceability)
+                            this.props.danceability(value)
                         }} />
                 </div>
                 <div>
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.energy * 10}
                         onChange={value => {
                             this.setState({ energy: value / 10 });
-                            this.props.energy(this.state.energy)
+                            this.props.energy(value)
                         }} />
                 </div>
                 <div>
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.acousticness * 10}
                         onChange={value => {
                             this.setState({ acousticness: value / 10 });
-                            this.props.acousticness(this.state.acousticness)
+                            this.props.acousticness(value)
                         }} />
                 </div>
                 <div>
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.instrumentalness * 10}
                         onChange={value => {
                             this.setState({ instrumentalness: value / 10 });
-                            this.props.instrumentalness(this.state.instrumentalness)
+                            this.props.instrumentalness(value)
                         }} />
                 </div>
                 <div>
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.valence * 10}
                         onChange={value => {
                             this.setState({ valence: value / 10 });
-                            this.props.valence(this.state.valence)
+                            this.props.valence(value)
                         }} />
                 </div>
                 <div>
                     <InputRange step={10} minValue={60} maxValue={300} value={this.state.tempo}
                         onChange={value => {
                             this.setState({ tempo: value });
-                            this.props.tempo(this.state.tempo)
+                            this.props.tempo(value)
                         }} />
                 </div>
             </div>
