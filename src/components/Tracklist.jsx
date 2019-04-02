@@ -8,7 +8,15 @@ class TrackList extends Component {
         super(props);
 
         this.state = {
-            originalPlaylist: []
+            originalPlaylist: [],
+            filterValues: {
+                danceability: '',
+                engergy: '',
+                acousticness: '',
+                instrumentalness: '',
+                valence: '',
+                tempo: ''
+            }
         };
     }
 
@@ -23,10 +31,15 @@ class TrackList extends Component {
     }
 
     render() {
+        console.log(this.state.originalPlaylist);
+
         const playlist = this.state.originalPlaylist
+            // .filter()
             .map((track, i) => (
-                <TrackCard track={track}></TrackCard>
+                <TrackCard key={i} track={track}></TrackCard>
             ));
+        console.log(playlist);
+
 
         return (
             <div className="App">
