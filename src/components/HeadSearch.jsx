@@ -6,6 +6,8 @@ const searchBar = {
   border: "1px solid black"
 };
 
+
+
 export class HeadSearch extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +17,7 @@ export class HeadSearch extends Component {
       filterInput: ""
     };
   }
+
 
   render() {
     return (
@@ -26,7 +29,7 @@ export class HeadSearch extends Component {
             type="text"
             placeholder="Enter playlist URI..."
             value={this.state.input}
-            onChange={this.handleTextInput}
+            onChange={value => this.setState({ input: value })}
           />
           <div>{this.state.filterInput}</div>
         </form>
