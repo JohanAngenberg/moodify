@@ -9,14 +9,13 @@ class MainWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            playlistUri: '',
-            danceability: 0,
-            energy: 0,
-            acousticness: 0,
-            instrumentalness: 0,
-            valence: 0,
-            tempo: 0,
-            toggleDance: false,
+            playListUri: '',
+            danceability: '',
+            energy: '',
+            acousticness: '',
+            instrumentalness: '',
+            valence: '',
+            tempo: '',
         }
     }
 
@@ -24,7 +23,6 @@ class MainWrapper extends React.Component {
         this.setState({
             danceability: value
         });
-        console.log(this.state.danceability);
     }
 
     updatePlaylistUri(value) {
@@ -32,6 +30,35 @@ class MainWrapper extends React.Component {
             playlistUri: value
         });
         console.log(this.state.playlistUri);
+    }
+    updateEnergy(value) {
+        this.setState({
+            energy: value
+        })
+    }
+
+    updateAcousticness(value) {
+        this.setState({
+            acousticness: value
+        })
+    }
+
+    updateInstrumentalness(value) {
+        this.setState({
+            acousticness: value
+        })
+    }
+
+    updateValence(value) {
+        this.setState({
+            valence: value
+        })
+    }
+
+    updateTempo(value) {
+        this.setState({
+            tempo: value
+        })
     }
 
     render() {
@@ -42,12 +69,17 @@ class MainWrapper extends React.Component {
                 </div>
                 <div className="main-container">
                     <div className="track-container">
-                        <TrackList />
+                        <TrackList filterValues={this.state} />
                     </div>
                     <div className="right-column">
                         <div className="toolkit-container">
                             <ToolKit
                                 danceability={this.updateDanceability.bind(this)}
+                                energy={this.updateEnergy.bind(this)}
+                                acousticness={this.updateAcousticness.bind(this)}
+                                instrumentalness={this.updateInstrumentalness.bind(this)}
+                                valence={this.updateValence.bind(this)}
+                                tempo={this.updateTempo.bind(this)}
                             />
                         </div>
                         <div className="player-container">
