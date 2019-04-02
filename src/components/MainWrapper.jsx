@@ -25,6 +25,36 @@ class MainWrapper extends React.Component {
         });
     }
 
+    updateEnergy(value) {
+        this.setState({
+            energy: value
+        })
+    }
+
+    updateAcousticness(value) {
+        this.setState({
+            acousticness: value
+        })
+    }
+
+    updateInstrumentalness(value) {
+        this.setState({
+            acousticness: value
+        })
+    }
+
+    updateValence(value) {
+        this.setState({
+            valence: value
+        })
+    }
+
+    updateTempo(value) {
+        this.setState({
+            tempo: value
+        })
+    }
+
     render() {
         return (
             <div>
@@ -39,6 +69,11 @@ class MainWrapper extends React.Component {
                         <div className="toolkit-container">
                             <ToolKit
                                 danceability={this.updateDanceability.bind(this)}
+                                energy={this.updateEnergy.bind(this)}
+                                acousticness={this.updateAcousticness.bind(this)}
+                                instrumentalness={this.updateInstrumentalness.bind(this)}
+                                valence={this.updateValence.bind(this)}
+                                tempo={this.updateTempo.bind(this)}
                             />
                         </div>
                         <div className="player-container">
