@@ -27,7 +27,7 @@ class HeadSearch extends Component {
             type="text"
             placeholder="Enter playlist URI..."
             value={this.state.input}
-            onChange={value => this.setState({ input: value })}
+            onChange={value => this.props.playlistUri({ input: value })}
           />
           <div>{this.state.filterInput}</div>
         </form>
