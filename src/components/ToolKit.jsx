@@ -37,35 +37,35 @@ class ToolKit extends React.Component {
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.danceability * 10}
                         onChange={value => {
                             this.setState({ danceability: value / 10 });
-                            this.props.danceability(value)
+                            this.props.danceability(value / 10)
                         }} />
                 </div>
                 <div>
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.energy * 10}
                         onChange={value => {
                             this.setState({ energy: value / 10 });
-                            this.props.energy(value)
+                            this.props.energy(value / 10)
                         }} />
                 </div>
                 <div>
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.acousticness * 10}
                         onChange={value => {
                             this.setState({ acousticness: value / 10 });
-                            this.props.acousticness(value)
+                            this.props.acousticness(value / 10)
                         }} />
                 </div>
                 <div>
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.instrumentalness * 10}
                         onChange={value => {
                             this.setState({ instrumentalness: value / 10 });
-                            this.props.instrumentalness(value)
+                            this.props.instrumentalness(value / 10)
                         }} />
                 </div>
                 <div>
                     <InputRange step={1} minValue={0} maxValue={10} value={this.state.valence * 10}
                         onChange={value => {
                             this.setState({ valence: value / 10 });
-                            this.props.valence(value)
+                            this.props.valence(value / 10)
                         }} />
                 </div>
                 <div>
