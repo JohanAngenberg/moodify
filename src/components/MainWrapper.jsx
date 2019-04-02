@@ -9,7 +9,7 @@ class MainWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            playListUri: '',
+            playlistUri: '',
             danceability: 0,
             energy: 0,
             acousticness: 0,
@@ -26,11 +26,19 @@ class MainWrapper extends React.Component {
         });
         console.log(this.state.danceability);
     }
+
+    updatePlaylistUri(value) {
+        this.setState({
+            playlistUri: value
+        });
+        console.log(this.state.playlistUri);
+    }
+
     render() {
         return (
             <div>
                 <div className="header-container">
-                    <HeadSearch />
+                    <HeadSearch playlistUri={this.updatePlaylistUri.bind(this)} />
                 </div>
                 <div className="main-container">
                     <div className="track-container">
