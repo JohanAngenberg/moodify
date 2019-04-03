@@ -16,6 +16,7 @@
   margin-right: 30px;
   border: 1px solid lightgray;
   padding: 20px;
+  min-width: 400px;
 }
 
 .toolkit-container,

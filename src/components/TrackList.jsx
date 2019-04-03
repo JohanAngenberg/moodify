@@ -56,7 +56,7 @@ class TrackList extends Component {
 
     return (
       <div className="App">
-        {playlist}
+        {playlist.length > 0 ? playlist: 'No tracks to show...'}
       </div>
     );
   }
