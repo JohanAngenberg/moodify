@@ -60,12 +60,6 @@ export class TrackCard extends React.Component {
             <div style={{ borderBottom: '1px solid gray' }}>
 
                 <div onClick={this.handleToggleDetails.bind(this)} style={wrapperStyles} >
-                    <link
-                        rel="stylesheet"
-                        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                        crossOrigin="anonymous"
-                    />
                     <img style={{ maxHeight: '100px' }} src={track.image} alt="" />
                     <div style={tableStyles}>
                         <div style={trackNameStyles}>{track.songName}</div>
