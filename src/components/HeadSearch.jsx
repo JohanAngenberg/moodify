@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import getPlaylistId from '../utilities/getPlaylistId.js'
+import getPlaylistId from "../utilities/getPlaylistId.js";
 
 const styleSearchBar = {
   height: "30px",
@@ -15,7 +15,7 @@ class HeadSearch extends Component {
       search: [],
       filterInput: "",
       playlistUri: [],
-      playlist: [],
+      playlist: []
     };
   }
 
@@ -28,9 +28,9 @@ class HeadSearch extends Component {
         .then(res => res.json())
         .then(res => {
           console.log(res);
-          this.setState({ playlist: res })
-        }).then(this.props.playlist(this.state.playlist))
-
+          this.setState({ playlist: res });
+        })
+        .then(this.props.playlist(this.state.playlist));
     }
   }
 
