@@ -36,7 +36,6 @@ class HeadSearch extends Component {
 
   handleInputTextChange(e) {
     let playlistId = getPlaylistId(e.target.value);
-    // this.setState({ filterInput: e.target.value });
     this.setState({ filterInput: playlistId });
   }
 
