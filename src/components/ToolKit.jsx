@@ -20,7 +20,14 @@ class ToolKit extends React.Component {
             toggleInstrumentalness: false,
             toggleValence: false,
             toggleTempo: false,
+            showToolbar: false
         };
+    }
+
+    onToggleToolbar() {
+        this.setState({ showToolbar: !this.state.showToolbar })
+        console.log(this.state.showToolbar);
+
     }
 
     onToggleDance() {
@@ -108,25 +115,32 @@ class ToolKit extends React.Component {
         }
         return (
             <div>
-                <div style={toolsWrappertStyles}>
+                <Button variant='info' onClick={this.onToggleToolbar.bind(this)}>PLACEHOLDER Advanced</Button>
+                {!this.state.showToolbar ? null : <div style={toolsWrappertStyles}>
                     <div style={buttonWrapperStyles}>
                         <div style={{ height: '80px', marginTop: '30px' }}>
-                            <Button onClick={this.onToggleDance.bind(this)} size="sm" variant={this.state.toggleDance ? 'info' : 'outline-info'}>{this.state.toggleDance ? 'ON' : 'OFF'}</Button>
+                            <Button onClick={this.onToggleDance.bind(this)} size="sm" variant={this.state.toggleDance ? 'info' : 'outline-info'}>
+                                {this.state.toggleDance ? 'ON' : 'OFF'}</Button>
                         </div>
                         <div style={buttonStyles}>
-                            <Button onClick={this.onToggleEnergy.bind(this)} size="sm" variant={this.state.toggleEnergy ? 'info' : 'outline-info'}>{this.state.toggleEnergy ? 'ON' : 'OFF'}</Button>
+                            <Button onClick={this.onToggleEnergy.bind(this)} size="sm" variant={this.state.toggleEnergy ? 'info' : 'outline-info'}>
+                                {this.state.toggleEnergy ? 'ON' : 'OFF'}</Button>
                         </div>
                         <div style={buttonStyles}>
-                            <Button onClick={this.onToggleAcousticness.bind(this)} size="sm" variant={this.state.toggleAcousticness ? 'info' : 'outline-info'}>{this.state.toggleAcousticness ? 'ON' : 'OFF'}</Button>
+                            <Button onClick={this.onToggleAcousticness.bind(this)} size="sm" variant={this.state.toggleAcousticness ? 'info' : 'outline-info'}>
+                                {this.state.toggleAcousticness ? 'ON' : 'OFF'}</Button>
                         </div>
                         <div style={buttonStyles}>
-                            <Button onClick={this.onToggleInstrumentalness.bind(this)} size="sm" variant={this.state.toggleInstrumentalness ? 'info' : 'outline-info'}>{this.state.toggleInstrumentalness ? 'ON' : 'OFF'}</Button>
+                            <Button onClick={this.onToggleInstrumentalness.bind(this)} size="sm" variant={this.state.toggleInstrumentalness ? 'info' : 'outline-info'}>
+                                {this.state.toggleInstrumentalness ? 'ON' : 'OFF'}</Button>
                         </div>
                         <div style={buttonStyles}>
-                            <Button onClick={this.onToggleValence.bind(this)} size="sm" variant={this.state.toggleValence ? 'info' : 'outline-info'}>{this.state.toggleValence ? 'ON' : 'OFF'}</Button>
+                            <Button onClick={this.onToggleValence.bind(this)} size="sm" variant={this.state.toggleValence ? 'info' : 'outline-info'}>
+                                {this.state.toggleValence ? 'ON' : 'OFF'}</Button>
                         </div>
                         <div style={buttonStyles}>
-                            <Button onClick={this.onToggleTempo.bind(this)} size="sm" variant={this.state.toggleTempo ? 'info' : 'outline-info'}>{this.state.toggleTempo ? 'ON' : 'OFF'}</Button>
+                            <Button onClick={this.onToggleTempo.bind(this)} size="sm" variant={this.state.toggleTempo ? 'info' : 'outline-info'}>
+                                {this.state.toggleTempo ? 'ON' : 'OFF'}</Button>
                         </div>
                     </div>
 
@@ -136,7 +150,8 @@ class ToolKit extends React.Component {
                             <div style={{ flexDirection: 'row', width: '100%' }}>
 
                                 <div>
-                                    <InputRange disabled={!this.state.toggleDance} step={1} minValue={0} maxValue={10} value={this.state.danceability * 10}
+                                    <InputRange disabled={!this.state.toggleDance}
+                                        step={1} minValue={0} maxValue={10} value={this.state.danceability * 10}
                                         onChange={value => {
                                             this.setState({ danceability: value / 10 });
                                             this.props.danceability(value / 10)
@@ -146,7 +161,8 @@ class ToolKit extends React.Component {
                         </div>
                         <div style={barWrapperStyles}>
                             <div style={barLabelStyles}>Energy</div>
-                            <InputRange disabled={!this.state.toggleEnergy} step={1} minValue={0} maxValue={10} value={this.state.energy * 10}
+                            <InputRange disabled={!this.state.toggleEnergy}
+                                step={1} minValue={0} maxValue={10} value={this.state.energy * 10}
                                 onChange={value => {
                                     this.setState({ energy: value / 10 });
                                     this.props.energy(value / 10)
@@ -154,7 +170,8 @@ class ToolKit extends React.Component {
                         </div>
                         <div style={barWrapperStyles}>
                             <div style={barLabelStyles}>Acousticness</div>
-                            <InputRange disabled={!this.state.toggleAcousticness} step={1} minValue={0} maxValue={10} value={this.state.acousticness * 10}
+                            <InputRange disabled={!this.state.toggleAcousticness}
+                                step={1} minValue={0} maxValue={10} value={this.state.acousticness * 10}
                                 onChange={value => {
                                     this.setState({ acousticness: value / 10 });
                                     this.props.acousticness(value / 10)
@@ -162,7 +179,8 @@ class ToolKit extends React.Component {
                         </div>
                         <div style={barWrapperStyles}>
                             <div style={barLabelStyles}>Instrumentalness</div>
-                            <InputRange disabled={!this.state.toggleInstrumentalness} step={1} minValue={0} maxValue={10} value={this.state.instrumentalness * 10}
+                            <InputRange disabled={!this.state.toggleInstrumentalness}
+                                step={1} minValue={0} maxValue={10} value={this.state.instrumentalness * 10}
                                 onChange={value => {
                                     this.setState({ instrumentalness: value / 10 });
                                     this.props.instrumentalness(value / 10)
@@ -170,7 +188,8 @@ class ToolKit extends React.Component {
                         </div>
                         <div style={barWrapperStyles}>
                             <div style={barLabelStyles}>Valence</div>
-                            <InputRange disabled={!this.state.toggleValence} step={1} minValue={0} maxValue={10} value={this.state.valence * 10}
+                            <InputRange disabled={!this.state.toggleValence}
+                                step={1} minValue={0} maxValue={10} value={this.state.valence * 10}
                                 onChange={value => {
                                     this.setState({ valence: value / 10 });
                                     this.props.valence(value / 10)
@@ -181,7 +200,8 @@ class ToolKit extends React.Component {
                             textAlign: 'center'
                         }}>
                             <div style={barLabelStyles}>Tempo</div>
-                            <InputRange disabled={!this.state.toggleTempo} step={10} minValue={60} maxValue={300} value={this.state.tempo}
+                            <InputRange disabled={!this.state.toggleTempo}
+                                step={10} minValue={60} maxValue={300} value={this.state.tempo}
                                 onChange={value => {
                                     this.setState({ tempo: value });
                                     this.props.tempo(value)
@@ -189,6 +209,7 @@ class ToolKit extends React.Component {
                         </div>
                     </div>
                 </div>
+                }
                 <Button variant='info' block>Create Playlist</Button>
             </div>
         )
