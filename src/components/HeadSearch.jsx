@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import getPlaylistId from '../utilities/getPlaylistId.js'
 
 const styleSearchBar = {
   height: "30px",
@@ -33,7 +34,9 @@ class HeadSearch extends Component {
   }
 
   handleInputTextChange(e) {
-    this.setState({ filterInput: e.target.value });
+    let playlistId = getPlaylistId(e.target.value);
+    // this.setState({ filterInput: e.target.value });
+    this.setState({ filterInput: playlistId });
   }
 
   render() {
