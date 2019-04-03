@@ -42,17 +42,16 @@ export class TrackCard extends React.Component {
             fontWeight: 'bold',
             display: 'flex',
             flexWrap: 'wrap',
+            maxWidth: '85%'
         }
         const artistStyles = {
             margin: '5px',
             fontSize: '12px',
             display: 'flex',
             flexWrap: 'wrap',
+            maxWidth: '85%'
         }
 
-        const detailStyles = {
-
-        }
         const barStyle = {
             fontSize: '12px',
             marginTop: '5px'
@@ -75,9 +74,12 @@ export class TrackCard extends React.Component {
 
                 </div >
                 {this.state.showDetails ?
-                    <div style={detailStyles}>
-                        <div style={barStyle}>Danceability<ProgressBar now={Math.round(track.danceability * 100)} label={`Danceability ${Math.round(track.danceability * 100)}%`} /></div>
-                        <div style={barStyle}>Annat <ProgressBar now={Math.round(track.danceability * 100)} label={`${Math.round(track.danceability * 100)}%`} /></div>
+                    <div>
+                        <div style={barStyle}>Danceability<ProgressBar now={Math.round(track.danceability * 100)} label={`${Math.round(track.danceability * 100)}%`} /></div>
+                        <div style={barStyle}>Energy <ProgressBar now={Math.round(track.energy * 100)} label={`${Math.round(track.energy * 100)}%`} /></div>
+                        <div style={barStyle}>Acousticness <ProgressBar now={Math.round(track.acousticness * 100)} label={`${Math.round(track.acousticness * 100)}%`} /></div>
+                        <div style={barStyle}>Instrumentalness <ProgressBar now={Math.round(track.instrumentalness * 100)} label={`${Math.round(track.instrumentalness * 100)}%`} /></div>
+                        <div style={barStyle}>Valence <ProgressBar now={Math.round(track.valence * 100)} label={`${Math.round(track.valence * 100)}%`} /></div>
                         <div>Tempo: {Math.round(track.tempo)} bpm</div>
                     </div>
                     : null}
