@@ -22,6 +22,7 @@ class HeadSearch extends Component {
   handleKeyPress(e) {
     if (e.key === "Enter") {
       this.props.playlistUri(this.state.filterInput);
+      console.log(this.state.filterInput);
 
       fetch(`http://localhost:3001/audio-features/${this.state.filterInput}`)
         .then(res => res.json())
