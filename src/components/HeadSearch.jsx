@@ -14,8 +14,7 @@ class HeadSearch extends Component {
     this.state = {
       search: [],
       filterInput: "",
-      playlistUri: [],
-      playlist: []
+      playlist: [],
     };
   }
 
