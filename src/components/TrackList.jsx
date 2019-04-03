@@ -52,11 +52,11 @@ class TrackList extends Component {
       .map((track, id) => (
         <TrackCard key={track.id} track={track}></TrackCard>
       ));
-      console.log(playlist)
+    console.log(playlist);
 
     return (
       <div className="App">
-        {playlist}
+        {playlist.length > 0 ? playlist: 'No tracks to show...'}
       </div>
     );
   }

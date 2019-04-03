@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";
 import Button from 'react-bootstrap/Button';
@@ -14,9 +14,8 @@ class ToolKit extends React.Component {
             instrumentalness: 0,
             valence: 0,
             tempo: 0,
-            toggleDance: false,
-
-        }
+            toggleDance: false
+        };
     }
 
     onToggleDance() {

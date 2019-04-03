@@ -2,17 +2,22 @@ import React, { Component } from "react";
 
 export default class WebPlayer extends Component {
   render() {
+    const URL = `https://open.spotify.com/embed/playlist/${
+      this.props.playlistUri
+    }`;
     return (
       <div>
-        <iframe
-          title="Moodify Webplayer"
-          src="https://open.spotify.com/embed/user/caaakeeey/playlist/6QAKnenuZoowNqxRzZbeRg"
-          width="300"
-          height="380"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        />
+        {this.props.playlistUri ? (
+          <iframe
+            title="Moodify Webplayer"
+            src={URL}
+            width="300"
+            height="380"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          />
+        ) : null}
       </div>
     );
   }
