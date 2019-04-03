@@ -8,12 +8,12 @@ class ToolKit extends React.Component {
         super(props);
 
         this.state = {
-            danceability: '',
-            energy: '',
-            acousticness: '',
-            instrumentalness: '',
-            valence: '',
-            tempo: '',
+            danceability: "",
+            energy: "",
+            acousticness: "",
+            instrumentalness: "",
+            valence: "",
+            tempo: "",
             toggleDance: false,
             toggleEnergy: false,
             toggleAcousticness: false,
