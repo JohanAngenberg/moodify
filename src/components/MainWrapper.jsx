@@ -71,12 +71,10 @@ class MainWrapper extends React.Component {
         });
     }
 
-    toggleModal() {
+    toggleModal(event) {
         this.setState({
-            showModal: true
+            showModal: event
         });
-        console.log(this.state.showModal);
-
     }
 
     render() {
@@ -110,10 +108,11 @@ class MainWrapper extends React.Component {
                             <WebPlayer playlistUri={this.state.playlistUri} />
                         </div>
                         <div className="modal-container">
-                            <button onClick={this.toggleModal.bind(this)}>hej</button>
-                            {this.state.showModal ?
-                                <Modal toggleModal={this.toggleModal.bind(this)}
-                                /> : null}
+                            <button onClick={this.toggleModal.bind(this, true)}>hej</button>
+                            <Modal
+                                toggleModal={this.toggleModal.bind(this)}
+                                displayModal={this.state.showModal}
+                            />
                         </div>
                     </div>
                 </div>

@@ -33,7 +33,7 @@ class TrackList extends Component {
   }
 
   render() {
-    // console.log(this.props.filterValues);
+    console.log(this.props.filterValues);
     let {
       danceability,
       energy,
@@ -52,11 +52,11 @@ class TrackList extends Component {
       .map((track, id) => (
         <TrackCard key={track.id} track={track}></TrackCard>
       ));
-    // console.log(playlist);
+    console.log(playlist);
 
     return (
       <div className="App">
-        {playlist.length > 0 ? playlist : 'No tracks to show...'}
+        {playlist}
       </div>
     );
   }

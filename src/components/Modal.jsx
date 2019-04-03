@@ -72,7 +72,11 @@ class Modal extends React.Component {
             height: '100vh',
             position: 'fixed',
             transition: 'all 1.3s',
-            width: '100vw'
+            width: '100vw',
+            top: 0,
+            left: 0,
+            transform: this.props.displayModal ? 'translateY(0vh)' : 'translateY(-100vh)',
+            opacity: this.props.displayModal ? '1' : '0'
         }
 
         const infoTextModal = {
@@ -87,7 +91,7 @@ class Modal extends React.Component {
                     }>
                     <div style={modalHeader}>
                         <h3 style={modalHeaderh3}>Help!</h3>
-                        <span style={closeModalBtn} onClick={this.props.toggleModal}>×</span>
+                        <span style={closeModalBtn} onClick={this.props.toggleModal.bind(this, false)}>×</span>
                     </div>
                     <div style={modalBody}>
 
@@ -111,7 +115,7 @@ class Modal extends React.Component {
                 </div>
 
                 <div style={modalFooter}>
-                    <button style={btnCancel} onClick={this.props.toggleModal}>CLOSE</button>
+                    <button style={btnCancel} onClick={this.props.toggleModal.bind(this, false)}>CLOSE</button>
                 </div>
             </div>
 
