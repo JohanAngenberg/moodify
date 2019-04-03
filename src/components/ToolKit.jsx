@@ -1,6 +1,7 @@
 import React from 'react';
 import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";
+import Button from 'react-bootstrap/Button';
 
 class ToolKit extends React.Component {
     constructor(props) {
@@ -20,12 +21,22 @@ class ToolKit extends React.Component {
 
     onToggleDance() {
         this.setState({ toggleDance: !this.state.toggleDance });
+        if (!this.state.toggleDance) {
+            this.setState({
+                danceability: ""
+            })
+        } else {
+            this.setState({
+                danceability: 0
+            })
+        }
     }
 
     render() {
         const slideWrapperStyles = {
             height: '100%',
             display: 'flex',
+            width: '100%',
             flexDirection: 'column',
             justifyContent: 'space-evenly',
 
@@ -33,7 +44,8 @@ class ToolKit extends React.Component {
         const barWrapperStyles = {
             borderBottom: '1px solid gray',
             paddingBottom: '25px',
-            textAlign: 'center'
+            textAlign: 'center',
+            width: '100%',
         }
 
         const barLabelStyles = {
@@ -44,11 +56,18 @@ class ToolKit extends React.Component {
             <div style={slideWrapperStyles}>
                 <div style={barWrapperStyles}>
                     <div style={barLabelStyles}>Danceability</div>
-                    <InputRange step={1} minValue={0} maxValue={10} value={this.state.danceability * 10}
-                        onChange={value => {
-                            this.setState({ danceability: value / 10 });
-                            this.props.danceability(value / 10)
-                        }} />
+                    <div style={{ flexDirection: 'row', width: '100%' }}>
+                        <div style={{}}>
+                            <Button onClick={this.onToggleDance.bind(this)} size="sm" variant={this.state.toggleDance ? 'info' : 'outline-info'}>{this.state.toggleDance ? 'ON' : 'OFF'}</Button>
+                        </div>
+                        <div style={{}}>
+                            <InputRange disabled={!this.state.toggleDance} step={1} minValue={0} maxValue={10} value={this.state.danceability * 10}
+                                onChange={value => {
+                                    this.setState({ danceability: value / 10 });
+                                    this.props.danceability(value / 10)
+                                }} />
+                        </div>
+                    </div>
                 </div>
                 <div style={barWrapperStyles}>
                     <div style={barLabelStyles}>Energy</div>
@@ -82,7 +101,10 @@ class ToolKit extends React.Component {
                             this.props.valence(value / 10)
                         }} />
                 </div>
-                <div style={barWrapperStyles}>
+                <div style={{
+                    paddingBottom: '25px',
+                    textAlign: 'center'
+                }}>
                     <div style={barLabelStyles}>Tempo</div>
                     <InputRange step={10} minValue={60} maxValue={300} value={this.state.tempo}
                         onChange={value => {
@@ -90,6 +112,9 @@ class ToolKit extends React.Component {
                             this.props.tempo(value)
                         }} />
                 </div>
+                <Button variant="secondary" size="lg" block>
+                    Create Playlist
+                </Button>
             </div>
         )
     }
