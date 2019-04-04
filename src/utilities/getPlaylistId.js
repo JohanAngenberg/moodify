@@ -6,10 +6,11 @@ function getPlaylistId(str) {
         playlistId = str.split('/')[6];
     } else if (str.includes('https://open.spotify.com/playlist/')) {
         playlistId = str.split('/')[4];
+    } else if (str.includes(':')) {
+        playlistId = str.split(':')[4];
     } else {
         playlistId = str;
     }
-
     return playlistId;
 }
 
