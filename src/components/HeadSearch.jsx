@@ -36,14 +36,14 @@ class HeadSearch extends Component {
         .then(res => {
           console.log(res);
           if (res.length !== 0) {
-            console.log('Data finns');
+            // console.log('Data finns');
             return res;
           } else {
-            console.log('Felhantering!');
+            // console.log('Felhantering!');
             this.setState({ isVisible: true })
           }
         })
-        .then(res => console.log(res))
+        // .then(res => console.log(res))
         .then(res => {
           this.setState({ playlist: res });
         })
@@ -53,8 +53,7 @@ class HeadSearch extends Component {
 
   handleInputTextChange(e) {
     let playlistId = getPlaylistId(e.target.value);
-    console.log(playlistId);
-
+    // console.log(playlistId);
     this.setState({ filterInput: playlistId });
   }
 
