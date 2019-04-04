@@ -84,6 +84,10 @@ class ToolKit extends React.Component {
         this.setState({ toggleTempo: !this.state.toggleTempo });
     }
 
+    onToggleModal() {
+        this.props.toggleModal()
+    }
+
     render() {
         const rowStyles = {
             paddingTop: '30px',
@@ -94,6 +98,7 @@ class ToolKit extends React.Component {
         return (
             <div>
                 <Button variant='info' onClick={this.onToggleToolbar.bind(this)}>PLACEHOLDER Advanced</Button>
+                <Button variant='info' onClick={this.onToggleModal.bind(this)}>Modal</Button>
                 {!this.state.showToolbar ? null :
                     <Container style={{ paddingTop: '10px' }}>
                         <Row>
