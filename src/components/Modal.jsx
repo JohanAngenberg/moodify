@@ -18,8 +18,7 @@ class Modal extends React.Component {
             margin: '0px auto 0',
             transition: 'all .8s',
             width: '60%',
-            transform: this.props.displayModal ? 'translateY(0vh)' : 'translateY(-100vh)',
-            opacity: this.props.displayModal ? '1' : '0'
+
         }
 
         const modalHeader = {
@@ -77,6 +76,8 @@ class Modal extends React.Component {
             width: '100vw',
             top: 0,
             left: 0,
+            transform: this.props.displayModal ? 'translateY(0vh)' : 'translateY(-100vh)',
+            opacity: this.props.displayModal ? '1' : '0'
 
         }
 
