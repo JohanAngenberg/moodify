@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from 'react-bootstrap/Button';
 import getPlaylistId from "../utilities/getPlaylistId.js";
 
 const styleSearchBar = {
@@ -26,7 +27,7 @@ class HeadSearch extends Component {
   }
 
 
- handleKeyPress(e) {
+  handleKeyPress(e) {
     if (e.key === "Enter") {
       this.props.playlistUri(this.state.filterInput);
       // console.log(this.state.filterInput);
@@ -62,6 +63,10 @@ class HeadSearch extends Component {
     this.setState({ isVisible: false });
   }
 
+  onToggleModal() {
+    this.props.toggleModal()
+  }
+
   render() {
     return (
       <div>
@@ -77,6 +82,7 @@ class HeadSearch extends Component {
           onKeyDown={this.handleKeyPress.bind(this)}
           onClick={this.handleOnClick.bind(this)}
         />
+        <Button variant='info' onClick={this.onToggleModal.bind(this)}>?</Button>
         {this.state.isVisible &&
           <p style={styleErrorMessage}>Oops, no data could be fetched. Please enter a valid playlist link.</p>}
       </div>

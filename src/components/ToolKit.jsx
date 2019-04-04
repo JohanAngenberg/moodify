@@ -98,7 +98,7 @@ class ToolKit extends React.Component {
         return (
             <div style={{ margin: '10px' }}>
                 <Button variant='info' onClick={this.onToggleToolbar.bind(this)}>PLACEHOLDER Advanced</Button>
-                <Button variant='info' onClick={this.onToggleModal.bind(this)}>Modal</Button>
+                <Button variant='info' onClick={this.onToggleModal.bind(this)}>?</Button>
                 {!this.state.showToolbar ? null :
                     <Container style={{ paddingTop: '10px' }}>
                         <Row>
