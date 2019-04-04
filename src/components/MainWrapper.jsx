@@ -3,7 +3,7 @@ import TrackList from "./TrackList";
 import HeadSearch from "./HeadSearch";
 import WebPlayer from "./WebPlayer";
 import ToolKit from "./ToolKit";
-import Modal from './Modal';
+//import Modal from './Modal';
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -92,7 +92,7 @@ class MainWrapper extends React.Component {
 
                 <Container>
                     <Row>
-                        <Col>
+                        <Col md="8">
                             <ToolKit
                                 danceability={this.updateDanceability.bind(this)}
                                 energy={this.updateEnergy.bind(this)}
@@ -102,9 +102,12 @@ class MainWrapper extends React.Component {
                                 tempo={this.updateTempo.bind(this)}
                             />
                         </Col>
-                        <Col>
-                            <WebPlayer playlistUri={this.state.playlistUri} />
-                        </Col>
+                        {this.state.playlistUri ?
+                            <Col>
+                                <WebPlayer playlistUri={this.state.playlistUri} />
+                            </Col>
+                            : null}
+
                     </Row>
                     <Row>
                         <Col>
