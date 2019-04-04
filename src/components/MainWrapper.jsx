@@ -3,6 +3,7 @@ import TrackList from "./TrackList";
 import HeadSearch from "./HeadSearch";
 import WebPlayer from "./WebPlayer";
 import ToolKit from "./ToolKit";
+import QuickButton from "./QuickButton";
 
 class MainWrapper extends React.Component {
   constructor(props) {
@@ -87,6 +88,14 @@ class MainWrapper extends React.Component {
           </div>
           <div className="right-column">
             <div className="toolkit-container">
+              <QuickButton
+                danceability={this.updateDanceability.bind(this)}
+                energy={this.updateEnergy.bind(this)}
+                acousticness={this.updateAcousticness.bind(this)}
+                instrumentalness={this.updateInstrumentalness.bind(this)}
+                valence={this.updateValence.bind(this)}
+                tempo={this.updateTempo.bind(this)}
+              />
               <ToolKit
                 danceability={this.updateDanceability.bind(this)}
                 energy={this.updateEnergy.bind(this)}
