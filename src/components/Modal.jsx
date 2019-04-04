@@ -12,20 +12,27 @@ class Modal extends React.Component {
 
     render() {
         const modalWrapper = {
+            position: 'fixed',
             background: 'white',
             border: '1px solid #d0cccc',
             boxShadow: '0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17)',
-            margin: '0px auto 0',
+            margin: '20px auto 0',
             transition: 'all .8s',
-            width: '60%'
+            width: '60%',
+            left: '50%',
+            marginLeft: '-30%',
+            zIndex: 2000,
+            top: 0,
+            transform: this.props.displayModal ? 'translateY(0vh)' : 'translateY(-100vh)',
         }
 
         const modalHeader = {
-            background: '#263238',
+            background: '#007d2a',
             height: '40px',
             lineHeight: '40px',
-            padding: '5px 20px',
-            textAlign: 'right'
+            padding: '5px 20px 43px 10px',
+            textAlign: 'right',
+
         }
 
         const modalHeaderh3 = {
@@ -41,43 +48,39 @@ class Modal extends React.Component {
         }
 
         const modalFooter = {
-            background: '#263238',
-            height: '35px',
-            padding: '15px'
-        }
-
-        const closeModalBtn = {
-            color: 'white',
-            cursor: 'pointer',
-            float: 'right',
-            fontSize: '30px',
+            background: '#007d2a',
+            height: '75px',
+            padding: '14px 100px 0px 0px',
+            width: '909px',
             margin: '0'
         }
 
         const btnCancel = {
             background: 'coral',
-            backgroundColor: '#b71c1c',
+            backgroundColor: '#fdad28',
             border: 'none',
+            borderRadius: '25px',
             color: 'white',
             cursor: 'pointer',
             fontWeight: 'bold',
             outline: 'none',
-            padding: '10px',
+            padding: '10px 0px 10px 0px',
+            margin: '0px 0px 0px 350px',
             float: 'left',
-            width: '100%'
+            width: '200px'
         }
 
         const backDrop = {
             backgroundColor: 'rgba(48, 49, 48, 0.42)',
             height: '100vh',
             position: 'fixed',
-            transition: 'all 1.3s',
+            transition: 'opacity 1.3s',
             width: '100vw',
             top: 0,
             left: 0,
             zIndex: 1000,
+            opacity: this.props.displayModal ? '1' : '0',
             transform: this.props.displayModal ? 'translateY(0vh)' : 'translateY(-100vh)',
-            opacity: this.props.displayModal ? '1' : '0'
         }
 
         const infoTextModal = {
@@ -85,14 +88,14 @@ class Modal extends React.Component {
         }
 
         return (
-            <div style={backDrop}>
+            <div>
+                <div style={backDrop} onClick={this.props.toggleModal.bind(this, false)}>&nbsp;</div>
                 <div
                     style={
                         modalWrapper
                     }>
                     <div style={modalHeader}>
                         <h3 style={modalHeaderh3}>Help!</h3>
-                        <span style={closeModalBtn} onClick={this.props.toggleModal.bind(this, false)}>×</span>
                     </div>
                     <div style={modalBody}>
 
@@ -113,13 +116,11 @@ class Modal extends React.Component {
                             Tempo shows the overall estimated tempo of a track in beats per minute (BPM).<br /><br />
                         </p>
                     </div>
-                </div>
-
-                <div style={modalFooter}>
-                    <button style={btnCancel} onClick={this.props.toggleModal.bind(this, false)}>CLOSE</button>
+                    <div style={modalFooter}>
+                        <button style={btnCancel} onClick={this.props.toggleModal.bind(this, false)}>CLOSE</button>
+                    </div>
                 </div>
             </div>
-
         )
     }
 }

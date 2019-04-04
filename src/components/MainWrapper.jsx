@@ -89,7 +89,7 @@ class MainWrapper extends React.Component {
                         playlist={this.updatePlaylist.bind(this)}
                     />
                 </div>
-                {this.state.showModal && <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />}
+                <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />
 
                 <Container style={{ maxWidth: "60%" }}>
                     <Row>
