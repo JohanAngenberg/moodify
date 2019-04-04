@@ -4,10 +4,16 @@ import getPlaylistId from "../utilities/getPlaylistId.js";
 const styleSearchBar = {
   height: "30px",
   width: "800px",
-  border: "1px solid black"
+  border: "1px solid black",
+  paddingLeft: '5px',
 };
 
+const styleErrorMessage = {
+  color: 'red',
+}
+
 class HeadSearch extends Component {
+
   constructor(props) {
     super(props);
 
@@ -15,13 +21,14 @@ class HeadSearch extends Component {
       search: [],
       filterInput: "",
       playlist: [],
+      isVisible: false,
     };
   }
 
-  handleKeyPress(e) {
+
+ handleKeyPress(e) {
     if (e.key === "Enter") {
       this.props.playlistUri(this.state.filterInput);
-
       // console.log(this.state.filterInput);
 
       fetch(`http://localhost:3001/audio-features/${this.state.filterInput}`)
@@ -29,13 +36,14 @@ class HeadSearch extends Component {
         .then(res => {
           console.log(res);
           if (res.length !== 0) {
-            console.log('Data finns');
+            // console.log('Data finns');
             return res;
           } else {
-            console.log('Felhantering!');
+            // console.log('Felhantering!');
+            this.setState({ isVisible: true })
           }
         })
-        .then(res => console.log(res))
+        // .then(res => console.log(res))
         .then(res => {
           this.setState({ playlist: res });
         })
@@ -43,11 +51,15 @@ class HeadSearch extends Component {
     }
   }
 
-
-
   handleInputTextChange(e) {
     let playlistId = getPlaylistId(e.target.value);
+    // console.log(playlistId);
     this.setState({ filterInput: playlistId });
+  }
+
+  handleOnClick(e) {
+    e.target.value = '';
+    this.setState({ isVisible: false });
   }
 
   render() {
@@ -63,10 +75,14 @@ class HeadSearch extends Component {
           value={this.state.input}
           onChange={this.handleInputTextChange.bind(this)}
           onKeyDown={this.handleKeyPress.bind(this)}
+          onClick={this.handleOnClick.bind(this)}
         />
+        {this.state.isVisible &&
+          <p style={styleErrorMessage}>Oops, no data could be fetched. Please enter a valid playlist link.</p>}
       </div>
     );
   }
 }
 
 export default HeadSearch;
+
