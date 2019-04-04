@@ -75,6 +75,7 @@ class Modal extends React.Component {
             width: '100vw',
             top: 0,
             left: 0,
+            zIndex: 1000,
             transform: this.props.displayModal ? 'translateY(0vh)' : 'translateY(-100vh)',
             opacity: this.props.displayModal ? '1' : '0'
         }
