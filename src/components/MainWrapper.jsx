@@ -92,8 +92,10 @@ class MainWrapper extends React.Component {
 
                 <Container>
                     <Row>
-                        <Col>
+                        <Col md="8">
+                            <Modal toggleModal={this.toggleModal.bind(this)} />
                             <ToolKit
+                                toggleModal={this.toggleModal.bind(this)}
                                 danceability={this.updateDanceability.bind(this)}
                                 energy={this.updateEnergy.bind(this)}
                                 acousticness={this.updateAcousticness.bind(this)}
@@ -102,9 +104,11 @@ class MainWrapper extends React.Component {
                                 tempo={this.updateTempo.bind(this)}
                             />
                         </Col>
-                        <Col>
-                            <WebPlayer playlistUri={this.state.playlistUri} />
-                        </Col>
+                        {this.state.playlistUri ?
+                            <Col>
+                                <WebPlayer playlistUri={this.state.playlistUri} />
+                            </Col>
+                            : null}
                     </Row>
                     <Row>
                         <Col>
