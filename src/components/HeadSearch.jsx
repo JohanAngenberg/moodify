@@ -1,15 +1,27 @@
 import React, { Component } from "react";
+import Button from 'react-bootstrap/Button';
 import getPlaylistId from "../utilities/getPlaylistId.js";
 
 const styleSearchBar = {
   height: "30px",
   width: "800px",
-  border: "1px solid black",
   paddingLeft: '5px',
+  border: 'none',
+  borderRadius: '3px',
 };
 
 const styleErrorMessage = {
   color: 'red',
+};
+
+const styleHeader = {
+  fontFamily: 'Bungee',
+  color: 'white',
+  fontSize: '5em',
+  fontWeight: 'bold',
+  textTransform: 'uppercase',
+  letterSpacing: '0.1em',
+  paddingBottom: '10px',
 }
 
 class HeadSearch extends Component {
@@ -26,7 +38,7 @@ class HeadSearch extends Component {
   }
 
 
- handleKeyPress(e) {
+  handleKeyPress(e) {
     if (e.key === "Enter") {
       this.props.playlistUri(this.state.filterInput);
       // console.log(this.state.filterInput);
@@ -62,11 +74,15 @@ class HeadSearch extends Component {
     this.setState({ isVisible: false });
   }
 
+  onToggleModal() {
+    this.props.toggleModal()
+  }
+
   render() {
     return (
       <div>
         <br />
-        <h1>Moodify</h1>
+        <h1 style={styleHeader}>Moodify</h1>
         <input
           ref="inputUrl"
           style={styleSearchBar}
@@ -77,6 +93,7 @@ class HeadSearch extends Component {
           onKeyDown={this.handleKeyPress.bind(this)}
           onClick={this.handleOnClick.bind(this)}
         />
+        <Button variant='info' onClick={this.onToggleModal.bind(this)}>?</Button>
         {this.state.isVisible &&
           <p style={styleErrorMessage}>Oops, no data could be fetched. Please enter a valid playlist link.</p>}
       </div>

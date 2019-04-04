@@ -87,6 +87,7 @@ class MainWrapper extends React.Component {
                     <HeadSearch
                         playlistUri={this.updatePlaylistUri.bind(this)}
                         playlist={this.updatePlaylist.bind(this)}
+                        toggleModal={this.toggleModal.bind(this)}
                     />
                 </div>
                 <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />
