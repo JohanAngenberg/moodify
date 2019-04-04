@@ -4,6 +4,9 @@ import HeadSearch from "./HeadSearch";
 import WebPlayer from "./WebPlayer";
 import ToolKit from "./ToolKit";
 import Modal from './Modal';
+import Container from "react-bootstrap/Container";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class MainWrapper extends React.Component {
     constructor(props) {
@@ -86,7 +89,9 @@ class MainWrapper extends React.Component {
                         playlist={this.updatePlaylist.bind(this)}
                     />
                 </div>
-                <div className="main-container">
+
+                <Container
+                    <div className="main-container">
                     <div className="track-container">
                         <TrackList
                             filterValues={this.state}
