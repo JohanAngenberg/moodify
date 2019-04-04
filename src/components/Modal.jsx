@@ -17,7 +17,9 @@ class Modal extends React.Component {
             boxShadow: '0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17)',
             margin: '0px auto 0',
             transition: 'all .8s',
-            width: '60%'
+            width: '60%',
+            transform: this.props.displayModal ? 'translateY(0vh)' : 'translateY(-100vh)',
+            opacity: this.props.displayModal ? '1' : '0'
         }
 
         const modalHeader = {
@@ -75,8 +77,7 @@ class Modal extends React.Component {
             width: '100vw',
             top: 0,
             left: 0,
-            transform: this.props.displayModal ? 'translateY(0vh)' : 'translateY(-100vh)',
-            opacity: this.props.displayModal ? '1' : '0'
+
         }
 
         const infoTextModal = {
