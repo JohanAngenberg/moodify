@@ -62,10 +62,10 @@ export class TrackCard extends React.Component {
         return (
             <Container style={{ borderRadius: '1px', border: '1px solid gray', margin: '10px', flex: '40%' }}>
                 <Row style={{ marginTop: '10px', marginBottom: '10px' }}>
-                    <Col md="4">
+                    <Col md="auto" sm="5" style={{ marginRight: '5px' }}>
                         <img style={{ maxHeight: '100px' }} src={track.image} alt="" />
                     </Col>
-                    <Col md='6'>
+                    <Col md='auto' sm="8">
                         <Row>{track.songName}</Row>
                         <Row>{track.artist}</Row>
                     </Col>
