@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { TrackCard } from "./TrackCard";
+import { TrackCard } from "../TrackCard/TrackCard";
 import {
   getUpperLimit,
   getLowerLimit
-} from "../utilities/filterHelpFunctions.js";
+} from "../../utilities/filterHelpFunctions.js";
 
-let dummyPlaylist = require("../dummydata.json"); //DETTA ÄR DUMMYPLAYLIST
+let dummyPlaylist = require("../../dummydata.json"); //DETTA ÄR DUMMYPLAYLIST
 
 class TrackList extends Component {
   constructor(props) {

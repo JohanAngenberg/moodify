@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Button from 'react-bootstrap/Button';
-import getPlaylistId from "../utilities/getPlaylistId.js";
+import getPlaylistId from "../../utilities/getPlaylistId.js";
 
 const styleSearchBar = {
   height: "30px",
