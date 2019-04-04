@@ -3,7 +3,6 @@ import TrackList from "./TrackList";
 import HeadSearch from "./HeadSearch";
 import WebPlayer from "./WebPlayer";
 import ToolKit from "./ToolKit";
-import QuickButton from "./QuickButton";
 import Modal from './Modal';
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
@@ -91,24 +90,9 @@ class MainWrapper extends React.Component {
                     />
                 </div>
 
-                <Container
-                    <div className="main-container">
-                    <div className="track-container">
-                        <TrackList
-                            filterValues={this.state}
-                            playlist={this.state.playlist}
-                        />
-                    </div>
-                    <div className="right-column">
-                        <div className="toolkit-container">
-                            <QuickButton
-                                danceability={this.updateDanceability.bind(this)}
-                                energy={this.updateEnergy.bind(this)}
-                                acousticness={this.updateAcousticness.bind(this)}
-                                instrumentalness={this.updateInstrumentalness.bind(this)}
-                                valence={this.updateValence.bind(this)}
-                                tempo={this.updateTempo.bind(this)}
-                            />
+                <Container>
+                    <Row>
+                        <Col>
                             <ToolKit
                                 danceability={this.updateDanceability.bind(this)}
                                 energy={this.updateEnergy.bind(this)}
@@ -117,19 +101,20 @@ class MainWrapper extends React.Component {
                                 valence={this.updateValence.bind(this)}
                                 tempo={this.updateTempo.bind(this)}
                             />
-                        </div>
-                        <div className="player-container">
+                        </Col>
+                        <Col>
                             <WebPlayer playlistUri={this.state.playlistUri} />
-                        </div>
-                        <div className="modal-container">
-                            <button onClick={this.toggleModal.bind(this, true)}>hej</button>
-                            <Modal
-                                toggleModal={this.toggleModal.bind(this)}
-                                displayModal={this.state.showModal}
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <TrackList
+                                filterValues={this.state}
+                                playlist={this.state.playlist}
                             />
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         );
     }
