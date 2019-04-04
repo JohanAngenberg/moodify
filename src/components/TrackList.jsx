@@ -55,7 +55,7 @@ class TrackList extends Component {
     console.log(playlist);
 
     return (
-      <div className="App">
+      <div className="App" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
         {playlist}
       </div>
     );

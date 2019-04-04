@@ -91,9 +91,9 @@ class MainWrapper extends React.Component {
                 </div>
                 {this.state.showModal && <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />}
 
-                <Container>
+                <Container style={{ maxWidth: "60%" }}>
                     <Row>
-                        <Col md="8">
+                        <Col>
                             <ToolKit
                                 toggleModal={this.toggleModal.bind(this)}
                                 danceability={this.updateDanceability.bind(this)}
@@ -105,7 +105,7 @@ class MainWrapper extends React.Component {
                             />
                         </Col>
                         {this.state.playlistUri ?
-                            <Col>
+                            <Col md="4">
                                 <WebPlayer playlistUri={this.state.playlistUri} />
                             </Col>
                             : null}
