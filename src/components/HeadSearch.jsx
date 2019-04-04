@@ -5,7 +5,6 @@ import getPlaylistId from "../utilities/getPlaylistId.js";
 const styleSearchBar = {
   height: "30px",
   width: "800px",
-  border: "1px solid black",
   paddingLeft: '5px',
   border: 'none',
   borderRadius: '3px',
