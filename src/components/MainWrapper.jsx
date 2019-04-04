@@ -74,9 +74,9 @@ class MainWrapper extends React.Component {
         });
     }
 
-    toggleModal(event) {
+    toggleModal() {
         this.setState({
-            showModal: event
+            showModal: !this.state.showModal
         });
     }
 
@@ -89,11 +89,11 @@ class MainWrapper extends React.Component {
                         playlist={this.updatePlaylist.bind(this)}
                     />
                 </div>
+                {this.state.showModal && <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />}
 
                 <Container>
                     <Row>
                         <Col md="8">
-                            {this.state.showModal ? <Modal toggleModal={this.toggleModal.bind(this)} /> : null}
                             <ToolKit
                                 toggleModal={this.toggleModal.bind(this)}
                                 danceability={this.updateDanceability.bind(this)}
