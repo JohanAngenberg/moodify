@@ -2,28 +2,6 @@ import React, { Component } from "react";
 import Button from 'react-bootstrap/Button';
 import getPlaylistId from "../../utilities/getPlaylistId.js";
 
-const styleSearchBar = {
-  height: "30px",
-  width: "800px",
-  paddingLeft: '5px',
-  border: 'none',
-  borderRadius: '3px',
-};
-
-const styleErrorMessage = {
-  color: 'red',
-};
-
-const styleHeader = {
-  fontFamily: 'Bungee',
-  color: 'white',
-  fontSize: '5em',
-  fontWeight: 'bold',
-  textTransform: 'uppercase',
-  letterSpacing: '0.1em',
-  paddingBottom: '10px',
-}
-
 class HeadSearch extends Component {
 
   constructor(props) {
@@ -83,10 +61,10 @@ class HeadSearch extends Component {
     return (
       <div>
         <br />
-        <h1 style={styleHeader}>Moodify</h1>
+        <h1 className='header'>Moodify</h1>
         <input
           ref="inputUrl"
-          style={styleSearchBar}
+          className='input-field'
           type="text"
           placeholder="Enter Spotify playlist link..."
           value={this.state.input}
@@ -96,7 +74,7 @@ class HeadSearch extends Component {
         />
         <Button variant='info' onClick={this.onToggleModal.bind(this)}>?</Button>
         {this.state.isVisible &&
-          <p style={styleErrorMessage}>Oops, no data could be fetched. Please enter a valid playlist link.</p>}
+          <p className='error-message'>Oops, no data could be fetched. Please enter a valid playlist link.</p>}
       </div>
     );
   }
