@@ -3,7 +3,11 @@ import TrackList from "./TrackList";
 import HeadSearch from "./HeadSearch";
 import WebPlayer from "./WebPlayer";
 import ToolKit from "./ToolKit";
+import QuickButton from "./QuickButton";
 import Modal from './Modal';
+import Container from "react-bootstrap/Container";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class MainWrapper extends React.Component {
     constructor(props) {
@@ -86,7 +90,9 @@ class MainWrapper extends React.Component {
                         playlist={this.updatePlaylist.bind(this)}
                     />
                 </div>
-                <div className="main-container">
+
+                <Container
+                    <div className="main-container">
                     <div className="track-container">
                         <TrackList
                             filterValues={this.state}
@@ -95,6 +101,14 @@ class MainWrapper extends React.Component {
                     </div>
                     <div className="right-column">
                         <div className="toolkit-container">
+                            <QuickButton
+                                danceability={this.updateDanceability.bind(this)}
+                                energy={this.updateEnergy.bind(this)}
+                                acousticness={this.updateAcousticness.bind(this)}
+                                instrumentalness={this.updateInstrumentalness.bind(this)}
+                                valence={this.updateValence.bind(this)}
+                                tempo={this.updateTempo.bind(this)}
+                            />
                             <ToolKit
                                 danceability={this.updateDanceability.bind(this)}
                                 energy={this.updateEnergy.bind(this)}
