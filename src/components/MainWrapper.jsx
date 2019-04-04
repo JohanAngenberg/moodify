@@ -93,7 +93,7 @@ class MainWrapper extends React.Component {
                 <Container>
                     <Row>
                         <Col md="8">
-                            <Modal toggleModal={this.toggleModal.bind(this)} />
+                            {this.state.showModal ? <Modal toggleModal={this.toggleModal.bind(this)} /> : null}
                             <ToolKit
                                 toggleModal={this.toggleModal.bind(this)}
                                 danceability={this.updateDanceability.bind(this)}
