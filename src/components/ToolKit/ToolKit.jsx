@@ -1,6 +1,7 @@
 import React from "react";
 import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";
+import "./ToolKit.scss";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
