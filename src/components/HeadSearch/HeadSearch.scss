@@ -11,6 +11,7 @@
   background-color: white;
   float: right;
   margin-right: 20px;
+  transition: 0.3s;
 }
 
 .info-button-questionmark {
@@ -18,6 +19,11 @@
   font-weight: 800;
   color: $primary;
   font-family: $general-font;
+}
+
+.info-button:hover{
+  background-color: $accent2;
+  cursor: pointer;
 }
 
 .header {
