@@ -6,7 +6,36 @@
     box-shadow: $box-shadow;
 }
 
-.trackCard img {
+.trackCardBackground {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.trackCardPic {
+    margin-right: 5px;
+}
+
+.trackCardImg {
     border-radius: $border-radius;
     box-shadow: $box-shadow;
+    max-height: 100px;
 }
+
+.Details:hover {
+  cursor: pointer;
+}
+
+.rowCardDetails {
+    border-top: 1px solid $grey;
+    padding: 10px;
+    text-align: center;
+}
+
+.barStyle {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+
+
