@@ -41,5 +41,8 @@
 }
 
 .error-message  {
-  color: $warning;
+  color: $accent2;
+  font-weight: bold;
+  font-size: $font-size-large;
+  padding-top: 5px;
 };
