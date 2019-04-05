@@ -60,7 +60,7 @@ export class TrackCard extends React.Component {
             marginTop: '5px'
         }
         return (
-            <Container style={{ borderRadius: '1px', border: '1px solid gray', margin: '10px', flex: '40%' }}>
+            <Container className='trackCard'>
                 <Row style={{ marginTop: '10px', marginBottom: '10px' }}>
                     <Col md="auto" sm="5" style={{ marginRight: '5px' }}>
                         <img style={{ maxHeight: '100px' }} src={track.image} alt="" />
