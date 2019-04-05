@@ -92,7 +92,7 @@ class MainWrapper extends React.Component {
                 </div>
                 <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />
 
-                <Container style={{ maxWidth: "60%" }}>
+                <Container className='main-container'>
                     <Row>
                         <Col>
                             <ToolKit
@@ -115,7 +115,7 @@ class MainWrapper extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <div style={{ position: 'fixed', bottom: 0, backgroundColor: 'black', width: '100vw' }}>{this.state.playlistUri ? <WebPlayer playlistUri={this.state.playlistUri} /> : null}</div>
+                <div className='web-player-container'>{this.state.playlistUri ? <WebPlayer playlistUri={this.state.playlistUri} /> : null}</div>
 
             </div>
         );
