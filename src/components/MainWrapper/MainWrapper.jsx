@@ -20,7 +20,8 @@ class MainWrapper extends React.Component {
             valence: "",
             tempo: "",
             playlist: "",
-            showModal: false
+            showModal: false,
+            showLanding: true
         };
     }
 
@@ -79,15 +80,22 @@ class MainWrapper extends React.Component {
             showModal: !this.state.showModal
         });
     }
+    hideLanding() {
+        this.setState({
+            showLanding: false
+        })
+    }
 
     render() {
         return (
             <div>
+
                 <div className="header-container">
                     <HeadSearch
                         playlistUri={this.updatePlaylistUri.bind(this)}
                         playlist={this.updatePlaylist.bind(this)}
                         toggleModal={this.toggleModal.bind(this)}
+                        hideLanding={this.hideLanding.bind(this)}
                     />
                 </div>
                 <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />
@@ -116,8 +124,8 @@ class MainWrapper extends React.Component {
                     </Row>
                 </Container>
                 <div className='web-player-container'>{this.state.playlistUri ? <WebPlayer playlistUri={this.state.playlistUri} /> : null}</div>
-
             </div>
+
         );
     }
 }
