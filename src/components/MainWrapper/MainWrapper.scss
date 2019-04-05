@@ -2,6 +2,10 @@
   text-align: center;
   background-color: $primary;
   padding: 0 0 30px 0;
+} .landing {
+  width: 100vw;
+  height: 100vh;
+  position: fixed; 
 }
 
 .main-container {
@@ -15,3 +19,4 @@
     background-color: black;
     width: 100vw;
 }
+

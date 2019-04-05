@@ -30,6 +30,8 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding-bottom: 10px;
+}.landingStyle {
+  padding-top: 10%;
 }
 
 .input-field {
@@ -41,5 +43,9 @@
 }
 
 .error-message  {
-  color: $warning;
+  color: $accent2;
+  font-weight: bold;
+  font-size: $font-size-large;
+  padding-top: 5px;
 };
+

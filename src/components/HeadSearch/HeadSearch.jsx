@@ -26,6 +26,7 @@ class HeadSearch extends Component {
           console.log(res);
           if (res.length !== 0) {
             // console.log('Data finns');
+            this.setState({ isVisible: false })
             return res;
           } else {
             // console.log('Felhantering!');
@@ -36,7 +37,10 @@ class HeadSearch extends Component {
         .then(res => {
           this.setState({ playlist: res });
         })
-        .then(this.props.playlist(this.state.playlist));
+        .then(this.props.playlist(this.state.playlist))
+      if (this.state.playlist) {
+        this.props.hideLanding()
+      }
     }
   }
 
@@ -56,7 +60,7 @@ class HeadSearch extends Component {
   }
 
   render() {
-    console.log(this.state.isVisible);
+    // console.log(this.state.isVisible);
     return (
       <div>
         <br />
@@ -66,7 +70,7 @@ class HeadSearch extends Component {
           </div>
         </div>
         {/* <Button className='info-button' onClick={this.onToggleModal.bind(this)}>?</Button> */}
-        <h1 className='header'>Moodify</h1>
+        <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
         <input
           ref="inputUrl"
           className='input-field'
@@ -77,8 +81,7 @@ class HeadSearch extends Component {
           onKeyDown={this.handleKeyPress.bind(this)}
           onClick={this.handleOnClick.bind(this)}
         />
-        {this.state.isVisible &&
-          <p className='error-message'>Oops, no data could be fetched. Please enter a valid playlist link.</p>}
+        <p className='error-message' style={{ visibility: this.state.isVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
       </div>
     );
   }
