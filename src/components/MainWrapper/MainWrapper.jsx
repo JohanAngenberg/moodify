@@ -20,7 +20,8 @@ class MainWrapper extends React.Component {
             valence: "",
             tempo: "",
             playlist: "",
-            showModal: false
+            showModal: false,
+            showLanding: true
         };
     }
 
@@ -79,45 +80,54 @@ class MainWrapper extends React.Component {
             showModal: !this.state.showModal
         });
     }
+    hideLanding() {
+        this.setState({
+            showLanding: false
+        })
+    }
 
     render() {
         return (
             <div>
-                <div className="header-container">
+
+                <div className={`header-container ${this.state.showLanding ? 'landing' : null}`}>
                     <HeadSearch
                         playlistUri={this.updatePlaylistUri.bind(this)}
                         playlist={this.updatePlaylist.bind(this)}
                         toggleModal={this.toggleModal.bind(this)}
+                        hideLanding={this.hideLanding.bind(this)}
+                        showLanding={this.state.showLanding}
                     />
                 </div>
                 <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />
-
-                <Container className='main-container'>
-                    <Row>
-                        <Col>
-                            <ToolKit
-                                toggleModal={this.toggleModal.bind(this)}
-                                danceability={this.updateDanceability.bind(this)}
-                                energy={this.updateEnergy.bind(this)}
-                                acousticness={this.updateAcousticness.bind(this)}
-                                instrumentalness={this.updateInstrumentalness.bind(this)}
-                                valence={this.updateValence.bind(this)}
-                                tempo={this.updateTempo.bind(this)}
-                            />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <TrackList
-                                filterValues={this.state}
-                                playlist={this.state.playlist}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
+                {!this.state.showLanding ?
+                    <Container className='main-container'>
+                        <Row>
+                            <Col>
+                                <ToolKit
+                                    toggleModal={this.toggleModal.bind(this)}
+                                    danceability={this.updateDanceability.bind(this)}
+                                    energy={this.updateEnergy.bind(this)}
+                                    acousticness={this.updateAcousticness.bind(this)}
+                                    instrumentalness={this.updateInstrumentalness.bind(this)}
+                                    valence={this.updateValence.bind(this)}
+                                    tempo={this.updateTempo.bind(this)}
+                                />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <TrackList
+                                    filterValues={this.state}
+                                    playlist={this.state.playlist}
+                                />
+                            </Col>
+                        </Row>
+                    </Container>
+                    : null}
                 <div className='web-player-container'>{this.state.playlistUri ? <WebPlayer playlistUri={this.state.playlistUri} /> : null}</div>
-
             </div>
+
         );
     }
 }
