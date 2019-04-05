@@ -37,7 +37,10 @@ class HeadSearch extends Component {
         .then(res => {
           this.setState({ playlist: res });
         })
-        .then(this.props.playlist(this.state.playlist));
+        .then(this.props.playlist(this.state.playlist))
+      if (this.state.playlist) {
+        this.props.hideLanding()
+      }
     }
   }
 
@@ -67,7 +70,7 @@ class HeadSearch extends Component {
           </div>
         </div>
         {/* <Button className='info-button' onClick={this.onToggleModal.bind(this)}>?</Button> */}
-        <h1 className='header'>Moodify</h1>
+        <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
         <input
           ref="inputUrl"
           className='input-field'
