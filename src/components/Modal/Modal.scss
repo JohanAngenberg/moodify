@@ -1,3 +1,81 @@
 ::-webkit-scrollbar {
     width: 0em;
 }
+
+.modalWrapper {
+    position: fixed;
+    background: $white;
+    border: 1px solid $soft-grey;
+    box-shadow: $box-shadow-modal;
+    margin: 20px auto 0;
+    transition: all .8s;
+    width: 60%;
+    max-height: 90vh;
+    left: 50%;
+    overflow: hidden scroll;
+    margin-left: -30%;
+    z-index: 2000;
+    top: 0;
+}
+
+.modalHeader {
+    background: $primary-dark;
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 20px 43px 10px;
+    text-align: right;
+}
+
+.modalHeaderH3 {
+    color: $white;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.modalBody {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.modalFooter {
+    background: $primary-dark;
+    height: 75px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.btnCancel {
+    //background: coral;
+    background-color: $accent2;
+    border: none;
+    border-radius: 25px;
+    color: $white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 10px;
+    width: 30%;
+}
+
+.backDrop {
+    background-color: $modal-backdrop;
+    height: 100vh;
+    position: fixed;
+    transition: opacity 1.3s;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.infoTextModal {
+    font-size: 14px;
+}
+
+
+
+
+
+
