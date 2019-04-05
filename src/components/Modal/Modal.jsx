@@ -22,7 +22,7 @@ class Modal extends React.Component {
 
         return (
             <div>
-                <div style={backDrop} onClick={this.props.toggleModal.bind(this, false)}>&nbsp;</div>
+                <div style={backDrop} className='backDrop' onClick={this.props.toggleModal.bind(this, false)}>&nbsp;</div>
                 <div style={modalWrapper} className='modalWrapper'>
                     <div className='modalHeader'>
                         <h3 className='modalHeaderH3'>Help!</h3>
