@@ -1,4 +1,5 @@
 import React from 'react';
+import './Modal.scss';
 
 class Modal extends React.Component {
     constructor(props) {
@@ -19,7 +20,9 @@ class Modal extends React.Component {
             margin: '20px auto 0',
             transition: 'all .8s',
             width: '60%',
+            maxHeight: '90vh',
             left: '50%',
+            overflow: 'hidden scroll',
             marginLeft: '-30%',
             zIndex: 2000,
             top: 0,
@@ -50,9 +53,9 @@ class Modal extends React.Component {
         const modalFooter = {
             background: '#007d2a',
             height: '75px',
-            padding: '14px 100px 0px 0px',
-            width: '909px',
-            margin: '0'
+            padding: '15px',
+            width: '100%',
+            textAlign: 'center'
         }
 
         const btnCancel = {
@@ -64,10 +67,8 @@ class Modal extends React.Component {
             cursor: 'pointer',
             fontWeight: 'bold',
             outline: 'none',
-            padding: '10px 0px 10px 0px',
-            margin: '0px 0px 0px 350px',
-            float: 'left',
-            width: '200px'
+            padding: '10px',
+            width: '30% '
         }
 
         const backDrop = {
