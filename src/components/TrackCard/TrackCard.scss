@@ -1,0 +1,12 @@
+.trackCard {
+    border-radius: $border-radius;
+    border: 1px solid $soft-grey;
+    margin: 10px;
+    flex: 40%;
+    box-shadow: $box-shadow;
+}
+
+.trackCard img {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+}

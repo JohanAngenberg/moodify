@@ -13,12 +13,12 @@ class ToolKit extends React.Component {
         super(props);
 
         this.state = {
-            danceability: "",
-            energy: "",
-            acousticness: "",
-            instrumentalness: "",
-            valence: "",
-            tempo: "",
+            danceability: 0.5,
+            energy: 0.5,
+            acousticness: 0.5,
+            instrumentalness: 0.5,
+            valence: 0.5,
+            tempo: 180,
             toggleDance: false,
             toggleEnergy: false,
             toggleAcousticness: false,
@@ -92,10 +92,14 @@ class ToolKit extends React.Component {
         }
 
         return (
-            <div style={{ margin: '10px' }}>
-                <Button variant='info' onClick={this.onToggleToolbar.bind(this)}>PLACEHOLDER Advanced</Button>
-                {!this.state.showToolbar ? null :
-                    <Container style={{ paddingTop: '10px' }}>
+            <div>
+                <Container>
+                    <Row style={{ border: '1px solid gray', padding: '10px' }}>
+                        <Col onClick={this.onToggleToolbar.bind(this)}>Show toolbar</Col>
+                        <Col>Play on Spotify</Col>
+                    </Row>
+
+                    {!this.state.showToolbar ? null :
                         <Row>
                             <Col>
                                 <Row style={rowStyles}>
@@ -198,9 +202,8 @@ class ToolKit extends React.Component {
                                 </Row>
                             </Col>
                         </Row>
-                    </Container>
-                }
-                <Button variant='info' block>Create Playlist</Button>
+                    }
+                </Container>
             </div >
         )
     }

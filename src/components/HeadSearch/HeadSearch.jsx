@@ -61,6 +61,12 @@ class HeadSearch extends Component {
     return (
       <div>
         <br />
+        <div className='info-button-container'>
+          <div className='info-button' onClick={this.onToggleModal.bind(this)}>
+            <p className='info-button-questionmark'>?</p>
+          </div>
+        </div>
+        {/* <Button className='info-button' onClick={this.onToggleModal.bind(this)}>?</Button> */}
         <h1 className='header'>Moodify</h1>
         <input
           ref="inputUrl"
@@ -72,7 +78,6 @@ class HeadSearch extends Component {
           onKeyDown={this.handleKeyPress.bind(this)}
           onClick={this.handleOnClick.bind(this)}
         />
-        <Button variant='info' onClick={this.onToggleModal.bind(this)}>?</Button>
         {this.state.isVisible &&
           <p className='error-message'>Oops, no data could be fetched. Please enter a valid playlist link.</p>}
       </div>
