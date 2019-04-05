@@ -12,7 +12,7 @@ class TrackList extends Component {
     super(props);
 
     this.state = {
-      originalPlaylist: dummyPlaylist,
+      originalPlaylist: dummyPlaylist, //dummyPlaylist,
       playlist: this.props.playlist
       //TA BORT dummyPlaylist OCH ERSÄTT MED [] FÖR ATT HÄMTA BACKEND-DATA
     };
