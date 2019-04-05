@@ -1,7 +1,6 @@
 import React from "react";
 import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";
-import "./ToolKit.scss";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -86,24 +85,19 @@ class ToolKit extends React.Component {
     }
 
     render() {
-        const rowStyles = {
-            paddingTop: '30px',
-            paddingBottom: '15px',
-            borderBottom: '1px solid gray'
-        }
 
         return (
             <div>
-                <Container>
-                    <Row style={{ border: '1px solid gray', padding: '10px' }}>
-                        <Col onClick={this.onToggleToolbar.bind(this)}>Show toolbar</Col>
-                        <Col>Play on Spotify</Col>
+                <Container className='toolKit'>
+                    <Row className='toolBar'>
+                        <Col className='menuButton'>Presets</Col>
+                        <Col className={`menuButton ${this.state.showToolbar ? 'active' : null}`} onClick={this.onToggleToolbar.bind(this)}>Advanced <i class="fas fa-sliders-h"></i></Col>
                     </Row>
 
                     {!this.state.showToolbar ? null :
                         <Row>
                             <Col>
-                                <Row style={rowStyles}>
+                                <Row className='toolRow'>
                                     <Col>
                                         <Button
                                             onClick={this.onToggleDance.bind(this)} size="sm" variant={this.state.toggleDance ? 'info' : 'outline-info'}>
@@ -111,7 +105,8 @@ class ToolKit extends React.Component {
                                 </Button>
                                     </Col>
                                     <Col md="9" xs="7">
-                                        <InputRange disabled={!this.state.toggleDance}
+                                        <InputRange
+                                            disabled={!this.state.toggleDance}
                                             step={1} minValue={0} maxValue={10} value={this.state.danceability * 10}
                                             onChange={value => {
                                                 this.setState({ danceability: value / 10 });
@@ -119,7 +114,7 @@ class ToolKit extends React.Component {
                                             }} />
                                     </Col>
                                 </Row>
-                                <Row style={rowStyles}>
+                                <Row className='toolRow'>
                                     <Col>
                                         <Button
                                             onClick={this.onToggleEnergy.bind(this)} size="sm" variant={this.state.toggleEnergy ? 'info' : 'outline-info'}>
@@ -135,7 +130,7 @@ class ToolKit extends React.Component {
                                             }} />
                                     </Col>
                                 </Row>
-                                <Row style={rowStyles}>
+                                <Row className='toolRow'>
                                     <Col>
                                         <Button
                                             onClick={this.onToggleAcousticness.bind(this)} size="sm" variant={this.state.toggleAcousticness ? 'info' : 'outline-info'}>
@@ -153,7 +148,7 @@ class ToolKit extends React.Component {
                                 </Row>
                             </Col>
                             <Col>
-                                <Row style={rowStyles}>
+                                <Row className='toolRow'>
                                     <Col>
                                         <Button
                                             onClick={this.onToggleInstrumentalness.bind(this)} size="sm" variant={this.state.toggleInstrumentalness ? 'info' : 'outline-info'}>
@@ -169,7 +164,7 @@ class ToolKit extends React.Component {
                                             }} />
                                     </Col>
                                 </Row>
-                                <Row style={rowStyles}>
+                                <Row className='toolRow'>
                                     <Col>
                                         <Button
                                             onClick={this.onToggleValence.bind(this)} size="sm" variant={this.state.toggleValence ? 'info' : 'outline-info'}>
@@ -185,7 +180,7 @@ class ToolKit extends React.Component {
                                             }} />
                                     </Col>
                                 </Row>
-                                <Row style={rowStyles}>
+                                <Row className='toolRow'>
                                     <Col>
                                         <Button
                                             onClick={this.onToggleTempo.bind(this)} size="sm" variant={this.state.toggleTempo ? 'info' : 'outline-info'}>
@@ -204,6 +199,7 @@ class ToolKit extends React.Component {
                             </Col>
                         </Row>
                     }
+                    <Row><Col className='playButton'>Play on Spotify  <i class="fab fa-spotify"></i></Col></Row>
                 </Container>
             </div >
         )
