@@ -6,7 +6,7 @@ export default class WebPlayer extends Component {
       this.props.playlistUri
       }`;
     return (
-      <div style={{ width: '640px', margin: '0 auto' }}>
+      <div className='web-player'>
         <iframe
           title="Moodify Webplayer"
           src={URL}
