@@ -55,34 +55,31 @@ export class TrackCard extends React.Component {
             maxWidth: '85%'
         }
 */
-        const barStyle = {
-            fontSize: '12px',
-            marginTop: '5px'
-        }
+
         return (
             <Container className='trackCard'>
-                <Row style={{ marginTop: '10px', marginBottom: '10px' }}>
-                    <Col md="auto" sm="5" style={{ marginRight: '5px' }}>
-                        <img style={{ maxHeight: '100px' }} src={track.image} alt="" />
+                <Row className='trackCardBackground'>
+                    <Col md="auto" sm="5" className='trackCardPic'>
+                        <img className='trackCardImg' src={track.image} alt="" />
                     </Col>
                     <Col md='auto' sm="8">
                         <Row>{track.songName}</Row>
                         <Row>{track.artist}</Row>
                     </Col>
                 </Row>
-                <Row style={{ borderTop: '1px solid gray', padding: '10px', textAlign: 'center' }}>
-                    <Col onClick={this.handleToggleDetails.bind(this)}>
+                <Row className='rowCardDetails'>
+                    <Col className='Details' onClick={this.handleToggleDetails.bind(this)}>
                         Show Details
                     </Col>
                 </Row>
 
                 {this.state.showDetails ?
                     <div>
-                        <div style={barStyle}>Danceability<ProgressBar now={Math.round(track.danceability * 100)} label={`${Math.round(track.danceability * 100)}%`} /></div>
-                        <div style={barStyle}>Energy <ProgressBar now={Math.round(track.energy * 100)} label={`${Math.round(track.energy * 100)}%`} /></div>
-                        <div style={barStyle}>Acousticness <ProgressBar now={Math.round(track.acousticness * 100)} label={`${Math.round(track.acousticness * 100)}%`} /></div>
-                        <div style={barStyle}>Instrumentalness <ProgressBar now={Math.round(track.instrumentalness * 100)} label={`${Math.round(track.instrumentalness * 100)}%`} /></div>
-                        <div style={barStyle}>Valence <ProgressBar now={Math.round(track.valence * 100)} label={`${Math.round(track.valence * 100)}%`} /></div>
+                        <div className='barStyle'>Danceability<ProgressBar now={Math.round(track.danceability * 100)} label={`${Math.round(track.danceability * 100)}%`} /></div>
+                        <div className='barStyle'>Energy <ProgressBar now={Math.round(track.energy * 100)} label={`${Math.round(track.energy * 100)}%`} /></div>
+                        <div className='barStyle'>Acousticness <ProgressBar now={Math.round(track.acousticness * 100)} label={`${Math.round(track.acousticness * 100)}%`} /></div>
+                        <div className='barStyle'>Instrumentalness <ProgressBar now={Math.round(track.instrumentalness * 100)} label={`${Math.round(track.instrumentalness * 100)}%`} /></div>
+                        <div className='barStyle'>Valence <ProgressBar now={Math.round(track.valence * 100)} label={`${Math.round(track.valence * 100)}%`} /></div>
                         <div>Tempo: {Math.round(track.tempo)} bpm</div>
                     </div>
                     : null}

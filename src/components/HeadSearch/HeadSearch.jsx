@@ -26,6 +26,7 @@ class HeadSearch extends Component {
           console.log(res);
           if (res.length !== 0) {
             // console.log('Data finns');
+            this.setState({ isVisible: false })
             return res;
           } else {
             // console.log('Felhantering!');
@@ -56,7 +57,7 @@ class HeadSearch extends Component {
   }
 
   render() {
-    console.log(this.state.isVisible);
+    // console.log(this.state.isVisible);
     return (
       <div>
         <br />
@@ -77,8 +78,7 @@ class HeadSearch extends Component {
           onKeyDown={this.handleKeyPress.bind(this)}
           onClick={this.handleOnClick.bind(this)}
         />
-        {this.state.isVisible &&
-          <p className='error-message'>Oops, no data could be fetched. Please enter a valid playlist link.</p>}
+        <p className='error-message' style={{ visibility: this.state.isVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
       </div>
     );
   }
