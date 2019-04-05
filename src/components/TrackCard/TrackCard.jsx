@@ -28,33 +28,6 @@ export class TrackCard extends React.Component {
     }
     render() {
         const track = this.state.TrackData;
-        /*const wrapperStyles = {
-            fontSize: '10px',
-            contentHeight: '60px',
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            padding: '5px'
-        };
-        const tableStyles = {
-
-        }
-        const trackNameStyles = {
-            margin: '5px',
-            fontSize: '15px',
-            fontWeight: 'bold',
-            display: 'flex',
-            flexWrap: 'wrap',
-            maxWidth: '85%'
-        }
-        const artistStyles = {
-            margin: '5px',
-            fontSize: '12px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            maxWidth: '85%'
-        }
-*/
 
         return (
             <Container className='trackCard'>
@@ -63,13 +36,13 @@ export class TrackCard extends React.Component {
                         <img className='trackCardImg' src={track.image} alt="" />
                     </Col>
                     <Col md='auto' sm="8">
-                        <Row>{track.songName}</Row>
-                        <Row>{track.artist}</Row>
+                        <Row className='trackNameStyles'>{track.songName}</Row>
+                        <Row className='artistStyles'>{track.artist}</Row>
                     </Col>
                 </Row>
                 <Row className='rowCardDetails'>
                     <Col className='Details' onClick={this.handleToggleDetails.bind(this)}>
-                        Show Details
+                        i
                     </Col>
                 </Row>
 
