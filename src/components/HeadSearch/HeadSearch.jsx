@@ -20,7 +20,7 @@ class HeadSearch extends Component {
       this.props.playlistUri(this.state.filterInput);
       // console.log(this.state.filterInput);
 
-      fetch(`http://localhost:3001/audio-features/${this.state.filterInput}`)
+      fetch(`http://moodify.sebastianberglonn.se/audio-features/${this.state.filterInput}`)
         .then(res => res.json())
         .then(res => {
           console.log(res);
@@ -37,7 +37,7 @@ class HeadSearch extends Component {
         .then(res => {
           this.setState({ playlist: res });
         })
-        .then(this.props.playlist(this.state.playlist))
+        .then(() => this.props.playlist(this.state.playlist))
       if (this.state.playlist) {
         this.props.hideLanding()
       }

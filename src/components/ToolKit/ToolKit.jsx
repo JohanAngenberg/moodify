@@ -91,7 +91,7 @@ class ToolKit extends React.Component {
                 <Container className='toolKit'>
                     <Row className='toolBar'>
                         <Col className='menuButton'>Presets</Col>
-                        <Col className={`menuButton ${this.state.showToolbar ? 'active' : null}`} onClick={this.onToggleToolbar.bind(this)}>Advanced <i class="fas fa-sliders-h"></i></Col>
+                        <Col className={`menuButton ${this.state.showToolbar ? 'active' : null}`} onClick={this.onToggleToolbar.bind(this)}>Advanced <i className="fas fa-sliders-h"></i></Col>
                     </Row>
 
                     {!this.state.showToolbar ? null :
@@ -199,7 +199,7 @@ class ToolKit extends React.Component {
                             </Col>
                         </Row>
                     }
-                    <Row><Col className='playButton'>Play on Spotify  <i class="fab fa-spotify"></i></Col></Row>
+                    <Row><Col className='playButton'>Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
                 </Container>
             </div >
         )
