@@ -63,7 +63,7 @@ class HeadSearch extends Component {
     // console.log(this.state.isVisible);
     return (
       <div>
-        <img className='question-mark-img' src='./Info-questionmark2.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
+        <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
         {/* <br />
         <div className='info-button-container'>
           <div className='info-button' onClick={this.onToggleModal.bind(this)}>
