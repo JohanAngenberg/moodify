@@ -63,13 +63,13 @@ class HeadSearch extends Component {
     // console.log(this.state.isVisible);
     return (
       <div>
-        <br />
+        <img className='question-mark-img' src='./Info-questionmark2.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
+        {/* <br />
         <div className='info-button-container'>
           <div className='info-button' onClick={this.onToggleModal.bind(this)}>
             <p className='info-button-questionmark'>?</p>
           </div>
-        </div>
-        {/* <Button className='info-button' onClick={this.onToggleModal.bind(this)}>?</Button> */}
+        </div> */}
         <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
         <input
           ref="inputUrl"
