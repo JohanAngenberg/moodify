@@ -41,8 +41,12 @@ export class TrackCard extends React.Component {
                     </Col>
                 </Row>
                 <Row className='rowCardDetails'>
-                    <Col className='Details' onClick={this.handleToggleDetails.bind(this)}>
-                        i
+                    <Col >
+                        <img
+                            className='info-i-img'
+                            src='./Info-i.png'
+                            alt='Detailed track info'
+                            onClick={this.handleToggleDetails.bind(this)} />
                     </Col>
                 </Row>
 
