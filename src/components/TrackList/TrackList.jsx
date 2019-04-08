@@ -5,7 +5,7 @@ import {
   getLowerLimit
 } from "../../utilities/filterHelpFunctions.js";
 
-//let dummyPlaylist = require("../../dummydata.json"); DETTA ÄR DUMMYPLAYLIST
+// let dummyPlaylist = require("../../dummydata.json"); DETTA ÄR DUMMYPLAYLIST
 
 class TrackList extends Component {
   constructor(props) {
