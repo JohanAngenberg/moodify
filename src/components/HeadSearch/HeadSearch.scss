@@ -4,6 +4,7 @@
   position: relative;
   top: 10px;
   right: 10px;
+  transition: $transition-time;
 }
 
 .question-mark-img:hover{
