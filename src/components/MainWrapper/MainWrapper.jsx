@@ -102,27 +102,29 @@ class MainWrapper extends React.Component {
                 <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />
                 {!this.state.showLanding ?
                     <Container className='main-container'>
-                        <Row>
-                            <Col>
-                                <ToolKit
-                                    toggleModal={this.toggleModal.bind(this)}
-                                    danceability={this.updateDanceability.bind(this)}
-                                    energy={this.updateEnergy.bind(this)}
-                                    acousticness={this.updateAcousticness.bind(this)}
-                                    instrumentalness={this.updateInstrumentalness.bind(this)}
-                                    valence={this.updateValence.bind(this)}
-                                    tempo={this.updateTempo.bind(this)}
-                                />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <TrackList
-                                    filterValues={this.state}
-                                    playlist={this.state.playlist}
-                                />
-                            </Col>
-                        </Row>
+                        <Col md='auto'>
+                            <Row>
+                                <Col md='12'>
+                                    <ToolKit
+                                        toggleModal={this.toggleModal.bind(this)}
+                                        danceability={this.updateDanceability.bind(this)}
+                                        energy={this.updateEnergy.bind(this)}
+                                        acousticness={this.updateAcousticness.bind(this)}
+                                        instrumentalness={this.updateInstrumentalness.bind(this)}
+                                        valence={this.updateValence.bind(this)}
+                                        tempo={this.updateTempo.bind(this)}
+                                    />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md='12' sm='12' xs='12'>
+                                    <TrackList
+                                        filterValues={this.state}
+                                        playlist={this.state.playlist}
+                                    />
+                                </Col>
+                            </Row>
+                        </Col>
                     </Container>
                     : null}
                 <div className='web-player-container'>{this.state.playlistUri ? <WebPlayer playlistUri={this.state.playlistUri} /> : null}</div>

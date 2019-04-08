@@ -32,10 +32,11 @@ export class TrackCard extends React.Component {
         return (
             <Container className='trackCard'>
                 <Row className='trackCardBackground'>
-                    <Col md="auto" sm="5" className='trackCardPic'>
+                    <Col md="3" sm="3" className='trackCardPic'>
                         <img className='trackCardImg' src={track.image} alt="" />
+
                     </Col>
-                    <Col md='auto' sm="8">
+                    <Col md='7' sm="7">
                         <Row className='trackNameStyles'>{track.songName}</Row>
                         <Row className='artistStyles'>{track.artist}</Row>
                     </Col>

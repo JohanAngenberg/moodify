@@ -62,3 +62,15 @@
   padding-top: 5px;
 };
 
+.loginButton {
+  padding: 5px;
+  background: $primary;
+  font-size: 30px;
+  color: white;
+  border: 1px solid $accent2;
+  background: $accent2;
+  max-width: 20%;
+  border-radius: 30px;
+  margin: 0px auto
+}
+
