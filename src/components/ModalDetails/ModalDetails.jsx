@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import './ModalDetails.scss';
 
 class ModalDetails extends Component {
     constructor(props) {
@@ -8,15 +10,26 @@ class ModalDetails extends Component {
         }
     }
     render() {
-        const { songName } = this.props.track;
+        const { songName, artist, danceability, energy, acousticness, instrumentalness, valence, tempo } = this.props.track;
         return (
-            <div>
-                <button
-                    onClick={this.props.handleCloseModalDetails.bind(this)}>Close</button>
-                <div>
-                    THIS IS TEXT IN THE MODAL!
-                    {songName}
-                   
+            <div
+                style={backdropDetails}
+                onClick={this.props.handleCloseModalDetails.bind(this)}
+            // className='backdropDetails'
+            >
+                <div
+                    // className='modalStyles'
+                    style={modalStyles}
+                >
+                    <img className='close-button' src='./close.png' onClick={this.props.handleCloseModalDetails.bind(this)} alt='Close' />
+                    <p className='trackNameStyles-inmodal'>{songName}</p>
+                    <p className='artistStyles-inmodal'>{artist}</p>
+                    <div className='barStyle'>Danceability<ProgressBar className='bar' now={Math.round(danceability * 100)} label={`${Math.round(danceability * 100)}%`} /></div>
+                    <div className='barStyle'>Energy <ProgressBar now={Math.round(energy * 100)} label={`${Math.round(energy * 100)}%`} /></div>
+                    <div className='barStyle'>Acousticness <ProgressBar now={Math.round(acousticness * 100)} label={`${Math.round(acousticness * 100)}%`} /></div>
+                    <div className='barStyle'>Instrumentalness <ProgressBar now={Math.round(instrumentalness * 100)} label={`${Math.round(instrumentalness * 100)}%`} /></div>
+                    <div className='barStyle'>Valence <ProgressBar now={Math.round(valence * 100)} label={`${Math.round(valence * 100)}%`} /></div>
+                    <div className='barStyle'>Tempo: {Math.round(tempo)} bpm</div>
                 </div>
             </div>
         );
@@ -25,3 +38,25 @@ class ModalDetails extends Component {
 
 export default ModalDetails;
 
+const backdropDetails = {
+    backgroundColor: 'rgb(255, 255, 255, 0.4)',
+    position: 'fixed',
+    left: 0,
+    top: 0,
+    width: '100vw',
+    height: '150vh',
+    zIndex: '10',
+
+}
+
+const modalStyles = {
+    backgroundColor: 'white',
+    border: '1px solid #007d2a',
+    boxShadow: '1px 1px 5px 1px #007d2a',
+    borderRadius: '5px',
+    maxWidth: '300px',
+    margin: '0 auto',
+    position: 'relative',
+    top: '15%',
+    padding: '10px',
+};

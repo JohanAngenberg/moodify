@@ -28,7 +28,6 @@ class TrackList extends Component {
   }
 
   handleCloseModalDetails(e) {
-    console.log('klick');
     if (e.target !== e.currentTarget) {
       return;
     }
