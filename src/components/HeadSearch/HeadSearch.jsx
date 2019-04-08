@@ -74,23 +74,6 @@ class HeadSearch extends Component {
             <p className='info-button-questionmark'>?</p>
           </div>
         </div> */}
-<<<<<<< HEAD
-        <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
-        {this.props.showLanding ? <p className='loginButton'>Login   <i className="fab fa-spotify"></i></p> :
-          <input
-            ref="inputUrl"
-            className='input-field'
-            type="text"
-            placeholder="Enter Spotify playlist link..."
-            value={this.state.input}
-            onChange={this.handleInputTextChange.bind(this)}
-            onKeyDown={this.handleKeyPress.bind(this)}
-            onClick={this.handleOnClick.bind(this)}
-          />
-        }
-        <p className='error-message' style={{ visibility: this.state.isVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
-
-=======
         <h1 onClick={() => this.reloadPage()} className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
 
         <input
@@ -104,7 +87,6 @@ class HeadSearch extends Component {
           onClick={this.handleOnClick.bind(this)}
         />
         <p className='error-message' style={{ visibility: this.state.errorMessIsVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
->>>>>>> 857bfa066520c86cd298d9ebdbe5b4c052e88897
       </div>
     );
   }
