@@ -1,0 +1,41 @@
+
+
+.close-button {
+    width: 20px;
+    float: right;
+}
+
+.trackNameStyles-inmodal {
+    // font-size: $font-size-medium;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.artistStyles-inmodal {
+    // font-size: $font-size-small;
+    font-size: 12px;
+}
+
+// .trackNameStyles {
+//     margin: 5px;
+  
+//     // display: flex;
+//     // flex-wrap: wrap;
+//     max-width: 85%;
+//     overflow: hidden; 
+//     text-overflow: ellipsis;
+// }
+
+// .artistStyles {
+//     margin: 5px;
+//     font-size: $font-size-small;
+//     // display: flex;
+//     // flex-wrap: wrap;
+//     max-width: 85%;
+// }
+
+.progress-bar {
+    background-color: #66d58c;
+}
