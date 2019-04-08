@@ -3,6 +3,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import ModalDetails from '../ModalDetails/ModalDetails';
 
 
 export class TrackCard extends React.Component {
@@ -11,21 +12,23 @@ export class TrackCard extends React.Component {
         this.state = {
             TrackData: {},
             isLoading: true,
-            showDetails: false
+            // showDetails: false
         }
     }
     componentDidMount() {
         this.setState({
             TrackData: this.props.track,
-            isLoading: false
+            isLoading: false,
 
         })
     }
-    handleToggleDetails() {
-        this.setState({
-            showDetails: !this.state.showDetails
-        })
-    }
+    // handleToggleDetails() {
+    //     this.setState({
+    //         showDetails: !this.state.showDetails
+    //     })
+    // }
+
+
     render() {
         const track = this.state.TrackData;
 
@@ -46,7 +49,8 @@ export class TrackCard extends React.Component {
                             className='info-i-img'
                             src='./Info-i.png'
                             alt='Detailed track info'
-                            onClick={this.handleToggleDetails.bind(this)} />
+                            // onClick={this.handleToggleDetails.bind(this)}
+                            onClick={this.props.handleShowModalDetails.bind(this, track.id)} />
                     </Col>
                 </Row>
 

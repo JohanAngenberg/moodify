@@ -10,7 +10,7 @@ class HeadSearch extends Component {
       search: [],
       filterInput: "",
       playlist: [],
-      isVisible: false,
+      errorMessIsVisible: false,
     };
   }
 
@@ -26,11 +26,11 @@ class HeadSearch extends Component {
           console.log(res);
           if (res.length !== 0) {
             // console.log('Data finns');
-            this.setState({ isVisible: false })
+            this.setState({ errorMessIsVisible: false })
             return res;
           } else {
             // console.log('Felhantering!');
-            this.setState({ isVisible: true })
+            this.setState({ errorMessIsVisible: true })
           }
         })
         // .then(res => console.log(res))
@@ -52,7 +52,7 @@ class HeadSearch extends Component {
 
   handleOnClick(e) {
     e.target.value = '';
-    this.setState({ isVisible: false });
+    this.setState({ errorMessIsVisible: false });
   }
 
   onToggleModal() {
@@ -60,7 +60,7 @@ class HeadSearch extends Component {
   }
 
   render() {
-    // console.log(this.state.isVisible);
+    // console.log(this.state.errorMessIsVisible);
     return (
       <div>
         <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
@@ -81,7 +81,7 @@ class HeadSearch extends Component {
           onKeyDown={this.handleKeyPress.bind(this)}
           onClick={this.handleOnClick.bind(this)}
         />
-        <p className='error-message' style={{ visibility: this.state.isVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
+        <p className='error-message' style={{ visibility: this.state.errorMessIsVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
       </div>
     );
   }
