@@ -86,7 +86,10 @@ class ToolKit extends React.Component {
 
     onCreatePlaylist() {
         let accessToken = window.location.search.replace("?access_token", "");
-        fetch(`http://localhost:3001/create-playlist/${accessToken}/swag`, {
+        let userId = "slainedinvain";
+        let playlistName = "PlaceholderLista";
+
+        fetch(`http://localhost:3001/create-playlist/${userId}/${playlistName}/${accessToken}`, {
             method: 'POST'
         })
     }
