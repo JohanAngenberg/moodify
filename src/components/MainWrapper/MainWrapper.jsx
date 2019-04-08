@@ -21,8 +21,13 @@ class MainWrapper extends React.Component {
             tempo: "",
             playlist: "",
             showModal: false,
-            showLanding: true
+            showLanding: true,
         };
+    }
+
+    componentDidMount() {
+        let parsed = window.location.search.replace("?access_token", "");
+        console.log(typeof (parsed));
     }
 
     updateDanceability(value) {
