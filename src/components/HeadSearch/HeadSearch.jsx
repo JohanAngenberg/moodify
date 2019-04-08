@@ -10,7 +10,7 @@ class HeadSearch extends Component {
       search: [],
       filterInput: "",
       playlist: [],
-      isVisible: false,
+      errorMessIsVisible: false,
     };
   }
 
@@ -26,11 +26,11 @@ class HeadSearch extends Component {
           console.log(res);
           if (res.length !== 0) {
             // console.log('Data finns');
-            this.setState({ isVisible: false })
+            this.setState({ errorMessIsVisible: false })
             return res;
           } else {
             // console.log('Felhantering!');
-            this.setState({ isVisible: true })
+            this.setState({ errorMessIsVisible: true })
           }
         })
         // .then(res => console.log(res))
@@ -52,15 +52,19 @@ class HeadSearch extends Component {
 
   handleOnClick(e) {
     e.target.value = '';
-    this.setState({ isVisible: false });
+    this.setState({ errorMessIsVisible: false });
   }
 
   onToggleModal() {
     this.props.toggleModal()
   }
 
+  reloadPage() {
+    window.location.reload()
+  }
+
   render() {
-    // console.log(this.state.isVisible);
+    // console.log(this.state.errorMessIsVisible);
     return (
       <div>
         <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
@@ -70,6 +74,7 @@ class HeadSearch extends Component {
             <p className='info-button-questionmark'>?</p>
           </div>
         </div> */}
+<<<<<<< HEAD
         <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
         {this.props.showLanding ? <p className='loginButton'>Login   <i className="fab fa-spotify"></i></p> :
           <input
@@ -85,6 +90,21 @@ class HeadSearch extends Component {
         }
         <p className='error-message' style={{ visibility: this.state.isVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
 
+=======
+        <h1 onClick={() => this.reloadPage()} className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
+
+        <input
+          ref="inputUrl"
+          className='input-field'
+          type="text"
+          placeholder="Enter Spotify playlist link..."
+          value={this.state.input}
+          onChange={this.handleInputTextChange.bind(this)}
+          onKeyDown={this.handleKeyPress.bind(this)}
+          onClick={this.handleOnClick.bind(this)}
+        />
+        <p className='error-message' style={{ visibility: this.state.errorMessIsVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
+>>>>>>> 857bfa066520c86cd298d9ebdbe5b4c052e88897
       </div>
     );
   }
