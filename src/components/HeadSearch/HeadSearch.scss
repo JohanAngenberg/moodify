@@ -2,6 +2,10 @@ h1 {
 padding-top: 20px
 }
 
+h1:hover {
+  cursor: pointer;
+}
+
 .question-mark-img {
   width: 50px;
   float: right;

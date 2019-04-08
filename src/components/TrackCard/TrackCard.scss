@@ -1,10 +1,10 @@
+
 .trackCard {
     border-radius: $border-radius;
     border: 1px solid $soft-grey;
     margin: 10px;
     flex: 40%;
     box-shadow: $box-shadow;
-    // height: 130px; //Denna har jag lagt till
 }
 
 .trackCardBackground {
@@ -41,9 +41,18 @@
     font-weight: bold;
     // display: flex;
     // flex-wrap: wrap;
-    max-width: 85%;
+    //max-width: 100%; //org. 85%
+    display: block;
+    width: 246px;
+    white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis;
+    
+    //superclamp = Cross-browser ellipsis on multi-line texts.
+}
+
+.trackNameStyles:hover {
+    overflow: visible;
 }
 
 .artistStyles {
@@ -51,7 +60,16 @@
     font-size: $font-size-small;
     // display: flex;
     // flex-wrap: wrap;
-    max-width: 85%;
+    //max-width: 100%; //org. 85%
+    display: block;
+    width: 246px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.artistStyles:hover {
+    overflow: visible;
 }
 
 .info-i-img {

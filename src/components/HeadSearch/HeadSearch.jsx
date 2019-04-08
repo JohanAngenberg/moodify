@@ -59,6 +59,10 @@ class HeadSearch extends Component {
     this.props.toggleModal()
   }
 
+  reloadPage() {
+    window.location.reload()
+  }
+
   render() {
     // console.log(this.state.errorMessIsVisible);
     return (
@@ -70,7 +74,8 @@ class HeadSearch extends Component {
             <p className='info-button-questionmark'>?</p>
           </div>
         </div> */}
-        <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
+        <h1 onClick={() => this.reloadPage()} className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
+
         <input
           ref="inputUrl"
           className='input-field'
