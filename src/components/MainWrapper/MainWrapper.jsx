@@ -120,7 +120,6 @@ class MainWrapper extends React.Component {
             .then(json => {
                 let playlistId = json.id;
                 console.log(playlistId);
-
                 return fetch(`http://localhost:3001/add-tracks/${playlistId}/${playlist}/${accessToken}`, {
                     method: 'POST'
                 })

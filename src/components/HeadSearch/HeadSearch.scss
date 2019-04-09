@@ -1,5 +1,6 @@
 h1 {
-padding-top: 10px //tidigare 20px
+padding-top: 10px; //tidigare 20px
+z-index: 9
 }
 
 h1:hover {
@@ -30,6 +31,7 @@ h1:hover {
   padding-bottom: 10px;
 }.landingStyle {
   padding-top: 10%;
+  margin-bottom: 10px;
 }
 
 .input-field {
@@ -50,12 +52,15 @@ h1:hover {
 .loginButton {
   padding: 5px;
   background: $primary;
-  font-size: 30px;
+  font-size: 20px;
   color: white;
   border: 1px solid $accent2;
   background: $accent2;
-  max-width: 20%;
+  max-width: 250px;
   border-radius: 30px;
-  margin: 0px auto
+  margin: 5px auto;
+  z-index: 10
+} :hover {
+  cursor: pointer;
 }
 
