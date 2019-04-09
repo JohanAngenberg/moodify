@@ -25,13 +25,20 @@ class ToolKit extends React.Component {
             toggleInstrumentalness: false,
             toggleValence: false,
             toggleTempo: false,
-            showToolbar: false
+            showToolbar: false,
+            showQuickbutton: false
         };
     }
 
     onToggleToolbar() {
         this.setState({ showToolbar: !this.state.showToolbar })
         console.log(this.state.showToolbar);
+
+    }
+
+    onToggleQuickbutton() {
+        this.setState({ showQuickbutton: !this.state.showQuickbutton })
+        console.log(this.state.showQuickbutton);
 
     }
 
@@ -100,7 +107,7 @@ class ToolKit extends React.Component {
             <div>
                 <Container className='toolKit'>
                     <Row className='toolBar'>
-                        <Col className='menuButton'>Presets</Col>
+                        <Col className={`menuButton ${this.state.showQuickbutton ? 'active' : null}`} onClick={this.onToggleQuickbutton.bind(this)}>Presets</Col>
                         <Col className={`menuButton ${this.state.showToolbar ? 'active' : null}`} onClick={this.onToggleToolbar.bind(this)}>Advanced <i className="fas fa-sliders-h"></i></Col>
                     </Row>
 
