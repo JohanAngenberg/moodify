@@ -71,7 +71,7 @@ class HeadSearch extends Component {
           <div>
             <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
             <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
-            <div><div onClick={() => window.location = 'http://localhost:3001/login'} className='loginButton'>Login with Spotify <i className="fab fa-spotify"></i></div></div>
+            <div><p onClick={() => window.location = 'http://localhost:3001/login'} className='loginButton'>Login with Spotify <i className="fab fa-spotify"></i></p></div>
           </div> : <div>
             <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
             <h1 onClick={() => this.reloadPage()} className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
