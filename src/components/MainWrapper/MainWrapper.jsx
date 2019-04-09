@@ -7,6 +7,10 @@ import Modal from '../Modal/Modal';
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {
+    getUpperLimit,
+    getLowerLimit
+} from "../../utilities/filterHelpFunctions.js";
 
 class MainWrapper extends React.Component {
     constructor(props) {
@@ -22,7 +26,8 @@ class MainWrapper extends React.Component {
             playlist: "",
             showModal: false,
             showLanding: true,
-            user: {}
+            user: {},
+            filteredPlaylist: []
         };
     }
 
@@ -56,8 +61,9 @@ class MainWrapper extends React.Component {
     }
 
     updatePlaylist(value) {
+        let playlist = value
         this.setState({
-            playlist: value
+            playlist: playlist
         });
         console.log(this.state.playlist);
     }
@@ -92,6 +98,7 @@ class MainWrapper extends React.Component {
         });
     }
 
+
     toggleModal() {
         this.setState({
             showModal: !this.state.showModal
@@ -102,8 +109,37 @@ class MainWrapper extends React.Component {
             showLanding: false
         })
     }
+    createPlaylist(playlist) {
+        let accessToken = window.location.search.replace("?access_token", "");
+        let playlistName = "Moodify Filtered List!";
+
+        fetch(`http://localhost:3001/create-playlist/${this.state.user.id}/${playlistName}/${accessToken}`, {
+            method: 'POST'
+        })
+            .then(res => res.json())
+            .then(json => {
+                let playlistId = json.id;
+                console.log(playlistId);
+
+                return fetch(`http://localhost:3001/add-tracks/${playlistId}/${playlist}/${accessToken}`, {
+                    method: 'POST'
+                })
+                    .then(res => res.json())
+                    .then(json => console.log(json)
+                    )
+
+            })
+    }
 
     render() {
+        const filteredPlaylist = !this.state.playlist ? [] : this.state.playlist
+            .filter(track => this.state.danceability === '' ? track : (track.danceability >= getLowerLimit(this.state.danceability) && track.danceability <= getUpperLimit(this.state.danceability)))
+            .filter(track => this.state.energy === '' ? track : (track.energy >= getLowerLimit(this.state.energy) && track.energy <= getUpperLimit(this.state.energy)))
+            .filter(track => this.state.acousticness === '' ? track : (track.acousticness >= getLowerLimit(this.state.acousticness) && track.acousticness <= getUpperLimit(this.state.acousticness)))
+            .filter(track => this.state.instrumentalness === '' ? track : (track.instrumentalness >= getLowerLimit(this.state.instrumentalness) && track.instrumentalness <= getUpperLimit(this.state.instrumentalness)))
+            .filter(track => this.state.valence === '' ? track : (track.valence >= getLowerLimit(this.state.valence) && track.valence <= getUpperLimit(this.state.valence)))
+            .filter(track => this.state.tempo === '' ? track : (track.tempo >= getLowerLimit(this.state.tempo) && track.tempo <= getUpperLimit(this.state.tempo)));
+
         return (
             <div>
 
@@ -131,6 +167,8 @@ class MainWrapper extends React.Component {
                                         valence={this.updateValence.bind(this)}
                                         tempo={this.updateTempo.bind(this)}
                                         userId={this.state.user.id}
+                                        playlist={this.state.playlist}
+                                        createPlaylist={this.createPlaylist.bind(this, filteredPlaylist.map(track => track.uri))}
                                     />
                                 </Col>
                             </Row>
@@ -138,7 +176,7 @@ class MainWrapper extends React.Component {
                                 <Col md='12' sm='12' xs='12'>
                                     <TrackList
                                         filterValues={this.state}
-                                        playlist={this.state.playlist}
+                                        playlist={filteredPlaylist}
                                     />
                                 </Col>
                             </Row>
