@@ -84,13 +84,16 @@ class ToolKit extends React.Component {
         this.setState({ toggleTempo: !this.state.toggleTempo });
     }
 
-    onCreatePlaylist() {
+    onCreatePlaylist(filteredPlaylist) {
         let accessToken = window.location.search.replace("?access_token", "");
         let playlistName = "Moodify Filtered List!";
+        console.log(filteredPlaylist);
 
         fetch(`http://localhost:3001/create-playlist/${this.props.userId}/${playlistName}/${accessToken}`, {
             method: 'POST'
         })
+            .then(res => res.json())
+            .then(json => console.log(json))
     }
 
     render() {
@@ -208,7 +211,7 @@ class ToolKit extends React.Component {
                             </Col>
                         </Row>
                     }
-                    <Row><Col onClick={this.onCreatePlaylist.bind(this)} className='playButton'>Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
+                    <Row><Col onClick={this.props.createPlaylist} className='playButton'>Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
                 </Container>
             </div >
         )
