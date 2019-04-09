@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import './ModalDetails.scss';
 
 class ModalDetails extends Component {
     constructor(props) {
@@ -24,7 +23,7 @@ class ModalDetails extends Component {
                     <img className='close-button' src='./close.png' onClick={this.props.handleCloseModalDetails.bind(this)} alt='Close' />
                     <p className='trackNameStyles-inmodal'>{songName}</p>
                     <p className='artistStyles-inmodal'>{artist}</p>
-                    <div className='barStyle'>Danceability<ProgressBar className='bar' now={Math.round(danceability * 100)} label={`${Math.round(danceability * 100)}%`} /></div>
+                    <div className='barStyle'>Danceability<ProgressBar now={Math.round(danceability * 100)} label={`${Math.round(danceability * 100)}%`} /></div>
                     <div className='barStyle'>Energy <ProgressBar now={Math.round(energy * 100)} label={`${Math.round(energy * 100)}%`} /></div>
                     <div className='barStyle'>Acousticness <ProgressBar now={Math.round(acousticness * 100)} label={`${Math.round(acousticness * 100)}%`} /></div>
                     <div className='barStyle'>Instrumentalness <ProgressBar now={Math.round(instrumentalness * 100)} label={`${Math.round(instrumentalness * 100)}%`} /></div>
