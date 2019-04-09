@@ -110,7 +110,7 @@ class ToolKit extends React.Component {
                                 <Row className='toolRow'>
                                     <Col>
                                         <Button
-                                            onClick={this.onToggleDance.bind(this)} size="sm" variant={this.state.toggleDance ? 'info' : 'outline-info'}>
+                                            onClick={this.onToggleDance.bind(this)} size="sm" variant={this.state.toggleDance ? 'primary' : 'outline-primary'}>
                                             Dance
                                 </Button>
                                     </Col>
@@ -127,7 +127,7 @@ class ToolKit extends React.Component {
                                 <Row className='toolRow'>
                                     <Col>
                                         <Button
-                                            onClick={this.onToggleEnergy.bind(this)} size="sm" variant={this.state.toggleEnergy ? 'info' : 'outline-info'}>
+                                            onClick={this.onToggleEnergy.bind(this)} size="sm" variant={this.state.toggleEnergy ? 'primary' : 'outline-primary'}>
                                             Energy
                                     </Button>
                                     </Col>
@@ -143,8 +143,9 @@ class ToolKit extends React.Component {
                                 <Row className='toolRow'>
                                     <Col>
                                         <Button
-                                            onClick={this.onToggleAcousticness.bind(this)} size="sm" variant={this.state.toggleAcousticness ? 'info' : 'outline-info'}>
-                                            {this.state.toggleAcousticness ? 'ON' : 'OFF'}
+                                            onClick={this.onToggleAcousticness.bind(this)} size="sm" variant={this.state.toggleAcousticness ? 'primary' : 'outline-primary'}>
+                                            {/* {this.state.toggleAcousticness ? 'ON' : 'OFF'} */}
+                                            Acoustic
                                         </Button>
                                     </Col>
                                     <Col md="9" xs="7">
@@ -161,8 +162,9 @@ class ToolKit extends React.Component {
                                 <Row className='toolRow'>
                                     <Col>
                                         <Button
-                                            onClick={this.onToggleInstrumentalness.bind(this)} size="sm" variant={this.state.toggleInstrumentalness ? 'info' : 'outline-info'}>
-                                            {this.state.toggleInstrumentalness ? 'ON' : 'OFF'}
+                                            onClick={this.onToggleInstrumentalness.bind(this)} size="sm" variant={this.state.toggleInstrumentalness ? 'primary' : 'outline-primary'}>
+                                            {/* {this.state.toggleInstrumentalness ? 'ON' : 'OFF'} */}
+                                            Instrumental
                                         </Button>
                                     </Col>
                                     <Col md="9" xs="7">
@@ -177,8 +179,9 @@ class ToolKit extends React.Component {
                                 <Row className='toolRow'>
                                     <Col>
                                         <Button
-                                            onClick={this.onToggleValence.bind(this)} size="sm" variant={this.state.toggleValence ? 'info' : 'outline-info'}>
-                                            {this.state.toggleValence ? 'ON' : 'OFF'}
+                                            onClick={this.onToggleValence.bind(this)} size="sm" variant={this.state.toggleValence ? 'primary' : 'outline-primary'}>
+                                            {/* {this.state.toggleValence ? 'ON' : 'OFF'} */}
+                                            Valence
                                         </Button>
                                     </Col>
                                     <Col md="9" xs="7">
@@ -193,8 +196,8 @@ class ToolKit extends React.Component {
                                 <Row className='toolRow'>
                                     <Col>
                                         <Button
-                                            onClick={this.onToggleTempo.bind(this)} size="sm" variant={this.state.toggleTempo ? 'info' : 'outline-info'}>
-                                            {this.state.toggleTempo ? 'ON' : 'OFF'}
+                                            onClick={this.onToggleTempo.bind(this)} size="sm" variant={this.state.toggleTempo ? 'primary' : 'outline-primary'}>
+                                            BPM
                                         </Button>
                                     </Col>
                                     <Col md="9" xs="7">
