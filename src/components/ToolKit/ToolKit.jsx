@@ -25,13 +25,13 @@ class ToolKit extends React.Component {
             toggleInstrumentalness: false,
             toggleValence: false,
             toggleTempo: false,
-            showToolbar: false
+            showAdvancedToolbar: false
         };
     }
 
     onToggleToolbar() {
-        this.setState({ showToolbar: !this.state.showToolbar })
-        console.log(this.state.showToolbar);
+        this.setState({ showAdvancedToolbar: !this.state.showAdvancedToolbar })
+        console.log(this.state.showAdvancedToolbar);
 
     }
 
@@ -100,10 +100,10 @@ class ToolKit extends React.Component {
                 <Container className='toolKit'>
                     <Row className='toolBar'>
                         <Col className='menuButton'>Presets</Col>
-                        <Col className={`menuButton ${this.state.showToolbar ? 'active' : null}`} onClick={this.onToggleToolbar.bind(this)}>Advanced <i className="fas fa-sliders-h"></i></Col>
+                        <Col className={`menuButton ${this.state.showAdvancedToolbar ? 'active' : null}`} onClick={this.onToggleToolbar.bind(this)}>Advanced <i className="fas fa-sliders-h"></i></Col>
                     </Row>
 
-                    {!this.state.showToolbar ? null :
+                    {!this.state.showAdvancedToolbar ? null :
                         <Row>
                             <Col>
                                 <Row className='toolRow'>
