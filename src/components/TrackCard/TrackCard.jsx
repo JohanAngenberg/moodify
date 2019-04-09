@@ -24,32 +24,23 @@ export class TrackCard extends React.Component {
     render() {
         const track = this.state.TrackData;
 
-        //ändrat från container till div 'trackcard'.
         return (
             <div className='trackCard'>
-                <Row className='trackCardBackground'>
-                    <Col md="3" sm="3" className='trackCardPic'>
-                        <img className='trackCardImg' src={track.image} alt="" />
-
-                    </Col>
-                    <Col md='7' sm="7">
-                        <Row className='trackNameStyles'>{track.songName}</Row>
-                        <Row className='artistStyles'>{track.artist}</Row>
-                    </Col>
-                </Row>
-                <Row className='rowCardDetails'>
-                    <Col >
-                        <img
-                            className='info-i-img'
-                            src='./Info-i.png'
-                            alt='Detailed track info'
-                            onClick={this.props.handleShowModalDetails.bind(this, track.id)} />
-                    </Col>
-                </Row>
-
+                <div>
+                    <img className='trackCardImg' src={track.image} alt="" />
+                </div>
+                <div>
+                    <p className='trackNameStyles'>{track.songName}</p>
+                    <p className='artistStyles'>{track.artist}</p>
+                </div>
+                <div>
+                    <img
+                        className='info-i-img'
+                        src='./Info-i.png'
+                        alt='Detailed track info'
+                        onClick={this.props.handleShowModalDetails.bind(this, track.id)} />
+                </div>
             </div>
-
-
         )
     }
 }
