@@ -3,7 +3,6 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ModalDetails from '../ModalDetails/ModalDetails';
 
 
 export class TrackCard extends React.Component {
@@ -12,7 +11,6 @@ export class TrackCard extends React.Component {
         this.state = {
             TrackData: {},
             isLoading: true,
-            // showDetails: false
         }
     }
     componentDidMount() {
@@ -22,12 +20,6 @@ export class TrackCard extends React.Component {
 
         })
     }
-    // handleToggleDetails() {
-    //     this.setState({
-    //         showDetails: !this.state.showDetails
-    //     })
-    // }
-
 
     render() {
         const track = this.state.TrackData;
@@ -50,21 +42,10 @@ export class TrackCard extends React.Component {
                             className='info-i-img'
                             src='./Info-i.png'
                             alt='Detailed track info'
-                            // onClick={this.handleToggleDetails.bind(this)}
                             onClick={this.props.handleShowModalDetails.bind(this, track.id)} />
                     </Col>
                 </Row>
 
-                {this.state.showDetails ?
-                    <div>
-                        <div className='barStyle'>Danceability<ProgressBar now={Math.round(track.danceability * 100)} label={`${Math.round(track.danceability * 100)}%`} /></div>
-                        <div className='barStyle'>Energy <ProgressBar now={Math.round(track.energy * 100)} label={`${Math.round(track.energy * 100)}%`} /></div>
-                        <div className='barStyle'>Acousticness <ProgressBar now={Math.round(track.acousticness * 100)} label={`${Math.round(track.acousticness * 100)}%`} /></div>
-                        <div className='barStyle'>Instrumentalness <ProgressBar now={Math.round(track.instrumentalness * 100)} label={`${Math.round(track.instrumentalness * 100)}%`} /></div>
-                        <div className='barStyle'>Valence <ProgressBar now={Math.round(track.valence * 100)} label={`${Math.round(track.valence * 100)}%`} /></div>
-                        <div>Tempo: {Math.round(track.tempo)} bpm</div>
-                    </div>
-                    : null}
             </Container>
 
 
