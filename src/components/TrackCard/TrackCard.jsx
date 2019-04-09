@@ -23,8 +23,9 @@ export class TrackCard extends React.Component {
     render() {
         const track = this.state.TrackData;
 
+        //ändrat från container till div 'trackcard'.
         return (
-            <Container className='trackCard'>
+            <div className='trackCard'>
                 <Row className='trackCardBackground'>
                     <Col md="3" sm="3" className='trackCardPic'>
                         <img className='trackCardImg' src={track.image} alt="" />
@@ -45,7 +46,7 @@ export class TrackCard extends React.Component {
                     </Col>
                 </Row>
 
-            </Container>
+            </div>
 
 
         )
