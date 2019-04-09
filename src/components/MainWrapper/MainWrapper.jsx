@@ -22,13 +22,25 @@ class MainWrapper extends React.Component {
             playlist: "",
             showModal: false,
             showLanding: true,
+            user: {}
         };
     }
 
     componentDidMount() {
         let parsed = window.location.search.replace("?access_token", "");
-        console.log(typeof (parsed));
+        if (parsed) {
+            fetch(`http://localhost:3001/user-data/${parsed}`)
+                .then(res => res.json())
+                .then(json => {
+                    this.setState({
+                        user: json
+                    })
+                    console.log(this.state.user)
+                })
+        }
     }
+
+
 
     updateDanceability(value) {
         this.setState({
@@ -118,6 +130,7 @@ class MainWrapper extends React.Component {
                                         instrumentalness={this.updateInstrumentalness.bind(this)}
                                         valence={this.updateValence.bind(this)}
                                         tempo={this.updateTempo.bind(this)}
+                                        userId={this.state.user.id}
                                     />
                                 </Col>
                             </Row>
