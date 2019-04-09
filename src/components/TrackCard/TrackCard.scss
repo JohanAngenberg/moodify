@@ -5,15 +5,10 @@
     margin: 10px;
     flex: 40%;
     box-shadow: $box-shadow;
-}
-
-.trackCardBackground {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.trackCardPic {
-    margin-right: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 
 .trackCardImg {
@@ -23,55 +18,53 @@
 }
 
 .rowCardDetails {
-    // border-top: 1px solid $grey;
-    padding: 10px;
     text-align: right;
     font-family: $info-font;
     font-size: $font-size-large;
 }
 
-.barStyle {
-    font-size: $font-size-small;
-    margin-top: 5px;
-}
-
 .trackNameStyles {
-    margin: 5px;
+    // margin: 5px;
     font-size: $font-size-medium;
     font-weight: bold;
-    // display: flex;
-    // flex-wrap: wrap;
-    //max-width: 100%; //org. 85%
+    margin-bottom: 0px;
     display: block;
     width: 246px;
     white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis;
-    
-    //superclamp = Cross-browser ellipsis on multi-line texts.
 }
 
 .artistStyles {
-    margin: 5px;
-    font-size: $font-size-small;
-    // display: flex;
-    // flex-wrap: wrap;
-    //max-width: 100%; //org. 85%
+    font-size: $font-size-small;    
     display: block;
     width: 246px;
     white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis;
+}
+
+.trackNameStyles, .artistStyles {
+    margin-left: 10px;
 }
 
 .info-i-img {
     width: 20px;
     transition: $transition-time;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 .info-i-img:hover{
   background-color: $accent2;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .trackCard {
+    flex-direction: column;
+  }
 }
        
 
