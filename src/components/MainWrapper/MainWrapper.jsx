@@ -43,7 +43,7 @@ class MainWrapper extends React.Component {
                     })
                     console.log(this.state.user)
                 })
-            fetch(`http://localhost:3001/user-playlists/${parsed}`)
+            fetch(`http://moodify.sebastianberglonn.se/user-playlists/${parsed}`)
                 .then(res => res.json())
                 .then(json => this.setState({
                     userPlaylists: json.items.map(playlist => (

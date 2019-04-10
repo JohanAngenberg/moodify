@@ -6,7 +6,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import QuickButton from '../QuickButton/QuickButton';
-
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 
 class ToolKit extends React.Component {
@@ -100,6 +101,34 @@ class ToolKit extends React.Component {
             this.props.tempo("")
         }
         this.setState({ toggleTempo: !this.state.toggleTempo });
+    }
+
+    createNotification = (type) => {
+        switch (type) {
+            case 'info':
+                NotificationManager.info('Info message');
+                break;
+            case 'success':
+                NotificationManager.success('Playlist added!', 'Success!');
+                break;
+            case 'warning':
+                NotificationManager.warning('Warning message', 'Close after 3000ms', 3000);
+                break;
+            case 'error':
+                NotificationManager.error('Error message', 'Click me!', 5000, () => {
+                    alert('callback');
+                });
+                break;
+            default:
+                console.log("info/success/warning/error is NOT entered.");
+                break;
+        }
+
+    }
+
+    buttonClick() {
+        this.createNotification('success');
+        this.props.createPlaylist();
     }
 
     render() {
@@ -240,8 +269,9 @@ class ToolKit extends React.Component {
                         </Row>
                     }
 
-                    <Row><Col onClick={this.props.createPlaylist} className='playButton'>Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
+                    <Row><Col onClick={this.buttonClick.bind(this)} className='playButton'> Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
                 </Container>
+                <NotificationContainer />
             </div >
         )
     }

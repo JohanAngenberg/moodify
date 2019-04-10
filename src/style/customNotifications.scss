@@ -1,0 +1,17 @@
+$react-notifications-font-base-path: './../node_modules/react-notifications/src/fonts';
+@import '../node_modules/react-notifications/src/notifications.scss';
+
+.notification-container {
+    top: 210px !important;
+    /*box-sizing: border-box;
+    position: fixed;
+    right: $react-notifications-container-right;
+    z-index: $react-notifications-container-z-index;
+    width: $react-notifications-container-width;
+  padding: $react-notifications-container-top-padding $react-notifications-container-right-padding;
+  max-height: $react-notifications-container-max-height;
+  overflow-x: hidden;
+  overflow-y: auto;*/
+}
+
+//https://github.com/minhtranite/react-notifications/blob/master/src/notifications.scss
