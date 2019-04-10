@@ -83,3 +83,9 @@ select, textarea{
 input, textarea{
   color: gray; 
 }
+
+@media only screen and (max-width: 800px) {
+  .input-field {
+    width: 100%
+  }
+}
