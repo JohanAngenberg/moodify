@@ -57,7 +57,9 @@ class MainWrapper extends React.Component {
         }
     }
 
-
+    componentDidUpdate() {
+        console.log('mainwrapper state:', this.state);
+    }
 
     updateDanceability(value) {
         this.setState({

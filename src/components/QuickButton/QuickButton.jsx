@@ -1,62 +1,91 @@
 import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button';
-let dummyPlaylist = require("../dummydata.json");
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default class quickButtons extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            originalPlaylist: dummyPlaylist,
-        }
-    }
 
     setHappyMode() {
-        this.props.danceability(0.7)
-        this.props.energy("")
-        this.props.acousticness("")
-        this.props.instrumentalness("")
-        this.props.valence("")
-        this.props.tempo("")
+        this.props.onPresetClick({
+            danceability: 0.7,
+            energy: 0.5,
+            acousticness: 0.5,
+            instrumentalness: 0.5,
+            valence: 0.5,
+            tempo: 180,
+            toggleDance: true,
+            toggleEnergy: false,
+            toggleAcousticness: false,
+            toggleInstrumentalness: false,
+            toggleValence: false,
+            toggleTempo: false,
+        });
     }
 
     setSadMode() {
-        this.props.danceability("")
-        this.props.energy("")
-        this.props.acousticness("")
-        this.props.instrumentalness("")
-        this.props.valence(0.2)
-        this.props.tempo("")
+        this.props.onPresetClick({
+            danceability: 0.5,
+            energy: 0.5,
+            acousticness: 0.5,
+            instrumentalness: 0.5,
+            valence: 0.2,
+            tempo: 180,
+            toggleDance: false,
+            toggleEnergy: false,
+            toggleAcousticness: false,
+            toggleInstrumentalness: false,
+            toggleValence: true,
+            toggleTempo: false,
+        });
     }
 
     setPartyMode() {
-        this.props.danceability("")
-        this.props.energy(0.8)
-        this.props.acousticness("")
-        this.props.instrumentalness("")
-        this.props.valence("")
-        this.props.tempo("")
+        this.props.onPresetClick({
+            danceability: 0.7,
+            energy: 0.7,
+            acousticness: 0.5,
+            instrumentalness: 0.5,
+            valence: 0.5,
+            tempo: 180,
+            toggleDance: true,
+            toggleEnergy: true,
+            toggleAcousticness: false,
+            toggleInstrumentalness: false,
+            toggleValence: false,
+            toggleTempo: false,
+        });
     }
 
     setStudyMode() {
-        this.props.danceability("")
-        this.props.energy("")
-        this.props.acousticness("")
-        this.props.instrumentalness(0.3)
-        this.props.valence("")
-        this.props.tempo("")
+        this.props.onPresetClick({
+            danceability: 0.5,
+            energy: 0.5,
+            acousticness: 0.5,
+            instrumentalness: 0.7,
+            valence: 0.5,
+            tempo: 180,
+            toggleDance: false,
+            toggleEnergy: false,
+            toggleAcousticness: false,
+            toggleInstrumentalness: true,
+            toggleValence: false,
+            toggleTempo: false,
+        });
     }
 
 
     render() {
         return (
             <div>
-                <div className="btn-toolbar">
-                    <Button onClick={this.setHappyMode.bind(this)} variant="success" size="sm">Happy Songs</Button>
-                    <Button onClick={this.setSadMode.bind(this)} variant="success" size="sm">Sad Songs</Button>
-                    <Button onClick={this.setPartyMode.bind(this)} variant="success" size="sm">Maximum Party</Button>
-                    <Button onClick={this.setStudyMode.bind(this)} variant="success" size="sm">Study Songs</Button>
-                </div>
+                <Container className="btn-toolbar, justify-content-around">
+                    <Row className>
+                        <Col md="auto"><Button onClick={this.setHappyMode.bind(this)} variant="success" size="md">Happy Songs</Button></Col>
+                        <Col md="auto"><Button onClick={this.setSadMode.bind(this)} variant="success" size="md">Sad Songs</Button></Col>
+                        <Col md="auto"><Button onClick={this.setPartyMode.bind(this)} variant="success" size="md">Maximum Party</Button></Col>
+                        <Col md="auto"><Button onClick={this.setStudyMode.bind(this)} variant="success" size="md">Study Songs</Button></Col>
+                    </Row>
+                </Container>
             </div>
         )
     }

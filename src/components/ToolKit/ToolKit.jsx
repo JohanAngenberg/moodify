@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import QuickButton from '../QuickButton/QuickButton';
 
 
 
@@ -26,30 +27,40 @@ class ToolKit extends React.Component {
             toggleValence: false,
             toggleTempo: false,
             showAdvancedToolbar: false,
-            //showQuickButton: false
+            showQuickButton: false
         };
     }
 
+    onPresetClick(preset) {
+        this.setState(preset);
+        this.updateDance();
+    }
+
     onToggleToolbar() {
-        this.setState({ showAdvancedToolbar: !this.state.showAdvancedToolbar })
+        this.setState({ showAdvancedToolbar: !this.state.showAdvancedToolbar, showQuickButton: false })
         console.log(this.state.showAdvancedToolbar);
 
     }
 
-    /*   onToggleQuickButton() {
-          this.setState({ showQuickButton: !this.state.showQuickButton })
-          console.log(this.state.showQuickButton);
-  
-      } */
+    onToggleQuickButton() {
+        this.setState({ showQuickButton: !this.state.showQuickButton, showAdvancedToolbar: false })
+        console.log(this.state.showQuickButton);
 
-    onToggleDance() {
+    }
+
+    updateDance() {
         if (!this.state.toggleDance) {
             this.props.danceability(this.state.danceability)
         } else {
             this.props.danceability("")
         }
+    }
+
+    onToggleDance() {
+        this.updateDance();
         this.setState({ toggleDance: !this.state.toggleDance })
     }
+
     onToggleEnergy() {
         if (!this.state.toggleEnergy) {
             this.props.energy(this.state.energy)
@@ -97,8 +108,7 @@ class ToolKit extends React.Component {
             <div>
                 <Container className='toolKit'>
                     <Row className='toolBar'>
-                        {/*<Col className={`menuButton ${this.state.showQuickButton ? 'active' : null}`} onClick={this.onToggleQuickButton.bind(this)}>Presets</Col>*/}
-                        <Col className={'menuButton'}>Presets</Col>
+                        <Col className={`menuButton ${this.state.showQuickButton ? 'active' : null}`} onClick={this.onToggleQuickButton.bind(this)}>Presets</Col>
                         <Col className={`menuButton ${this.state.showAdvancedToolbar ? 'active' : null}`} onClick={this.onToggleToolbar.bind(this)}>Advanced <i className="fas fa-sliders-h"></i></Col>
                     </Row>
 
@@ -210,6 +220,26 @@ class ToolKit extends React.Component {
                             </Col>
                         </Row>
                     }
+
+                    {!this.state.showQuickButton ? null :
+                        <Row>
+                            <Col>
+                                <Row className='toolRow'>
+                                    <QuickButton onPresetClick={this.onPresetClick.bind(this)} />
+                                </Row>
+                            </Col>
+
+                            {/*       <Col>
+                                <Row className='toolRow'>
+                                    <Col>
+                                        <QuickButton />
+                                    </Col>
+                                </Row>
+                            </Col> */}
+
+                        </Row>
+                    }
+
                     <Row><Col onClick={this.props.createPlaylist} className='playButton'>Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
                 </Container>
             </div >
