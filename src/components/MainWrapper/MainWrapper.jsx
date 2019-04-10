@@ -158,7 +158,9 @@ class MainWrapper extends React.Component {
                         <Col md='auto'>
                             <Row>
                                 <Col>
-                                    <p className='filteredMessage'>You have {filteredPlaylist.length} tracks in your list.</p>
+                                    <p className='filteredMessage'
+                                        style={{ visibility: filteredPlaylist.length === 0 ? 'hidden' : 'visible' }}
+                                    >You have {filteredPlaylist.length} tracks in your list.</p>
                                 </Col>
                             </Row>
                             <Row>
