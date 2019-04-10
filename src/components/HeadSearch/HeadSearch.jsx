@@ -20,7 +20,7 @@ class HeadSearch extends Component {
       this.props.playlistUri(this.state.filterInput);
       // console.log(this.state.filterInput);
 
-      fetch(`http://localhost:3001/audio-features/${this.state.filterInput}`)
+      fetch(`http://moodify.sebastianberglonn.se/audio-features/${this.state.filterInput}`)
         .then(res => res.json())
         .then(res => {
           console.log(res);
@@ -71,7 +71,7 @@ class HeadSearch extends Component {
           <div>
             <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
             <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
-            <div><p onClick={() => window.location = 'http://localhost:3001/login'} className='loginButton'>Login with Spotify <i className="fab fa-spotify"></i></p></div>
+            <div><p onClick={() => window.location = 'http://moodify.sebastianberglonn.se/login'} className='loginButton'>Login with Spotify <i className="fab fa-spotify"></i></p></div>
           </div> : <div>
             <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
             <h1 onClick={() => this.reloadPage()} className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>

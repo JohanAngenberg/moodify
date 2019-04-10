@@ -34,7 +34,7 @@ class MainWrapper extends React.Component {
     componentDidMount() {
         let parsed = window.location.search.replace("?access_token", "");
         if (parsed) {
-            fetch(`http://localhost:3001/user-data/${parsed}`)
+            fetch(`http://moodify.sebastianberglonn.se/user-data/${parsed}`)
                 .then(res => res.json())
                 .then(json => {
                     this.setState({
@@ -113,14 +113,15 @@ class MainWrapper extends React.Component {
         let accessToken = window.location.search.replace("?access_token", "");
         let playlistName = "Moodify Filtered List!";
 
-        fetch(`http://localhost:3001/create-playlist/${this.state.user.id}/${playlistName}/${accessToken}`, {
+        fetch(`http://moodify.sebastianberglonn.se/create-playlist/${this.state.user.id}/${playlistName}/${accessToken}`, {
             method: 'POST'
         })
             .then(res => res.json())
             .then(json => {
                 let playlistId = json.id;
                 console.log(playlistId);
-                return fetch(`http://localhost:3001/add-tracks/${playlistId}/${playlist}/${accessToken}`, {
+
+                return fetch(`http://moodify.sebastianberglonn.se/add-tracks/${playlistId}/${playlist}/${accessToken}`, {
                     method: 'POST'
                 })
                     .then(res => res.json())
