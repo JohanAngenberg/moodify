@@ -40,3 +40,8 @@
     font-size: $font-size-large;
     color: white;
 }
+
+.playButton:hover{
+    background: $primary-dark;
+    cursor: pointer;
+}

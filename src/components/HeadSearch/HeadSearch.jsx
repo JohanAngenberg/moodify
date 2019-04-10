@@ -84,8 +84,8 @@ class HeadSearch extends Component {
               onChange={this.handleInputTextChange.bind(this)}
               onKeyDown={this.handleKeyPress.bind(this)}
               onClick={this.handleOnClick.bind(this)}
-            />}
-      <p className='error-message' style={{ visibility: this.state.errorMessIsVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
+            />
+            <p className='error-message' style={{ visibility: this.state.errorMessIsVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
           </div>}
       </div>
     );

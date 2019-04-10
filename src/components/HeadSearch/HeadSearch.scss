@@ -57,10 +57,10 @@ h1:hover {
   background: $accent2;
   max-width: 250px;
   border-radius: 30px;
-  margin: 5px auto;
+  margin: 45px auto;
   z-index: 10
 } 
-p .loginButton :hover {
+.loginButton:hover {
   cursor: pointer;
 }
 
