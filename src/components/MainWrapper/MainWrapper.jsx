@@ -27,7 +27,8 @@ class MainWrapper extends React.Component {
             showModal: false,
             showLanding: true,
             user: {},
-            filteredPlaylist: []
+            filteredPlaylist: [],
+            userPlaylists: []
         };
     }
 
@@ -42,6 +43,17 @@ class MainWrapper extends React.Component {
                     })
                     console.log(this.state.user)
                 })
+            fetch(`http://localhost:3001/user-playlists/${parsed}`)
+                .then(res => res.json())
+                .then(json => this.setState({
+                    userPlaylists: json.items.map(playlist => (
+                        {
+                            name: playlist.name,
+                            uri: playlist.id,
+                        }
+                    ))
+                }))
+                .then(() => console.log(this.state.userPlaylists))
         }
     }
 
@@ -119,15 +131,13 @@ class MainWrapper extends React.Component {
             .then(res => res.json())
             .then(json => {
                 let playlistId = json.id;
-                console.log(playlistId);
 
                 return fetch(`http://moodify.sebastianberglonn.se/add-tracks/${playlistId}/${playlist}/${accessToken}`, {
                     method: 'POST'
                 })
                     .then(res => res.json())
-                    .then(json => console.log(json)
-                    )
-
+                    .then(json => console.log(json))
+                    .then(() => this.setState({ playlistUri: playlistId }))
             })
     }
 
@@ -150,6 +160,7 @@ class MainWrapper extends React.Component {
                         toggleModal={this.toggleModal.bind(this)}
                         hideLanding={this.hideLanding.bind(this)}
                         showLanding={this.state.showLanding}
+                        userPlaylists={this.state.userPlaylists}
                     />
                 </div>
                 <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />
