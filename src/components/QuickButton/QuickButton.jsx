@@ -80,10 +80,10 @@ export default class quickButtons extends Component {
             <div>
                 <Container className="btn-toolbar, justify-content-around">
                     <Row className>
-                        <Col md="auto"><Button onClick={this.setHappyMode.bind(this)} variant="success" size="md">Happy Songs</Button></Col>
-                        <Col md="auto"><Button onClick={this.setSadMode.bind(this)} variant="success" size="md">Sad Songs</Button></Col>
+                        <Col md="auto"><Button onClick={this.setHappyMode.bind(this)} variant="success" size="md">Super Happy</Button></Col>
+                        <Col md="auto"><Button onClick={this.setSadMode.bind(this)} variant="success" size="md">Anger Management</Button></Col>
                         <Col md="auto"><Button onClick={this.setPartyMode.bind(this)} variant="success" size="md">Maximum Party</Button></Col>
-                        <Col md="auto"><Button onClick={this.setStudyMode.bind(this)} variant="success" size="md">Study Songs</Button></Col>
+                        <Col md="auto"><Button onClick={this.setStudyMode.bind(this)} variant="success" size="md">Soft And Cozy</Button></Col>
                     </Row>
                 </Container>
             </div>
