@@ -157,6 +157,11 @@ class MainWrapper extends React.Component {
                     <Container className='main-container'>
                         <Col md='auto'>
                             <Row>
+                                <Col>
+                                    <p className='filteredMessage'>You have {filteredPlaylist.length} tracks in your list.</p>
+                                </Col>
+                            </Row>
+                            <Row>
                                 <Col md='12'>
                                     <ToolKit
                                         toggleModal={this.toggleModal.bind(this)}
