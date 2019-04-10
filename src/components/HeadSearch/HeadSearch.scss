@@ -64,3 +64,22 @@ h1:hover {
   cursor: pointer;
 }
 
+.radioWrapper {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+div label{
+  font-size: $font-size-large;
+  color: #dddddd;
+  margin: 5px
+}
+
+select, textarea{
+  color: gray;
+}
+input, textarea{
+  color: gray; 
+}

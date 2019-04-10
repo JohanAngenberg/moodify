@@ -11,37 +11,52 @@ class HeadSearch extends Component {
       filterInput: "",
       playlist: [],
       errorMessIsVisible: false,
+      inputType: 'listInput'
     };
   }
 
+  getData(value) {
+    fetch(`http://moodify.sebastianberglonn.se/audio-features/${value}`)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        if (res.length !== 0) {
+          // console.log('Data finns');
+          this.setState({ errorMessIsVisible: false })
+          return res;
+        } else {
+          // console.log('Felhantering!');
+          this.setState({ errorMessIsVisible: true })
+        }
+      })
+      // .then(res => console.log(res))
+      .then(res => {
+        this.setState({ playlist: res });
+      })
+      .then(() => this.props.playlist(this.state.playlist))
+    if (this.state.playlist) {
+      this.props.hideLanding()
+    }
+  }
+
+  handleSelectPlaylist(e) {
+    if (e.target.value) {
+      this.props.playlistUri(e.target.value);
+      this.getData(e.target.value)
+    }
+  }
 
   handleKeyPress(e) {
     if (e.key === "Enter") {
       this.props.playlistUri(this.state.filterInput);
       // console.log(this.state.filterInput);
+      this.getData(this.state.filterInput)
 
-      fetch(`http://moodify.sebastianberglonn.se/audio-features/${this.state.filterInput}`)
-        .then(res => res.json())
-        .then(res => {
-          console.log(res);
-          if (res.length !== 0) {
-            // console.log('Data finns');
-            this.setState({ errorMessIsVisible: false })
-            return res;
-          } else {
-            // console.log('Felhantering!');
-            this.setState({ errorMessIsVisible: true })
-          }
-        })
-        // .then(res => console.log(res))
-        .then(res => {
-          this.setState({ playlist: res });
-        })
-        .then(() => this.props.playlist(this.state.playlist))
-      if (this.state.playlist) {
-        this.props.hideLanding()
-      }
     }
+  }
+
+  handleRadio(e) {
+    this.setState({ inputType: e.target.value })
   }
 
   handleInputTextChange(e) {
@@ -65,6 +80,13 @@ class HeadSearch extends Component {
 
   render() {
     // console.log(this.state.errorMessIsVisible);
+    const playlists = this.props.userPlaylists.map(playlist => (
+      <option value={playlist.uri}>{playlist.name}</option>
+    ))
+    const inputOptions = [
+      { value: 'listInput', displayValue: 'Select playlist' },
+      { value: 'textInput', displayValue: 'Enter playlistlink' }
+    ]
     return (
       <div>
         {!window.location.search.replace('?access_token', '') ?
@@ -75,16 +97,34 @@ class HeadSearch extends Component {
           </div> : <div>
             <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
             <h1 onClick={() => this.reloadPage()} className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
-            <input
-              ref="inputUrl"
-              className='input-field'
-              type="text"
-              placeholder="Enter Spotify playlist link..."
-              value={this.state.input}
-              onChange={this.handleInputTextChange.bind(this)}
-              onKeyDown={this.handleKeyPress.bind(this)}
-              onClick={this.handleOnClick.bind(this)}
-            />
+            <div>
+              {inputOptions.map(option => (
+                <div className="radioWrapper">
+                  <input type="radio"
+                    value={option.value}
+                    checked={this.state.inputType === option.value}
+                    onChange={this.handleRadio.bind(this)}
+                  />
+                  <label>{option.displayValue}</label>
+                </div>
+              ))}
+            </div>
+
+            {this.state.inputType === 'listInput' ?
+              <select className='input-field' onChange={this.handleSelectPlaylist.bind(this)}>
+                <option value="">Select playlist...</option>
+                {playlists}
+              </select> :
+              <input
+                ref="inputUrl"
+                className='input-field'
+                type="text"
+                placeholder="Enter Spotify playlist link..."
+                value={this.state.input}
+                onChange={this.handleInputTextChange.bind(this)}
+                onKeyDown={this.handleKeyPress.bind(this)}
+                onClick={this.handleOnClick.bind(this)}
+              />}
             <p className='error-message' style={{ visibility: this.state.errorMessIsVisible ? 'visible' : 'hidden' }}>Oops, no data could be fetched. Please enter a valid playlist link.</p>
           </div>}
       </div>
