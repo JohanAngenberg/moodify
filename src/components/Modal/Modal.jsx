@@ -37,12 +37,13 @@ class Modal extends React.Component {
                         </p>
                         <h4>But what does it MEAN?</h4>
                         <p className='infoTextModal'>
-                            <br />Dance describes how suitable a track is for dancing.<br />
-                            Energy represents a preceptual measure of intensity and activity.<br />
-                            Acoustic measures whether a track is acoustic.<br />
-                            Instrumental predicts whether a track contains no vocals.<br />
-                            Positivity describes the musical positiveness conveyed by a track.<br />
-                            Tempo shows the overall tempo of a track in beats per minute (BPM).<br />
+                            <br />
+                            <span style={{ fontWeight: 'bold' }}> Dance </span> describes how suitable a track is for dancing.<br />
+                            <span style={{ fontWeight: 'bold' }}> Energy </span> represents a preceptual measure of intensity and activity.<br />
+                            <span style={{ fontWeight: 'bold' }}> Acoustic </span> measures whether a track is acoustic.<br />
+                            <span style={{ fontWeight: 'bold' }}> Instrumental </span> predicts whether a track contains no vocals.<br />
+                            <span style={{ fontWeight: 'bold' }}> Positivity </span> describes the musical positiveness conveyed by a track.<br />
+                            <span style={{ fontWeight: 'bold' }}> Tempo </span> shows the overall tempo of a track in beats per minute (BPM).<br />
                         </p>
                     </div>
                     <div className='modalFooter'>
