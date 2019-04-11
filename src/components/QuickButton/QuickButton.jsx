@@ -23,7 +23,7 @@ export default class quickButtons extends Component {
         });
     }
 
-    setSadMode() {
+    setAngerMode() {
         this.props.onPresetClick({
             danceability: 0.5,
             energy: 0.5,
@@ -57,7 +57,7 @@ export default class quickButtons extends Component {
         });
     }
 
-    setStudyMode() {
+    setSoftMode() {
         this.props.onPresetClick({
             danceability: 0.5,
             energy: 0.5,
@@ -81,9 +81,9 @@ export default class quickButtons extends Component {
                 <Container className="btn-toolbar, justify-content-around">
                     <Row className>
                         <Col md="auto"><Button onClick={this.setHappyMode.bind(this)} variant="success" size="md">Super Happy</Button></Col>
-                        <Col md="auto"><Button onClick={this.setSadMode.bind(this)} variant="success" size="md">Anger Management</Button></Col>
+                        <Col md="auto"><Button onClick={this.setAngerMode.bind(this)} variant="success" size="md">Anger Management</Button></Col>
                         <Col md="auto"><Button onClick={this.setPartyMode.bind(this)} variant="success" size="md">Maximum Party</Button></Col>
-                        <Col md="auto"><Button onClick={this.setStudyMode.bind(this)} variant="success" size="md">Soft And Cozy</Button></Col>
+                        <Col md="auto"><Button onClick={this.setSoftMode.bind(this)} variant="success" size="md">Soft And Cozy</Button></Col>
                     </Row>
                 </Container>
             </div>
