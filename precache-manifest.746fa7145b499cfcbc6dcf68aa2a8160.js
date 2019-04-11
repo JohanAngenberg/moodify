@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/moodify/static/js/runtime~main.6be1317b.js"
   },
   {
-    "revision": "4bdcd5e29a1b357e49fe",
+    "revision": "f34cfa7b4d05b7bea715",
     "url": "/moodify/static/js/main.9a334e4d.chunk.js"
   },
   {
@@ -28,15 +28,15 @@ self.__precacheManifest = [
     "url": "/moodify/static/js/2.160a813f.chunk.js"
   },
   {
-    "revision": "4bdcd5e29a1b357e49fe",
-    "url": "/moodify/static/css/main.d5d8d9aa.chunk.css"
+    "revision": "f34cfa7b4d05b7bea715",
+    "url": "/moodify/static/css/main.8e349b59.chunk.css"
   },
   {
     "revision": "175e5856d01e40940379",
     "url": "/moodify/static/css/2.f750135a.chunk.css"
   },
   {
-    "revision": "ca986f625cbc0bc4a2859ab5125f1526",
+    "revision": "8c012ce3845e47946b798026c416fe01",
     "url": "/moodify/index.html"
   }
 ];
