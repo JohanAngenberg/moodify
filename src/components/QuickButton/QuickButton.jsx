@@ -27,7 +27,7 @@ export default class quickButtons extends Component {
     setAngerMode() {
         this.props.onPresetClick({
             danceability: 0.5,
-            energy: 0.8,
+            energy: 0.9,
             acousticness: 0.5,
             instrumentalness: 0.5,
             valence: 0.2,
@@ -43,7 +43,7 @@ export default class quickButtons extends Component {
 
     setPartyMode() {
         this.props.onPresetClick({
-            danceability: 0.8,
+            danceability: 0.7,
             energy: 0.8,
             acousticness: 0.5,
             instrumentalness: 0.5,
