@@ -60,3 +60,12 @@
 .buttonPosition {
     margin: 100px;
 }
+
+.slider {
+    padding: 50px;
+}
+@media screen and (max-width: 991px) {
+    .sliderCol {
+        padding-top: 20px;
+    }
+  }

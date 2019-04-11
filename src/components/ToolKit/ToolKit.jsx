@@ -210,7 +210,7 @@ class ToolKit extends React.Component {
                                             Dance
                                 </Button>
                                     </Col>
-                                    <Col md="9" xs="7">
+                                    <Col className="sliderCol" lg="8" md="9" sm="9">
                                         <InputRange
                                             disabled={!this.state.toggleDance}
                                             step={1} minValue={0} maxValue={10} value={this.state.danceability * 10}
@@ -227,7 +227,7 @@ class ToolKit extends React.Component {
                                             Energy
                                     </Button>
                                     </Col>
-                                    <Col md="9" xs="7">
+                                    <Col className="sliderCol" lg="8" md="9" sm="9">
                                         <InputRange disabled={!this.state.toggleEnergy}
                                             step={1} minValue={0} maxValue={10} value={this.state.energy * 10}
                                             onChange={value => {
@@ -244,7 +244,7 @@ class ToolKit extends React.Component {
                                             Acoustic
                                         </Button>
                                     </Col>
-                                    <Col md="9" xs="7">
+                                    <Col className="sliderCol" lg="8" md="9" sm="9">
                                         <InputRange disabled={!this.state.toggleAcousticness}
                                             step={1} minValue={0} maxValue={10} value={this.state.acousticness * 10}
                                             onChange={value => {
@@ -263,7 +263,7 @@ class ToolKit extends React.Component {
                                             Instrumental
                                         </Button>
                                     </Col>
-                                    <Col md="9" xs="7">
+                                    <Col className="sliderCol" lg="8" md="9" sm="9">
                                         <InputRange disabled={!this.state.toggleInstrumentalness}
                                             step={1} minValue={0} maxValue={10} value={this.state.instrumentalness * 10}
                                             onChange={value => {
@@ -280,7 +280,7 @@ class ToolKit extends React.Component {
                                             Positivity
                                         </Button>
                                     </Col>
-                                    <Col md="9" xs="7">
+                                    <Col className="sliderCol" lg="8" md="9" sm="9">
                                         <InputRange disabled={!this.state.toggleValence}
                                             step={1} minValue={0} maxValue={10} value={this.state.valence * 10}
                                             onChange={value => {
@@ -296,7 +296,7 @@ class ToolKit extends React.Component {
                                             Tempo
                                         </Button>
                                     </Col>
-                                    <Col md="9" xs="7">
+                                    <Col className="sliderCol" lg="8" md="9" sm="9">
                                         <InputRange disabled={!this.state.toggleTempo}
                                             step={10} minValue={60} maxValue={300} value={this.state.tempo}
                                             onChange={value => {
