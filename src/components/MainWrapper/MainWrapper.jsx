@@ -11,6 +11,8 @@ import {
     getUpperLimit,
     getLowerLimit
 } from "../../utilities/filterHelpFunctions.js";
+import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 class MainWrapper extends React.Component {
     constructor(props) {
@@ -25,6 +27,7 @@ class MainWrapper extends React.Component {
             tempo: "",
             playlist: "",
             showModal: false,
+            showConfirmationModal: false,
             showLanding: true,
             user: {},
             filteredPlaylist: [],
@@ -118,29 +121,58 @@ class MainWrapper extends React.Component {
             showModal: !this.state.showModal
         });
     }
+    toggleConfirmationModal() {
+        this.setState({
+            showConfirmationModal: !this.state.showConfirmationModal
+        });
+    }
     hideLanding() {
         this.setState({
             showLanding: false
         })
     }
-    createPlaylist(playlist) {
-        let accessToken = window.location.search.replace("?access_token", "");
-        let playlistName = "Moodify Filtered List!";
 
+
+    createPlaylist(playlist, inputName) {
+        let accessToken = window.location.search.replace("?access_token", "");
+        let playlistName = inputName
         fetch(`http://moodify.sebastianberglonn.se/create-playlist/${this.state.user.id}/${playlistName}/${accessToken}`, {
             method: 'POST'
         })
             .then(res => res.json())
             .then(json => {
                 let playlistId = json.id;
-
                 return fetch(`http://moodify.sebastianberglonn.se/add-tracks/${playlistId}/${playlist}/${accessToken}`, {
                     method: 'POST'
                 })
                     .then(res => res.json())
                     .then(json => console.log(json))
                     .then(() => this.setState({ playlistUri: playlistId }))
+                    .then(() => this.createNotification('success'))
             })
+    }
+
+    createNotification = (type) => {
+        switch (type) {
+            case 'info':
+                NotificationManager.info('Info message');
+                break;
+            case 'success':
+                NotificationManager.success('Playlist added!', 'Success!');
+                break;
+            case 'warning':
+                NotificationManager.warning('Warning message', 'Close after 3000ms', 3000);
+                break;
+            case 'error':
+                NotificationManager.error('Error message', 'Click me!', 5000, () => {
+                    alert('callback');
+                });
+                break;
+            default:
+                console.log("info/success/warning/error is NOT entered.");
+                break;
+        }
+
     }
 
     render() {
@@ -166,6 +198,8 @@ class MainWrapper extends React.Component {
                     />
                 </div>
                 <Modal displayModal={this.state.showModal} toggleModal={this.toggleModal.bind(this)} />
+                <ConfirmationModal displayModal={this.state.showConfirmationModal} toggleModal={this.toggleConfirmationModal.bind(this)}
+                    createPlaylist={this.createPlaylist.bind(this, filteredPlaylist.map(track => track.uri))} />
                 {!this.state.showLanding ?
                     <Container className='main-container'>
                         <Col md='auto'>
@@ -188,7 +222,7 @@ class MainWrapper extends React.Component {
                                         tempo={this.updateTempo.bind(this)}
                                         userId={this.state.user.id}
                                         playlist={this.state.playlist}
-                                        createPlaylist={this.createPlaylist.bind(this, filteredPlaylist.map(track => track.uri))}
+                                        toggleConfirmationModal={this.toggleConfirmationModal.bind(this)}
                                     />
                                 </Col>
                             </Row>
@@ -203,6 +237,7 @@ class MainWrapper extends React.Component {
                         </Col>
                     </Container>
                     : null}
+                <NotificationContainer />
                 <div className='web-player-container'>{this.state.playlistUri ? <WebPlayer playlistUri={this.state.playlistUri} /> : null}</div>
             </div>
 

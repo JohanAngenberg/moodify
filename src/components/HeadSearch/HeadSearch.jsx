@@ -21,15 +21,12 @@ class HeadSearch extends Component {
       .then(res => {
         console.log(res);
         if (res.length !== 0) {
-          // console.log('Data finns');
           this.setState({ errorMessIsVisible: false })
           return res;
         } else {
-          // console.log('Felhantering!');
           this.setState({ errorMessIsVisible: true })
         }
       })
-      // .then(res => console.log(res))
       .then(res => {
         this.setState({ playlist: res });
       })
@@ -49,9 +46,7 @@ class HeadSearch extends Component {
   handleKeyPress(e) {
     if (e.key === "Enter") {
       this.props.playlistUri(this.state.filterInput);
-      // console.log(this.state.filterInput);
       this.getData(this.state.filterInput)
-
     }
   }
 
@@ -61,7 +56,6 @@ class HeadSearch extends Component {
 
   handleInputTextChange(e) {
     let playlistId = getPlaylistId(e.target.value);
-    console.log(playlistId);
     this.setState({ filterInput: playlistId });
   }
 
@@ -79,7 +73,6 @@ class HeadSearch extends Component {
   }
 
   render() {
-    // console.log(this.state.errorMessIsVisible);
     const playlists = this.props.userPlaylists.map(playlist => (
       <option value={playlist.uri}>{playlist.name}</option>
     ))
