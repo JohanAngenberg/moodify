@@ -11,15 +11,8 @@ class ModalDetails extends Component {
     render() {
         const { songName, artist, danceability, energy, acousticness, instrumentalness, valence, tempo } = this.props.track;
         return (
-            <div
-                style={backdropDetails}
-                onClick={this.props.handleCloseModalDetails.bind(this)}
-            // className='backdropDetails'
-            >
-                <div
-                    // className='modalStyles'
-                    style={modalStyles}
-                >
+            <div style={backdropDetails} onClick={this.props.handleCloseModalDetails.bind(this)}>
+                <div style={modalStyles}>
                     <img className='close-button' src='./close.png' onClick={this.props.handleCloseModalDetails.bind(this)} alt='Close' />
                     <p className='trackNameStyles-inmodal'>{songName}</p>
                     <p className='artistStyles-inmodal'>{artist}</p>
