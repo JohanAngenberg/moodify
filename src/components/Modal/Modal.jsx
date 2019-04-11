@@ -31,17 +31,18 @@ class Modal extends React.Component {
 
                         <h4>How I work, you ask?</h4>
                         <p className='infoTextModal'>
+                            <br />
                             1. You can either select an existing playlist from our dropdown menu OR enter a Spotify playlist link of your own choice.<br />
                             2. When you have chosen your playlist two alternatives will appear; Presets and Advanced. You can either choose one of our already done Presets OR use our toolkit to filter out the songs you want.<br />
                         </p>
                         <h4>But what does it MEAN?</h4>
                         <p className='infoTextModal'>
-                            Dance describes how suitable a track is for dancing.<br /><br />
-                            Energy represents a preceptual measure of intensity and activity.<br /><br />
-                            Acoustic measures whether a track is acoustic.<br /><br />
-                            Instrumental predicts whether a track contains no vocals.<br /><br />
-                            Positivity describes the musical positiveness conveyed by a track.<br /><br />
-                            Tempo shows the overall tempo of a track in beats per minute (BPM).<br /><br />
+                            <br />Dance describes how suitable a track is for dancing.<br />
+                            Energy represents a preceptual measure of intensity and activity.<br />
+                            Acoustic measures whether a track is acoustic.<br />
+                            Instrumental predicts whether a track contains no vocals.<br />
+                            Positivity describes the musical positiveness conveyed by a track.<br />
+                            Tempo shows the overall tempo of a track in beats per minute (BPM).<br />
                         </p>
                     </div>
                     <div className='modalFooter'>
