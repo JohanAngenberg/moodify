@@ -20,10 +20,17 @@ export default class ToggleButton extends React.Component {
     }
 
     render() {
+        console.log(this.state.isToggleOn)
         return (
+<<<<<<< HEAD
             <Button variant={this.props.variant} onClick={this.handleClick.bind(this)}>
+=======
+            <Button onClick={this.handleClick.bind(this)} variant={this.state.isToggleOn ? 'secondary' : 'outline-secondary'}>
+>>>>>>> 9a18faedb257e1df62a8e667d794f6f52e52bb18
                 {this.props.children}
             </Button>
+
         );
+
     }
 }
