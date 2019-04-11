@@ -11,23 +11,16 @@ class ModalDetails extends Component {
     render() {
         const { songName, artist, danceability, energy, acousticness, instrumentalness, valence, tempo } = this.props.track;
         return (
-            <div
-                style={backdropDetails}
-                onClick={this.props.handleCloseModalDetails.bind(this)}
-            // className='backdropDetails'
-            >
-                <div
-                    // className='modalStyles'
-                    style={modalStyles}
-                >
+            <div style={backdropDetails} onClick={this.props.handleCloseModalDetails.bind(this)}>
+                <div style={modalStyles}>
                     <img className='close-button' src='./close.png' onClick={this.props.handleCloseModalDetails.bind(this)} alt='Close' />
                     <p className='trackNameStyles-inmodal'>{songName}</p>
                     <p className='artistStyles-inmodal'>{artist}</p>
-                    <div className='barStyle'>Danceability<ProgressBar now={Math.round(danceability * 100)} label={`${Math.round(danceability * 100)}%`} /></div>
+                    <div className='barStyle'>Dance<ProgressBar now={Math.round(danceability * 100)} label={`${Math.round(danceability * 100)}%`} /></div>
                     <div className='barStyle'>Energy <ProgressBar now={Math.round(energy * 100)} label={`${Math.round(energy * 100)}%`} /></div>
-                    <div className='barStyle'>Acousticness <ProgressBar now={Math.round(acousticness * 100)} label={`${Math.round(acousticness * 100)}%`} /></div>
-                    <div className='barStyle'>Instrumentalness <ProgressBar now={Math.round(instrumentalness * 100)} label={`${Math.round(instrumentalness * 100)}%`} /></div>
-                    <div className='barStyle'>Valence <ProgressBar now={Math.round(valence * 100)} label={`${Math.round(valence * 100)}%`} /></div>
+                    <div className='barStyle'>Acoustic <ProgressBar now={Math.round(acousticness * 100)} label={`${Math.round(acousticness * 100)}%`} /></div>
+                    <div className='barStyle'>Instrumental <ProgressBar now={Math.round(instrumentalness * 100)} label={`${Math.round(instrumentalness * 100)}%`} /></div>
+                    <div className='barStyle'>Positivity <ProgressBar now={Math.round(valence * 100)} label={`${Math.round(valence * 100)}%`} /></div>
                     <div className='barStyle'>Tempo: {Math.round(tempo)} bpm</div>
                 </div>
             </div>
