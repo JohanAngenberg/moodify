@@ -16,7 +16,7 @@ class HeadSearch extends Component {
   }
 
   getData(value) {
-    fetch(`http://moodify.sebastianberglonn.se/audio-features/${value}`)
+    fetch(`https://moodify.sebastianberglonn.se/audio-features/${value}`)
       .then(res => res.json())
       .then(res => {
         if (res.length !== 0) {
@@ -84,7 +84,7 @@ class HeadSearch extends Component {
         {!window.location.search.replace('?access_token', '') || window.location.search.replace('?access_token', '') === 'undefined' ?
           <div>
             <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
-            <div><p onClick={() => window.location = 'http://moodify.sebastianberglonn.se/login'} className='loginButton'>Login with Spotify <i className="fab fa-spotify"></i></p></div>
+            <div><p onClick={() => window.location = 'https://moodify.sebastianberglonn.se/login'} className='loginButton'>Login with Spotify <i className="fab fa-spotify"></i></p></div>
           </div> : <div>
             <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
             <h1 onClick={() => this.reloadPage()} className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>

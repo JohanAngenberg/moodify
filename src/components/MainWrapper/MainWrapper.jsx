@@ -38,14 +38,14 @@ class MainWrapper extends React.Component {
     componentDidMount() {
         let parsed = window.location.search.replace("?access_token", "");
         if (parsed && parsed !== 'undefined') {
-            fetch(`http://moodify.sebastianberglonn.se/user-data/${parsed}`)
+            fetch(`https://moodify.sebastianberglonn.se/user-data/${parsed}`)
                 .then(res => res.json())
                 .then(json => {
                     this.setState({
                         user: json
                     })
                 })
-            fetch(`http://moodify.sebastianberglonn.se/user-playlists/${parsed}`)
+            fetch(`https://moodify.sebastianberglonn.se/user-playlists/${parsed}`)
                 .then(res => res.json())
                 .then(json => this.setState({
                     userPlaylists: json.items.map(playlist => (
@@ -129,13 +129,13 @@ class MainWrapper extends React.Component {
     createPlaylist(playlist, inputName) {
         let accessToken = window.location.search.replace("?access_token", "");
         let playlistName = inputName
-        fetch(`http://moodify.sebastianberglonn.se/create-playlist/${this.state.user.id}/${playlistName}/${accessToken}`, {
+        fetch(`https://moodify.sebastianberglonn.se/create-playlist/${this.state.user.id}/${playlistName}/${accessToken}`, {
             method: 'POST'
         })
             .then(res => res.json())
             .then(json => {
                 let playlistId = json.id;
-                return fetch(`http://moodify.sebastianberglonn.se/add-tracks/${playlistId}/${playlist}/${accessToken}`, {
+                return fetch(`https://moodify.sebastianberglonn.se/add-tracks/${playlistId}/${playlist}/${accessToken}`, {
                     method: 'POST'
                 })
                     .then(res => res.json())
