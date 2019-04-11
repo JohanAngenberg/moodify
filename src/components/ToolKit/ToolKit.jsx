@@ -34,13 +34,16 @@ class ToolKit extends React.Component {
     }
 
     onPresetClick(preset) {
-        this.setState(preset);
-        this.updateDance();
-        this.updateEnergy();
-        this.updateAcousticness();
-        this.updateInstrumentalness();
-        this.updateValence();
-        this.updateTempo();
+        this.setState(preset, () => {
+            console.log('preset: ', preset);
+            this.updateDance();
+            this.updateEnergy();
+            this.updateAcousticness();
+            this.updateInstrumentalness();
+            this.updateValence();
+            this.updateTempo();
+        });
+
     }
 
     onToggleToolbar() {
@@ -57,15 +60,17 @@ class ToolKit extends React.Component {
 
     //Presets
     updateDance() {
-        if (!this.state.toggleDance) {
+        if (this.state.toggleDance) {
             this.props.danceability(this.state.danceability)
         } else {
             this.props.danceability("")
         }
+        //this.setState({ toggleDance: !this.state.toggleDance })
+
     }
 
     updateEnergy() {
-        if (!this.state.toggleEnergy) {
+        if (this.state.toggleEnergy) {
             this.props.energy(this.state.energy)
         } else {
             this.props.energy("")
@@ -73,7 +78,7 @@ class ToolKit extends React.Component {
     }
 
     updateAcousticness() {
-        if (!this.state.toggleAcousticness) {
+        if (this.state.toggleAcousticness) {
             this.props.acousticness(this.state.acousticness)
         } else {
             this.props.acousticness("")
@@ -81,7 +86,7 @@ class ToolKit extends React.Component {
     }
 
     updateInstrumentalness() {
-        if (!this.state.toggleInstrumentalness) {
+        if (this.state.toggleInstrumentalness) {
             this.props.instrumentalness(this.state.instrumentalness)
         } else {
             this.props.instrumentalness("")
@@ -89,7 +94,7 @@ class ToolKit extends React.Component {
     }
 
     updateValence() {
-        if (!this.state.toggleValence) {
+        if (this.state.toggleValence) {
             this.props.valence(this.state.valence)
         } else {
             this.props.valence("")
@@ -97,7 +102,7 @@ class ToolKit extends React.Component {
     }
 
     updateTempo() {
-        if (!this.state.toggleTempo) {
+        if (this.state.toggleTempo) {
             this.props.tempo(this.state.tempo)
         } else {
             this.props.tempo("")
@@ -107,7 +112,11 @@ class ToolKit extends React.Component {
 
     // Advanced
     onToggleDance() {
-        this.updateDance();
+        if (!this.state.toggleDance) {
+            this.props.danceability(this.state.danceability)
+        } else {
+            this.props.danceability("")
+        }
         this.setState({ toggleDance: !this.state.toggleDance })
     }
 
@@ -304,13 +313,15 @@ class ToolKit extends React.Component {
                         <Row>
                             <Col>
                                 <Row className='toolRow'>
-                                    <QuickButton onPresetClick={this.onPresetClick.bind(this)} />
+                                    <QuickButton
+                                        onPresetClick={this.onPresetClick.bind(this)}
+                                    />
                                 </Row>
                             </Col>
                         </Row>
                     }
 
-                    <Row><Col onClick={this.props.toggleConfirmationModal} className='playButton'> Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
+                    <Row><Col onClick={this.props.toggleConfirmationModal} className='playButton'> Create Spotify playlist <i className="fab fa-spotify"></i></Col></Row>
                 </Container>
                 <NotificationContainer />
             </div >
