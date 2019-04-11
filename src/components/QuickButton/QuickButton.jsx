@@ -8,28 +8,11 @@ export default class quickButtons extends Component {
 
     setHappyMode() {
         this.props.onPresetClick({
-            danceability: 0.7,
-            energy: 0.5,
-            acousticness: 0.5,
-            instrumentalness: 0.5,
-            valence: 0.5,
-            tempo: 180,
-            toggleDance: true,
-            toggleEnergy: false,
-            toggleAcousticness: false,
-            toggleInstrumentalness: false,
-            toggleValence: false,
-            toggleTempo: false,
-        });
-    }
-
-    setAngerMode() {
-        this.props.onPresetClick({
             danceability: 0.5,
             energy: 0.5,
             acousticness: 0.5,
             instrumentalness: 0.5,
-            valence: 0.2,
+            valence: 0.9,
             tempo: 180,
             toggleDance: false,
             toggleEnergy: false,
@@ -40,10 +23,27 @@ export default class quickButtons extends Component {
         });
     }
 
+    setAngerMode() {
+        this.props.onPresetClick({
+            danceability: 0.5,
+            energy: 0.8,
+            acousticness: 0.5,
+            instrumentalness: 0.5,
+            valence: 0.2,
+            tempo: 180,
+            toggleDance: false,
+            toggleEnergy: true,
+            toggleAcousticness: false,
+            toggleInstrumentalness: false,
+            toggleValence: true,
+            toggleTempo: false,
+        });
+    }
+
     setPartyMode() {
         this.props.onPresetClick({
-            danceability: 0.7,
-            energy: 0.7,
+            danceability: 0.8,
+            energy: 0.8,
             acousticness: 0.5,
             instrumentalness: 0.5,
             valence: 0.5,
@@ -60,13 +60,13 @@ export default class quickButtons extends Component {
     setSoftMode() {
         this.props.onPresetClick({
             danceability: 0.5,
-            energy: 0.5,
+            energy: 0.3,
             acousticness: 0.5,
-            instrumentalness: 0.7,
+            instrumentalness: 0.8,
             valence: 0.5,
             tempo: 180,
             toggleDance: false,
-            toggleEnergy: false,
+            toggleEnergy: true,
             toggleAcousticness: false,
             toggleInstrumentalness: true,
             toggleValence: false,
