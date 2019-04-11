@@ -308,7 +308,7 @@ class ToolKit extends React.Component {
                         </Row>
                     }
 
-                    <Row><Col onClick={this.buttonClick.bind(this)} className='playButton'> Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
+                    <Row><Col onClick={this.buttonClick.bind(this)} className='playButton'>Create Spotify playlist <i className="fab fa-spotify"></i></Col></Row>
                 </Container>
                 <NotificationContainer />
             </div >
