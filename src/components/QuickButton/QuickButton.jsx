@@ -8,28 +8,11 @@ export default class quickButtons extends Component {
 
     setHappyMode() {
         this.props.onPresetClick({
-            danceability: 0.7,
-            energy: 0.5,
-            acousticness: 0.5,
-            instrumentalness: 0.5,
-            valence: 0.5,
-            tempo: 180,
-            toggleDance: true,
-            toggleEnergy: false,
-            toggleAcousticness: false,
-            toggleInstrumentalness: false,
-            toggleValence: false,
-            toggleTempo: false,
-        });
-    }
-
-    setSadMode() {
-        this.props.onPresetClick({
             danceability: 0.5,
             energy: 0.5,
             acousticness: 0.5,
             instrumentalness: 0.5,
-            valence: 0.2,
+            valence: 0.9,
             tempo: 180,
             toggleDance: false,
             toggleEnergy: false,
@@ -40,10 +23,27 @@ export default class quickButtons extends Component {
         });
     }
 
+    setAngerMode() {
+        this.props.onPresetClick({
+            danceability: 0.5,
+            energy: 0.8,
+            acousticness: 0.5,
+            instrumentalness: 0.5,
+            valence: 0.2,
+            tempo: 180,
+            toggleDance: false,
+            toggleEnergy: true,
+            toggleAcousticness: false,
+            toggleInstrumentalness: false,
+            toggleValence: true,
+            toggleTempo: false,
+        });
+    }
+
     setPartyMode() {
         this.props.onPresetClick({
-            danceability: 0.7,
-            energy: 0.7,
+            danceability: 0.8,
+            energy: 0.8,
             acousticness: 0.5,
             instrumentalness: 0.5,
             valence: 0.5,
@@ -57,16 +57,16 @@ export default class quickButtons extends Component {
         });
     }
 
-    setStudyMode() {
+    setSoftMode() {
         this.props.onPresetClick({
             danceability: 0.5,
-            energy: 0.5,
+            energy: 0.3,
             acousticness: 0.5,
-            instrumentalness: 0.7,
+            instrumentalness: 0.8,
             valence: 0.5,
             tempo: 180,
             toggleDance: false,
-            toggleEnergy: false,
+            toggleEnergy: true,
             toggleAcousticness: false,
             toggleInstrumentalness: true,
             toggleValence: false,
@@ -81,9 +81,9 @@ export default class quickButtons extends Component {
                 <Container className="btn-toolbar, justify-content-around">
                     <Row className>
                         <Col md="auto"><Button onClick={this.setHappyMode.bind(this)} variant="success" size="md">Super Happy</Button></Col>
-                        <Col md="auto"><Button onClick={this.setSadMode.bind(this)} variant="success" size="md">Anger Management</Button></Col>
+                        <Col md="auto"><Button onClick={this.setAngerMode.bind(this)} variant="success" size="md">Anger Management</Button></Col>
                         <Col md="auto"><Button onClick={this.setPartyMode.bind(this)} variant="success" size="md">Maximum Party</Button></Col>
-                        <Col md="auto"><Button onClick={this.setStudyMode.bind(this)} variant="success" size="md">Soft And Cozy</Button></Col>
+                        <Col md="auto"><Button onClick={this.setSoftMode.bind(this)} variant="success" size="md">Soft And Cozy</Button></Col>
                     </Row>
                 </Container>
             </div>

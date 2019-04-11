@@ -57,6 +57,7 @@ class ToolKit extends React.Component {
         }
     }
 
+
     onToggleDance() {
         this.updateDance();
         this.setState({ toggleDance: !this.state.toggleDance })
@@ -257,15 +258,6 @@ class ToolKit extends React.Component {
                                     <QuickButton onPresetClick={this.onPresetClick.bind(this)} />
                                 </Row>
                             </Col>
-
-                            {/*       <Col>
-                                <Row className='toolRow'>
-                                    <Col>
-                                        <QuickButton />
-                                    </Col>
-                                </Row>
-                            </Col> */}
-
                         </Row>
                     }
 
