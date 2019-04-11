@@ -10,7 +10,7 @@ export default class WebPlayer extends Component {
         <iframe
           title="Moodify Webplayer"
           src={URL}
-          width="640"
+          width={window.screen.width >= 640 ? "640" : `${window.screen.width}`}
           height="80"
           frameBorder="0"
           allowtransparency="true"
