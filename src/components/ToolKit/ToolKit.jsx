@@ -35,6 +35,11 @@ class ToolKit extends React.Component {
     onPresetClick(preset) {
         this.setState(preset);
         this.updateDance();
+        this.updateEnergy();
+        this.updateAcousticness();
+        this.updateInstrumentalness();
+        this.updateValence();
+        this.updateTempo();
     }
 
     onToggleToolbar() {
@@ -49,6 +54,7 @@ class ToolKit extends React.Component {
 
     }
 
+    //Presets
     updateDance() {
         if (!this.state.toggleDance) {
             this.props.danceability(this.state.danceability)
@@ -57,7 +63,48 @@ class ToolKit extends React.Component {
         }
     }
 
+    updateEnergy() {
+        if (!this.state.toggleEnergy) {
+            this.props.energy(this.state.energy)
+        } else {
+            this.props.energy("")
+        }
+    }
 
+    updateAcousticness() {
+        if (!this.state.toggleAcousticness) {
+            this.props.acousticness(this.state.acousticness)
+        } else {
+            this.props.acousticness("")
+        }
+    }
+
+    updateInstrumentalness() {
+        if (!this.state.toggleInstrumentalness) {
+            this.props.instrumentalness(this.state.instrumentalness)
+        } else {
+            this.props.instrumentalness("")
+        }
+    }
+
+    updateValence() {
+        if (!this.state.toggleValence) {
+            this.props.valence(this.state.valence)
+        } else {
+            this.props.valence("")
+        }
+    }
+
+    updateTempo() {
+        if (!this.state.toggleTempo) {
+            this.props.tempo(this.state.tempo)
+        } else {
+            this.props.tempo("")
+        }
+    }
+
+
+    // Advanced
     onToggleDance() {
         this.updateDance();
         this.setState({ toggleDance: !this.state.toggleDance })
