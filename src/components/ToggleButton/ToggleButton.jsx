@@ -21,7 +21,7 @@ export default class ToggleButton extends React.Component {
 
     render() {
         return (
-            <Button onClick={this.handleClick.bind(this)}>
+            <Button variant={this.props.variant} onClick={this.handleClick.bind(this)}>
                 {this.props.children}
             </Button>
         );

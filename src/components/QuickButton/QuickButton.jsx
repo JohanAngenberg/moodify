@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
 //import Button from 'react-bootstrap/Button';
-import ToggleButton from '../ToggleButton/ToggleButton';
+import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export default class quickButtons extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeButton: ''
+        }
+    }
 
     setHappyMode() {
+        this.setState({ activeButton: 'superHappy' })
         this.props.onPresetClick({
             danceability: 0.5,
             energy: 0.5,
@@ -25,6 +32,7 @@ export default class quickButtons extends Component {
     }
 
     setAngerMode() {
+        this.setState({ activeButton: 'angerManagement' })
         this.props.onPresetClick({
             danceability: 0.5,
             energy: 0.9,
@@ -42,6 +50,7 @@ export default class quickButtons extends Component {
     }
 
     setPartyMode() {
+        this.setState({ activeButton: 'maximumParty' });
         this.props.onPresetClick({
             danceability: 0.7,
             energy: 0.8,
@@ -59,6 +68,7 @@ export default class quickButtons extends Component {
     }
 
     setSoftMode() {
+        this.setState({ activeButton: 'softCozy' })
         this.props.onPresetClick({
             danceability: 0.5,
             energy: 0.1,
@@ -76,6 +86,7 @@ export default class quickButtons extends Component {
     }
 
     resetPreset() {
+        this.setState({ activeButton: '' })
         this.props.onPresetClick({
             danceability: 0.5,
             energy: 0.5,
@@ -111,16 +122,14 @@ export default class quickButtons extends Component {
 
     render() {
         return (
-            <div>
-                <Container className="btn-toolbar, justify-content-around">
-                    <Row className>
-                        <Col md="auto"><ToggleButton toggleOn={this.setHappyMode.bind(this)} toggleOff={this.resetPreset.bind(this)} variant="success" size="md">Super Happy</ToggleButton></Col>
-                        <Col md="auto"><ToggleButton toggleOn={this.setAngerMode.bind(this)} toggleOff={this.resetPreset.bind(this)} variant="success" size="md">Anger Management</ToggleButton></Col>
-                        <Col md="auto"><ToggleButton toggleOn={this.setPartyMode.bind(this)} toggleOff={this.resetPreset.bind(this)} variant="success" size="md">Maximum Party</ToggleButton></Col>
-                        <Col md="auto"><ToggleButton toggleOn={this.setSoftMode.bind(this)} toggleOff={this.resetPreset.bind(this)} variant="success" size="md">Soft And Cozy</ToggleButton></Col>
-                    </Row>
-                </Container>
-            </div>
+            <Container className="btn-wrapper">
+                <Row className="btn-toolbar">
+                    <Col className="btn-col"><Button onClick={this.state.activeButton === 'superHappy' ? this.resetPreset.bind(this) : this.setHappyMode.bind(this)} variant={this.state.activeButton === 'superHappy' ? 'secondary' : 'outline-secondary'} size="md">Super Happy</Button></Col>
+                    <Col className="btn-col"><Button onClick={this.state.activeButton === 'angerManagement' ? this.resetPreset.bind(this) : this.setAngerMode.bind(this)} variant={this.state.activeButton === 'angerManagement' ? 'secondary' : 'outline-secondary'} size="md">Anger Management</Button></Col>
+                    <Col className="btn-col"><Button onClick={this.state.activeButton === 'maximumParty' ? this.resetPreset.bind(this) : this.setPartyMode.bind(this)} variant={this.state.activeButton === 'maximumParty' ? 'secondary' : 'outline-secondary'} size="md">Maximum Party</Button></Col>
+                    <Col className="btn-col"><Button onClick={this.state.activeButton === 'softCozy' ? this.resetPreset.bind(this) : this.setSoftMode.bind(this)} variant={this.state.activeButton === 'softCozy' ? 'secondary' : 'outline-secondary'} size="md">Soft And Cozy</Button></Col>
+                </Row>
+            </Container>
         )
     }
 }
