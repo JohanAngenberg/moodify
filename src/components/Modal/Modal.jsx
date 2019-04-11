@@ -38,11 +38,11 @@ class Modal extends React.Component {
                         </p>
                         <h4>But what does it MEAN?</h4>
                         <p className='infoTextModal'>
-                            Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.<br /><br />
+                            Dance describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.<br /><br />
                             Energy represents a preceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Makes sense right?<br /><br />
-                            Acousticness measures whether a track is acoustic. Higher values represents higher confidence of the track being acoustic.<br /><br />
-                            Instrumentalness predicts whether a track contains no vocals. "Ooh" and "aah" sounds are treated as instrumental in this context.<br /><br />
-                            Valence describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).<br /><br />
+                            Acoustic measures whether a track is acoustic. Higher values represents higher confidence of the track being acoustic.<br /><br />
+                            Instrumental predicts whether a track contains no vocals. "Ooh" and "aah" sounds are treated as instrumental in this context.<br /><br />
+                            Positivity describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).<br /><br />
                             Tempo shows the overall estimated tempo of a track in beats per minute (BPM).<br /><br />
                         </p>
                     </div>

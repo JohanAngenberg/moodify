@@ -266,7 +266,7 @@ class ToolKit extends React.Component {
                                         <Button
                                             onClick={this.onToggleValence.bind(this)} size="sm" variant={this.state.toggleValence ? 'secondary' : 'outline-secondary'}>
                                             {/* {this.state.toggleValence ? 'ON' : 'OFF'} */}
-                                            Valence
+                                            Positivity
                                         </Button>
                                     </Col>
                                     <Col md="9" xs="7">
@@ -282,7 +282,7 @@ class ToolKit extends React.Component {
                                     <Col>
                                         <Button
                                             onClick={this.onToggleTempo.bind(this)} size="sm" variant={this.state.toggleTempo ? 'secondary' : 'outline-secondary'}>
-                                            BPM
+                                            Tempo
                                         </Button>
                                     </Col>
                                     <Col md="9" xs="7">
