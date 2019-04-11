@@ -19,7 +19,6 @@ class HeadSearch extends Component {
     fetch(`http://moodify.sebastianberglonn.se/audio-features/${value}`)
       .then(res => res.json())
       .then(res => {
-        console.log(res);
         if (res.length !== 0) {
           this.setState({ errorMessIsVisible: false })
           return res;
@@ -74,7 +73,7 @@ class HeadSearch extends Component {
 
   render() {
     const playlists = this.props.userPlaylists.map(playlist => (
-      <option value={playlist.uri}>{playlist.name}</option>
+      <option key={playlist.uri} value={playlist.uri}>{playlist.name}</option>
     ))
     const inputOptions = [
       { value: 'listInput', displayValue: 'Select playlist' },
@@ -82,9 +81,8 @@ class HeadSearch extends Component {
     ]
     return (
       <div>
-        {!window.location.search.replace('?access_token', '') ?
+        {!window.location.search.replace('?access_token', '') || window.location.search.replace('?access_token', '') === 'undefined' ?
           <div>
-            <img className='question-mark-img' src='./Info-questionmark.png' onClick={this.onToggleModal.bind(this)} alt='Info' />
             <h1 className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
             <div><p onClick={() => window.location = 'http://moodify.sebastianberglonn.se/login'} className='loginButton'>Login with Spotify <i className="fab fa-spotify"></i></p></div>
           </div> : <div>
@@ -92,7 +90,7 @@ class HeadSearch extends Component {
             <h1 onClick={() => this.reloadPage()} className={`header ${this.props.showLanding && 'landingStyle'}`}>Moodify</h1>
             <div>
               {inputOptions.map(option => (
-                <div className="radioWrapper">
+                <div key={option.value} className="radioWrapper">
                   <input type="radio"
                     value={option.value}
                     checked={this.state.inputType === option.value}

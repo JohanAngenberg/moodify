@@ -37,14 +37,13 @@ class MainWrapper extends React.Component {
 
     componentDidMount() {
         let parsed = window.location.search.replace("?access_token", "");
-        if (parsed) {
+        if (parsed && parsed !== 'undefined') {
             fetch(`http://moodify.sebastianberglonn.se/user-data/${parsed}`)
                 .then(res => res.json())
                 .then(json => {
                     this.setState({
                         user: json
                     })
-                    console.log(this.state.user)
                 })
             fetch(`http://moodify.sebastianberglonn.se/user-playlists/${parsed}`)
                 .then(res => res.json())
@@ -56,13 +55,9 @@ class MainWrapper extends React.Component {
                         }
                     ))
                 }))
-                .then(() => console.log(this.state.userPlaylists))
         }
     }
 
-    componentDidUpdate() {
-        console.log('mainwrapper state:', this.state);
-    }
 
     updateDanceability(value) {
         this.setState({
@@ -74,7 +69,6 @@ class MainWrapper extends React.Component {
         this.setState({
             playlistUri: value
         });
-        console.log(this.state.playlistUri);
     }
 
     updatePlaylist(value) {
@@ -82,7 +76,6 @@ class MainWrapper extends React.Component {
         this.setState({
             playlist: playlist
         });
-        console.log(this.state.playlist);
     }
 
     updateEnergy(value) {
@@ -99,7 +92,7 @@ class MainWrapper extends React.Component {
 
     updateInstrumentalness(value) {
         this.setState({
-            acousticness: value
+            instrumentalness: value
         });
     }
 
@@ -146,7 +139,6 @@ class MainWrapper extends React.Component {
                     method: 'POST'
                 })
                     .then(res => res.json())
-                    .then(json => console.log(json))
                     .then(() => this.setState({ playlistUri: playlistId }))
                     .then(() => this.createNotification('success'))
             })
@@ -238,7 +230,7 @@ class MainWrapper extends React.Component {
                     </Container>
                     : null}
                 <NotificationContainer />
-                <div className='web-player-container'>{this.state.playlistUri ? <WebPlayer playlistUri={this.state.playlistUri} /> : null}</div>
+                <div className='web-player-container'>{this.state.playlist ? <WebPlayer playlistUri={this.state.playlistUri} /> : null}</div>
             </div>
 
         );
