@@ -1,8 +1,19 @@
+.btn-wrapper {
+    width: 100%;
+}
 .btn-toolbar {
+    align-items: stretch; 
     padding: 10px;
+    width: 100%;
     //align-content: center;
     //text-align: center;
     //width: 100%;
     //margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
+.btn-col{
+    display: flex;
+    justify-content: center
+}
