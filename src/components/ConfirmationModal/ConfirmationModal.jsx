@@ -18,6 +18,12 @@ class ConfirmationModal extends React.Component {
         this.props.toggleModal(false);
     }
 
+    handleKeyPress(e) {
+        if (e.key === "Enter") {
+            this.handleSubmitplaylist()
+        }
+    }
+
 
     render() {
         const modalWrapper = {
@@ -42,6 +48,7 @@ class ConfirmationModal extends React.Component {
                         <input
                             className='confirmationModal-input'
                             type='text'
+                            onKeyPress={this.handleKeyPress.bind(this)}
                             onChange={this.handleInputTextChange.bind(this)}
                         />
                     </div>
