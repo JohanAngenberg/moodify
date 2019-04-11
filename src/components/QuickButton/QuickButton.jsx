@@ -114,10 +114,10 @@ export default class quickButtons extends Component {
             <div>
                 <Container className="btn-toolbar, justify-content-around">
                     <Row className>
-                        <Col md="auto"><ToggleButton toggleOn={this.setHappyMode.bind(this)} toggleOff={this.resetPreset.bind(this)} variant="success" size="md">Super Happy</ToggleButton></Col>
-                        <Col md="auto"><ToggleButton toggleOn={this.setAngerMode.bind(this)} toggleOff={this.resetPreset.bind(this)} variant="success" size="md">Anger Management</ToggleButton></Col>
-                        <Col md="auto"><ToggleButton toggleOn={this.setPartyMode.bind(this)} toggleOff={this.resetPreset.bind(this)} variant="success" size="md">Maximum Party</ToggleButton></Col>
-                        <Col md="auto"><ToggleButton toggleOn={this.setSoftMode.bind(this)} toggleOff={this.resetPreset.bind(this)} variant="success" size="md">Soft And Cozy</ToggleButton></Col>
+                        <Col md="auto"><ToggleButton toggleOn={this.setHappyMode.bind(this)} toggleOff={this.resetPreset.bind(this)} size="md">Super Happy</ToggleButton></Col>
+                        <Col md="auto"><ToggleButton toggleOn={this.setAngerMode.bind(this)} toggleOff={this.resetPreset.bind(this)} size="md">Anger Management</ToggleButton></Col>
+                        <Col md="auto"><ToggleButton toggleOn={this.setPartyMode.bind(this)} toggleOff={this.resetPreset.bind(this)} size="md">Maximum Party</ToggleButton></Col>
+                        <Col md="auto"><ToggleButton toggleOn={this.setSoftMode.bind(this)} toggleOff={this.resetPreset.bind(this)} size="md">Soft And Cozy</ToggleButton></Col>
                     </Row>
                 </Container>
             </div>
