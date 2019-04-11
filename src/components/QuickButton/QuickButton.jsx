@@ -61,9 +61,9 @@ export default class quickButtons extends Component {
     setSoftMode() {
         this.props.onPresetClick({
             danceability: 0.5,
-            energy: 0.3,
+            energy: 0.1,
             acousticness: 0.5,
-            instrumentalness: 0.8,
+            instrumentalness: 0.9,
             valence: 0.5,
             tempo: 180,
             toggleDance: false,
