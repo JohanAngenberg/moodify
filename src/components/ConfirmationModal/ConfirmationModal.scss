@@ -1,0 +1,86 @@
+.confirmationModal-input {
+    height: 30px;
+    width: 80%;
+    border: 1px solid $soft-grey;
+    border-radius: $border-radius;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0em;
+}
+
+.confirmationModalHeaderH3 {
+    color: $white;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.confirmationModalWrapper {
+    position: fixed;
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-modal;
+    margin: 20px auto 0;
+    width: 60%;
+    max-height: 90vh;
+    left: 50%;
+    overflow: hidden scroll;
+    margin-left: -30%;
+    z-index: 2000;
+    top: 0;
+}
+
+.confirmationModalHeader {
+    background: $primary;
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 20px 43px 10px;
+    text-align: right;
+}
+
+.confirmationModalBody {
+    padding: 10px 15px;
+    text-align: center;
+    background: $soft-grey
+}
+
+.confirmationModalFooter {
+    background: $primary;
+    height: 75px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.btnCancel {
+    //background: coral;
+    background-color: $accent2;
+    border: none;
+    border-radius: 25px;
+    color: $white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 10px;
+    width: 30%;
+}
+
+.backDrop {
+    background-color: $modal-backdrop;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.infoTextconfirmationModal {
+    font-size: 14px;
+}
+
+
+
+
+
+

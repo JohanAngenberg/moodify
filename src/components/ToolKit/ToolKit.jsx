@@ -28,7 +28,8 @@ class ToolKit extends React.Component {
             toggleValence: false,
             toggleTempo: false,
             showAdvancedToolbar: false,
-            showQuickButton: false
+            showQuickButton: false,
+            showConfirmationModal: false
         };
     }
 
@@ -128,8 +129,9 @@ class ToolKit extends React.Component {
     }
 
     buttonClick() {
-        this.createNotification('success');
-        this.props.createPlaylist();
+        this.setState({ showConfirmationModal: true })
+        //this.createNotification('success');
+        //this.props.createPlaylist();
     }
 
     render() {
@@ -261,7 +263,7 @@ class ToolKit extends React.Component {
                         </Row>
                     }
 
-                    <Row><Col onClick={this.buttonClick.bind(this)} className='playButton'> Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
+                    <Row><Col onClick={this.props.toggleConfirmationModal} className='playButton'> Play on Spotify  <i className="fab fa-spotify"></i></Col></Row>
                 </Container>
                 <NotificationContainer />
             </div >
